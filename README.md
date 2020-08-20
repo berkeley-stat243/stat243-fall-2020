@@ -24,8 +24,54 @@ The `howtos` directory has information on installing and/or getting access to th
 
 ## Submitting assignments
 
-The file [submitting-electronically.txt](./howtos/submitting-electronically.txt) has information on setting up a Github repository for the class and submitting your assignments by committing your solution to Github. We will discuss this in section on Friday.
+The file [submitting-electronically.txt](./howtos/submitting-electronically.txt) has information on setting up a Github repository for the class and submitting your assignments by committing your solution to Github. We will discuss this in section on Friday Sep. 4.
 
 ## Online discussion and questions.
 
 We will use the [course Piazza site](https://XYZ) for communication (announcements, questions, and discussion). If you're enrolled in the class you should be a member of the group and be able to access it. If you're auditing or not yet enrolled and would like access, make sure to fill out the survey above and I will add you. 
+
+## Schedule (Tentative):
+
+Week 1:
+
+Class:
+ - Wed Aug. 26 (live): general introduction, basic UNIX demo
+ - Fri Aug. 28 (OPTIONAL, live): game event to get to know each other
+
+Assignments:
+
+Week 2:
+
+Class:
+ - Mon Aug 31 (live): webscraping demo
+ - Wed Sep 2 (OPTIONAL, live): group work on bash tutorial problems
+ - Fri Sep 4 (live): bash shell demo
+
+Assignments:
+ - Mon Aug 31, 10 am: Unit 2 reading/videos questions
+ - Wed Sep 2 (OPTIONAL): suggested day to have completed optional UNIX problems
+ - Fri Sep 4 (OPTIONAL): suggested day to have completed R catch-up
+
+Week 3:
+
+Class:
+ - Mon Sep 7: no class (holiday)
+ - Wed Sep 9 (live): bash challenge problems group work
+ - Fri Sep 11: no class
+
+Assignments:
+ - Wed Sep 7, 10 am: bash tutorial problems (recommended to do at least some by Fri Sep 4 10 am)
+ - Fri Sep 9, 5 pm: PS1
+
+Week 4:
+
+Class:
+ - Mon Sep 14: strings/regular expressions demo and group work
+
+Assignments:
+ - Mon Sep 14, 10 am: regex practice problems and string processing tutorial questions
+ - Fri Sep 18, 10 am: PS 2
+
+
+
+
