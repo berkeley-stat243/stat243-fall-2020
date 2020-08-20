@@ -28,19 +28,19 @@ The file [submitting-electronically.txt](./howtos/submitting-electronically.txt)
 
 ## Online discussion and questions.
 
-We will use the [course Piazza site](https://XYZ) for communication (announcements, questions, and discussion). If you're enrolled in the class you should be a member of the group and be able to access it. If you're auditing or not yet enrolled and would like access, make sure to fill out the survey above and I will add you. 
+We will use the [course Piazza site](https://piazza.com/berkeley/fall2020/stat243) for communication (announcements, questions, and discussion). If you're enrolled in the class you should be a member of the group and be able to access it. If you're auditing or not yet enrolled and would like access, make sure to fill out the survey above and I will add you. 
 
 ## Schedule (Tentative):
 
-Week 1:
+**Week 1**
 
 Class:
  - Wed Aug. 26 (live): general introduction, basic UNIX demo
  - Fri Aug. 28 (OPTIONAL, live): game event to get to know each other
 
-Assignments:
+Lab: (OPTIONAL) R and basic UNIX practice
 
-Week 2:
+**Week 2**
 
 Class:
  - Mon Aug 31 (live): webscraping demo
@@ -52,7 +52,9 @@ Assignments:
  - Wed Sep 2 (OPTIONAL): suggested day to have completed optional UNIX problems
  - Fri Sep 4 (OPTIONAL): suggested day to have completed R catch-up
 
-Week 3:
+Lab: Git and R Markdown introduction, problem set requirements/submission tools
+
+**Week 3**
 
 Class:
  - Mon Sep 7: no class (holiday)
@@ -61,16 +63,16 @@ Class:
 
 Assignments:
  - Wed Sep 7, 10 am: bash tutorial problems (recommended to do at least some by Fri Sep 4 10 am)
- - Fri Sep 9, 5 pm: PS1
+ - *Fri Sep 9, 5 pm: PS 1*
 
-Week 4:
+**Week 4**
 
 Class:
  - Mon Sep 14: strings/regular expressions demo and group work
 
 Assignments:
  - Mon Sep 14, 10 am: regex practice problems and string processing tutorial questions
- - Fri Sep 18, 10 am: PS 2
+ - *Fri Sep 18, 10 am: PS 2*
 
 
 

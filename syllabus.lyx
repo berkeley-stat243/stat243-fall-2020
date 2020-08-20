@@ -127,7 +127,7 @@ Statistics 243 is an introduction to statistical computing, taught using
  and Monte Carlo methods, numerical optimization, and numerical integration/diff
 erentiation.
  A goal is that coverage of these topics complement the models/methods discussed
- in the rest of the statistics graduate curriculum.
+ in the rest of the statistics/biostatistics graduate curriculum.
  We will also cover the basics of UNIX/Linux, in particular some basic shell
  scripting and operating on remote servers, as well as a bit of Python.
  
@@ -168,8 +168,8 @@ literal "false"
 
 \begin_layout Standard
 DISCLAIMER: Given the evolving situation, we may need to adjust some of
- the approaches and policies stated here, but I try to be very clear if/when
- I do this.
+ the approaches and policies stated here, but I will try to be very clear
+ if/when I do this.
 \end_layout
 
 \begin_layout Subsection*
@@ -238,6 +238,12 @@ Zoe Vernon
 
 \end_deeper
 \begin_layout Itemize
+We'll post office hours on the Github site README.
+ I expect we'll have some hours where you can just show up and others where
+ we have sign-up slots for individual-specific questions.
+\end_layout
+
+\begin_layout Itemize
 
 \series bold
 When to see us about an assignment
@@ -256,8 +262,8 @@ Class sessions
 \end_layout
 
 \begin_layout Standard
-Given the virtual context, class will be somewhat different than a usual
- university class.
+Given the virtual context, class sessions will be somewhat different than
+ the usual university course.
 \end_layout
 
 \begin_layout Standard
@@ -289,6 +295,24 @@ Those not able to attend live class sessions will have the option of watching
  class.
 \end_layout
 
+\begin_layout Standard
+My goal is to have the class sessions that we do hold live be an interactive
+ environment.
+ Part of this will involve group work where I will pose questions to the
+ class to think about, respond to via Google forms, and discuss.
+ During times where I am doing a demo or otherwise presenting, I encourage
+ you to ask questions verbally and (likely) through the Piazza forum.
+ 
+\end_layout
+
+\begin_layout Standard
+Please do your best to stay focused during class time and section group
+ work (I know this can be hard).
+ I ask that you leave your phone elsewhere and keep other windows/apps on
+ your computer closed.
+ 
+\end_layout
+
 \begin_layout Subsubsection*
 Zoom guidance
 \end_layout
@@ -309,28 +333,6 @@ We'll experiment with having text-based questions in Piazza during class
 If possible please have your video on during class sessions.
  Unless absolutely necessary, please have your video on when working in
  a group or asking me a question.
-\end_layout
-
-\begin_layout Subsection*
-Class time
-\end_layout
-
-\begin_layout Standard
-My goal is to have the class sessions that we do hold live be an interactive
- environment.
- Part of this will involve group work where I will pose questions to the
- class to think about, respond to via Google forms, and discuss.
- During times where I am doing a demo or otherwise presenting, I encourage
- you to ask questions verbally and (likely) through the Piazza forum.
- 
-\end_layout
-
-\begin_layout Standard
-Please do your best to stay focused during class time and section group
- work.
- I ask that you leave your phone elsewhere and keep other windows/apps on
- your computer closed.
- 
 \end_layout
 
 \begin_layout Standard
@@ -367,11 +369,31 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-Piazza site for discussions/questions and answer: TBD
+SCF tutorials for additional content: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://statistics.berkeley.edu/computing/training/tutorials"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-bCourses site for course recordings and possibly some other materials: 
+Piazza site for discussions/Q&A (also linked from bCourses): 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://piazza.com/berkeley/fall2020/stat243"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+bCourses site for course recordings, Zoom links, and possibly some other
+ materials: 
 \begin_inset CommandInset href
 LatexCommand href
 name "https://bcourses.berkeley.edu/courses/1497598"
@@ -384,15 +406,10 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-GradeScope: TBD
-\end_layout
-
-\begin_layout Itemize
-SCF tutorials for additional content: 
+Gradescope for assignments (also linked from bCourses): 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://statistics.berkeley.edu/computing/training/tutorials"
-literal "false"
+target "https://www.gradescope.com/courses/166974"
 
 \end_inset
 
@@ -1211,6 +1228,11 @@ Your report need not be in any standardized format, but all of the above
 Topics (in order with rough timing)
 \end_layout
 
+\begin_layout Standard
+The 'days' here are class sessions under a non-virtual format, as general
+ guidance.
+\end_layout
+
 \begin_layout Enumerate
 Introduction to UNIX, operating on a compute server (1 day)
 \end_layout
@@ -1271,11 +1293,11 @@ If you want to get a sense of what material we will cover in more detail,
 \emph on
 units
 \emph default
- directory of Github repository from when I taught the class in 2018.
+ directory of Github repository from when I taught the class in 2019.
  See 
 \begin_inset CommandInset href
 LatexCommand href
-target "https://github.com/berkeley-stat243/stat243-fall-2018"
+target "https://github.com/berkeley-stat243/stat243-fall-2019"
 literal "false"
 
 \end_inset
