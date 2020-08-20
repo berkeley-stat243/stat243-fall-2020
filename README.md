@@ -1,15 +1,21 @@
 # stat243-fall-2020
-This repository holds all course materials for the fall 2020 offering of Statistics 243 at UC Berkeley.
+This repository holds course materials for the fall 2020 offering of Statistics 243 at UC Berkeley.
+
+If you would like to audit the class, enroll as a UC Berkeley undergraduate, or enroll as a concurrent enrollment student (i.e., for visiting students), or for some other reason are not enrolled, please fill out [this survey](https://forms.gle/j5KP7TwGgHGYQZHt8) as soon as possible. All those enrolled or wishing to take the class should have filled it out by Friday, August 28 at 5 pm.
 
 This site is UNDER CONSTRUCTION.
 
 You can view the [(DRAFT) syllabus here](https://github.com/berkeley-stat243/stat243-fall-2020/blob/master/syllabus.pdf).
 
+## Course content
+
+ - This site: most non-recorded course material
+ - SCF tutorials (see below)
+ - bCourses: Zoom class recordings and pre-recorded videos
+
 Note that the various tutorials referred to in the class materials (e.g., the UNIX and bash shell tutorials, the dynamic documents tutorial, the Git tutorial, the string processing tutorial, etc.), are available [here](http://statistics.berkeley.edu/computing/training/tutorials).
 
 If you're not yet familiar with Git, go to the upper right of this page and click on 'Clone or download' and then 'Download ZIP'.
-
-If you would like to audit the class, enroll as a UC Berkeley undergraduate, or enroll as a concurrent enrollment student (i.e., for visiting students), or for some other reason are not enrolled, please fill out [this survey](https://forms.gle/j5KP7TwGgHGYQZHt8) as soon as possible. All those enrolled or wishing to take the class should have filled it out by Friday, August 28 at 5 pm.
 
 ## Logistics
 
@@ -37,8 +43,11 @@ We will use the [course Piazza site](https://piazza.com/berkeley/fall2020/stat24
 **Week 1**
 
 Class:
- - Wed Aug. 26 (live): general introduction, basic UNIX demo
- - Fri Aug. 28 (OPTIONAL, live): game event to get to know each other
+ - Wed Aug 26 (live): general introduction, basic UNIX demo
+ - Fri Aug 28 (OPTIONAL, live): game event to get to know each other
+
+Assignments:
+ - Fri Aug 28: fill out [class survey](https://forms.gle/ZPvuDmQSw4YoRGVJ9)
 
 Lab: (OPTIONAL) R and basic UNIX practice
 
