@@ -1,7 +1,9 @@
 # stat243-fall-2020
 This repository holds all course materials for the fall 2020 offering of Statistics 243 at UC Berkeley.
 
-You can view the [syllabus here](https://github.com/berkeley-stat243/stat243-fall-2020/blob/master/syllabus.pdf).
+This site is UNDER CONSTRUCTION.
+
+You can view the [(DRAFT) syllabus here](https://github.com/berkeley-stat243/stat243-fall-2020/blob/master/syllabus.pdf).
 
 Note that the various tutorials referred to in the class materials (e.g., the UNIX and bash shell tutorials, the dynamic documents tutorial, the Git tutorial, the string processing tutorial, etc.), are available [here](http://statistics.berkeley.edu/computing/training/tutorials).
 
