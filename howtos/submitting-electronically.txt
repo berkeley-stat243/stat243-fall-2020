@@ -1,6 +1,6 @@
 We are trying something different this year - instead of everyone creating individual 
-repositories, we are creating repositories for everyone at https://github.berkeley.edu/.
-Additionally, homeworks still need to be submitted as PDFs on bCourses.
+repositories at github.com, we are creating repositories for everyone at https://github.berkeley.edu/.
+Additionally, homeworks still need to be submitted as PDFs on Gradescope.
 
 Steps:
 
@@ -11,8 +11,8 @@ Nothing else needs to be done, just log in and log out.
 
 2. After accounts are created (may take a couple days after first login), when 
 you log-in again, you should see one private repository listed on the left side 
-(mine reads `stat243-fall-2019/jared-bennett`). This is your class repository.
-Do not change the repository settings! They are setup for this class.
+(mine reads `stat243-fall-2020/zoe-vernon`). This is your class repository.
+Do not change the repository settings! They are set up for this class.
 
 3. Clone the repo to your home directory (I would clone it into a directory
 just for repositories (e.g., I use `~/repos`). In the top-level of your working

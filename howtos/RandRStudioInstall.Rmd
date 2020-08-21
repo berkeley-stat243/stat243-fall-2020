@@ -1,10 +1,10 @@
 ### On your laptop
 
-If your version of R is older than 3.4.0, please install the latest version, though you may be fine with older versions.
+If your version of R is older than 4.0.0, please install the latest version. For the most part R 3.5 or 3.6 would be fine but there are a couple topics in Unit 5 that will assume you are using R 4.0.0 or later.
 
 To install R, see:
 
-  * MacOS: install the R-3.6.1.pkg from https://cran.rstudio.com/bin/macosx/ if you have OS X 10.11 (El Capitan) or higher (or the R-3.3.3.pkg package if you have OS X 10.9 or 10.10)
+  * MacOS: install the R-4.0.2.pkg from https://cran.rstudio.com/bin/macosx
   * Windows: https://cran.rstudio.com/bin/windows/base/
   * Linux: https://cran.rstudio.com/bin/linux/
 

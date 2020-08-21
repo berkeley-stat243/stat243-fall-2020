@@ -18,7 +18,7 @@ Open a Terminal by going to Applications -> Utilities -> Terminal
     
     For more detailed instructions, see the [Windows and Linux](./windowsAndLinux.md) tutorial.
 
-2. There's an older program called cygwin that provides a UNIX command-line interface.
+2. (Not recommended) There's an older program called cygwin that provides a UNIX command-line interface.
 
 Note that when you install Git on Windows, you will get Git Bash. While you can use this to control Git, the functionality is limited so this will not be enough for general UNIX command-line access for the course.
 
