@@ -27,7 +27,7 @@ body {
 
 <h1 id="windows-10-and-the-ubuntu-subsystem">Windows 10 and the Ubuntu Subsystem</h1>
 <p>Jared Bennett<br />
-25 January, 2020</p>
+21 August, 2020</p>
 <p>Windows 10 has a powerful new feature that allows a full Linux system to be installed and run from within Windows. This is incredibly useful for building/testing code in Linux, without having a dedicated Linux machine, but it poses strange new behaviors as two very different operating systems coexist in one place. Initially, this document mirrors the <a href="./windowsInstall.md">Windows Install</a> tutorial, showing you how to install Ubuntu and setting up R, RStudio, and LaTex. Then, we cover some of the issues of running two systems together, starting with finding files, finding the Ubuntu subsystem, and file modifications.</p>
 <h2 id="installing-ubuntu">Installing Ubuntu</h2>
 <p>There are 2 parts to installing a Linux subsystem in Windows. I will write this using Ubuntu as the example, as it is my preferred Linux distro, but several others are provided by Windows.</p>
@@ -62,7 +62,7 @@ If you don't wish to use PowerShell, you can work your way through the control p
 <li>Open the <strong>Microsoft Store</strong></li>
 <li>Search for <strong>Ubuntu</strong>
 <ul>
-<li>You're looking for the highest number followed by LTS, currently <strong>18.04 LTS</strong>. This is the current long-term-release, meaning it will be supported for the next 5 years.</li>
+<li>You're looking for the highest number followed by LTS, currently <strong>20.04 LTS</strong> (or 18.04 LTS is fine too). This is the current long-term-release, meaning it will be supported for the next 5 years.</li>
 </ul></li>
 <li>Click on the tile, then click <strong>Get</strong>, and this should start the installation.</li>
 <li>Follow the prompts to install Ubuntu.</li>
@@ -88,7 +88,7 @@ If you don't wish to use PowerShell, you can work your way through the control p
 </ul></li>
 <li>Then, type <code>sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'</code>
 <ul>
-<li><code>cloud.r-project.org</code> is the default mirror, however, it is prudent to connect to the mirror closest to you geographically. Berkeley has it's own mirror, so the command with the Berkeley mirror would look like <code>sudo add-apt-repository 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu bionic-cran35/'</code></li>
+<li><code>cloud.r-project.org</code> is the default mirror, however, it is prudent to connect to the mirror closest to you geographically. Berkeley has it's own mirror, so the command with the Berkeley mirror would look like <code>sudo add-apt-repository 'deb https://cran.r-project.org/bin/linux/ubuntu/bionic-cran40/'</code></li>
 </ul></li>
 <li>Finally, type <code>sudo apt install r-base</code>, and press <code>y</code> to confirm installation</li>
 <li>To test that it worked, type <code>R</code> into the console, and an R session should begin

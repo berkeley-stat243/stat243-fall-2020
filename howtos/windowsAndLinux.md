@@ -1,7 +1,7 @@
 Windows 10 and the Ubuntu Subsystem
 ================
 Jared Bennett
-25 January, 2020
+21 August, 2020
 
 Windows 10 has a powerful new feature that allows a full Linux system to be installed and run from within Windows. This is incredibly useful for building/testing code in Linux, without having a dedicated Linux machine, but it poses strange new behaviors as two very different operating systems coexist in one place. Initially, this document mirrors the [Windows Install](./windowsInstall.md) tutorial, showing you how to install Ubuntu and setting up R, RStudio, and LaTex. Then, we cover some of the issues of running two systems together, starting with finding files, finding the Ubuntu subsystem, and file modifications.
 
@@ -38,7 +38,7 @@ Once the Linux subsystem feature has been enabled, there are multiple methods to
 
 1.  Open the **Microsoft Store**
 2.  Search for **Ubuntu**
-    -   You're looking for the highest number followed by LTS, currently **18.04 LTS**. This is the current long-term-release, meaning it will be supported for the next 5 years.
+    -   You're looking for the highest number followed by LTS, currently **20.04 LTS** (or 18.04 LTS is fine too). This is the current long-term-release, meaning it will be supported for the next 5 years.
 3.  Click on the tile, then click **Get**, and this should start the installation.
 4.  Follow the prompts to install Ubuntu.
 
@@ -63,7 +63,7 @@ R is not a part of the standard Ubuntu installation. So, we have to add the repo
 1.  In a bash window, type `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9`
     -   This adds the key to "sign", or validate, the R repository
 2.  Then, type `sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'`
-    -   `cloud.r-project.org` is the default mirror, however, it is prudent to connect to the mirror closest to you geographically. Berkeley has it's own mirror, so the command with the Berkeley mirror would look like `sudo add-apt-repository 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu bionic-cran35/'`
+    -   `cloud.r-project.org` is the default mirror, however, it is prudent to connect to the mirror closest to you geographically. Berkeley has it's own mirror, so the command with the Berkeley mirror would look like `sudo add-apt-repository 'deb https://cran.r-project.org/bin/linux/ubuntu/bionic-cran40/'`
 3.  Finally, type `sudo apt install r-base`, and press `y` to confirm installation
 4.  To test that it worked, type `R` into the console, and an R session should begin
     -   Type `q()` to quit the R session
