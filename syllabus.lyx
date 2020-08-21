@@ -550,7 +550,12 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-For statistical computing topics: Gentle, James.
+For statistical computing topics: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gentle, James.
  Computational Statistics (available electronically through OskiCat: 
 \begin_inset CommandInset href
 LatexCommand href
@@ -562,6 +567,26 @@ literal "false"
 )
 \end_layout
 
+\begin_layout Itemize
+Gentle, James.
+ Matrix Algebra 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://link-springer-com.libproxy.berkeley.edu/book/10.1007%2F978-3-319-64867-5"
+
+\end_inset
+
+ or Numerical Linear Algebra with Applications in Statistics 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://link-springer-com.libproxy.berkeley.edu/chapter/10.1007/978-1-4612-0623-1_1"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Other resources with more details on particular aspects of R:
 \end_layout
