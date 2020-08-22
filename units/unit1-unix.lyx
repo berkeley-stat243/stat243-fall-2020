@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -29,6 +29,8 @@ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -58,6 +60,7 @@ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -70,7 +73,10 @@ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -112,6 +118,7 @@ howtos/accessingUnixCommandLine.html
 LatexCommand href
 name "Xcode developer tools"
 target "https://developer.apple.com/xcode/"
+literal "false"
 
 \end_inset
 
@@ -139,6 +146,7 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 target "http://statistics.berkeley.edu/computing/training/tutorials"
+literal "false"
 
 \end_inset
 
@@ -155,7 +163,11 @@ Please see the material in our tutorial on the
 basics of UNIX
 \emph default
  to get up to speed on working in a UNIX-style command line environment.
- 
+ We'll do a bit of demo in the first class.
+ If what you see seems quite familiar, you can probably skip that tutorial.
+ If what you see is not familiar, please work through the tutorial and (optional
+ly) attend section on Friday August 28 to work in groups on the problems
+ at the end of the tutorial.
 \end_layout
 
 \begin_layout Standard
@@ -165,6 +177,7 @@ For an alternative introduction (which also includes some of the topics
 LatexCommand href
 name "this Software Carpentry tutorial"
 target "https://swcarpentry.github.io/shell-novice"
+literal "false"
 
 \end_inset
 
@@ -204,6 +217,7 @@ repository
 LatexCommand href
 name "graphical interfaces to Git"
 target "https://git-scm.com/downloads"
+literal "false"
 
 \end_inset
 
@@ -213,6 +227,7 @@ target "https://git-scm.com/downloads"
 LatexCommand href
 name "Github Desktop"
 target "https://desktop.github.com"
+literal "false"
 
 \end_inset
 
@@ -227,7 +242,7 @@ berkeley-stat243
 \emph default
  is the project and 
 \emph on
-stat243-fall-2018
+stat243-fall-2020
 \emph default
  is the repository]:
 \begin_inset Newline newline
@@ -235,7 +250,7 @@ stat243-fall-2018
 
 > 
 \family typewriter
-git clone https://github.com/berkeley-stat243/stat243-fall-2018
+git clone https://github.com/berkeley-stat243/stat243-fall-2020
 \end_layout
 
 \begin_layout Enumerate
@@ -274,6 +289,7 @@ Git for Scientists: A Tutorial:
 \begin_inset CommandInset href
 LatexCommand href
 target "http://nyuccl.org/pages/GitTutorial/"
+literal "false"
 
 \end_inset
 
@@ -289,6 +305,7 @@ Gitwash: workflow for scientific Python projects:
 \begin_inset CommandInset href
 LatexCommand href
 target "http://matthew-brett.github.io/pydagogue/gitwash_build.html"
+literal "false"
 
 \end_inset
 
@@ -300,6 +317,7 @@ Git branching demo:
 \begin_inset CommandInset href
 LatexCommand href
 target "http://pcottle.github.io/learnGitBranching/"
+literal "false"
 
 \end_inset
 
@@ -324,6 +342,7 @@ ssh
 LatexCommand href
 name "this webpage"
 target "http://statistics.berkeley.edu/computing/ssh"
+literal "false"
 
 \end_inset
 
@@ -379,6 +398,7 @@ There are also client programs for file transfer; see
 LatexCommand href
 name "this webpage"
 target "http://statistics.berkeley.edu/computing/copying-files"
+literal "false"
 
 \end_inset
 
@@ -462,6 +482,13 @@ As you get started it's ok to use a very simple text editor such as Notepad
 
 \begin_layout Subsection
 Basic emacs
+\end_layout
+
+\begin_layout Standard
+Emacs is one option as an editor.
+ I use emacs a fair amount, so I'm including some tips here, but other editors
+ listed above are just as good.
+ 
 \end_layout
 
 \begin_layout Itemize

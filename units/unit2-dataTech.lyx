@@ -117,7 +117,7 @@ options(replace.assign=TRUE, width=56)
 
 \begin_layout Plain Layout
 
-read_chunk('unit2-dataIO.R')
+read_chunk('unit2-dataTech.R')
 \end_layout
 
 \begin_layout Plain Layout
@@ -136,7 +136,7 @@ read_chunk('unit2-dataIO.R')
 \end_layout
 
 \begin_layout Title
-Unit 2: Data input/output and webscraping
+Unit 2: Data technologies
 \end_layout
 
 \begin_layout Standard
@@ -227,6 +227,26 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Section*
+Videos
+\end_layout
+
+\begin_layout Standard
+Three videos accompany this unit:
+\end_layout
+
+\begin_layout Enumerate
+Text files and ASCII
+\end_layout
+
+\begin_layout Enumerate
+Encodings and UTF-8
+\end_layout
+
+\begin_layout Enumerate
+HTML, XML, and JSON
 \end_layout
 
 \begin_layout Standard
@@ -343,12 +363,12 @@ note that I switched away from use of XML package in 2018 as it is listed
 \end_layout
 
 \begin_layout Section
-Data storage and formats (outside R)
+Data storage and file formats (outside R)
 \end_layout
 
 \begin_layout Standard
-At this point, we're going to turn to getting data, reading data in, writing
- data out to disk, and webscraping.
+We're going to start early in the data analysis pipeline: getting data,
+ reading data in, writing data out to disk, and webscraping.
  We'll focus on doing these manipulations in R, but the concepts and tools
  involved are common to other languages, so familarity with these in R should
  allow you to pick up other tools more easily.
@@ -836,11 +856,12 @@ noindent
 
 \end_inset
 
- Note that for 
+ Actually, that file, 
 \emph on
 precip.txt
 \emph default
-, reading in using 
+, is in a fixed-width format (i.e., every element in a given column has the
+ exact same number of characters),so reading in using 
 \emph on
 read.fwf()
 \emph default

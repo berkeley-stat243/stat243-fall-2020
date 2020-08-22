@@ -151,7 +151,7 @@ links <- read_html(URL) %>% html_nodes("a") %>% html_attr('href')
 head(links, n = 10)
 
 ## @knitr XPath
-## find all 'a' nodes that have attribute href; then
+## find all 'a' elements that have attribute href; then
 ## extract the 'href' attribute
 links <- read_html(URL) %>% html_nodes(xpath = "//a[@href]") %>%
     html_attr('href')
