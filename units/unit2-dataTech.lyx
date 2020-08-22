@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -11,6 +11,9 @@
 \hypersetup{unicode=true, pdfusetitle,
 bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
  breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=true,}
+% Added by lyx2lyx
+\renewcommand{\textendash}{--}
+\renewcommand{\textemdash}{---}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -31,8 +34,6 @@ knitr
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype false
-\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -62,7 +63,6 @@ knitr
 \suppress_date false
 \justification true
 \use_refstyle 0
-\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -75,10 +75,7 @@ knitr
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\is_math_indent 0
-\math_numbering_side default
-\quotes_style english
-\dynamic_quotes 0
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -176,7 +173,6 @@ Chambers
 LatexCommand href
 name "R intro manual"
 target "http://cran.r-project.org/doc/manuals/R-intro.html"
-literal "false"
 
 \end_inset
 
@@ -197,7 +193,6 @@ Murrell, Introduction to Data Technologies.
 LatexCommand href
 name "R Data Import/Export manual"
 target "http://cran.r-project.org/doc/manuals/R-data.html"
-literal "false"
 
 \end_inset
 
@@ -222,7 +217,6 @@ Working with large datasets in SQL, R, and Python
 \begin_inset CommandInset href
 LatexCommand href
 target "http://statistics.berkeley.edu/computing/training/tutorials"
-literal "false"
 
 \end_inset
 
@@ -426,7 +420,6 @@ read.table()
 LatexCommand href
 name "ASCII"
 target "http://en.wikipedia.org/wiki/ASCII"
-literal "false"
 
 \end_inset
 
@@ -680,15 +673,9 @@ read.table()
 read.fwf()
 \emph default
  that allow the user to control the classes.
- One difficulty is that character and numeric fields are sometimes read
+ One difficulty in older versions of R was that character fields were read
  in as factors.
- Basically 
-\emph on
-read.table()
-\emph default
- tries to read fields in as numeric and if it finds non-numeric and non-NA
- values, it reads in as a factor.
- This can be annoying.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -829,7 +816,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 readLines
 \end_layout
 
@@ -888,7 +874,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 connections, eval=FALSE
 \end_layout
 
@@ -938,7 +923,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 curl
 \end_layout
 
@@ -1004,7 +988,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 streaming, eval=FALSE
 \end_layout
 
@@ -1036,7 +1019,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 stream-curl, eval=TRUE, cache=TRUE
 \end_layout
 
@@ -1084,7 +1066,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 text-connection
 \end_layout
 
@@ -1276,7 +1257,6 @@ stringsAsFactors=FALSE
 LatexCommand href
 name "this blog post"
 target "http://blog.rstudio.org/2015/04/09/readr-0-1-0/"
-literal "false"
 
 \end_inset
 
@@ -1320,7 +1300,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 readr
 \end_layout
 
@@ -1384,7 +1363,6 @@ Here are some UNIX command-line tools to help in webscraping and working
 \begin_inset CommandInset href
 LatexCommand href
 target "http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html"
-literal "false"
 
 \end_inset
 
@@ -1467,7 +1445,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 https
 \end_layout
 
@@ -1510,7 +1487,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 https-pipe
 \end_layout
 
@@ -1531,7 +1507,6 @@ It's often useful to be able to extract the hyperlinks in an HTML document.
 LatexCommand href
 name "CSS selectors"
 target "https://www.w3schools.com/cssref/css_selectors.asp"
-literal "false"
 
 \end_inset
 
@@ -1548,7 +1523,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 htmlLinks
 \end_layout
 
@@ -1584,7 +1558,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 XPath
 \end_layout
 
@@ -1614,7 +1587,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 XPath2, eval=FALSE
 \end_layout
 
@@ -1793,7 +1765,6 @@ xml2
 \begin_inset CommandInset href
 LatexCommand href
 target "http://api.kivaws.org/v1/loans/newest.xml"
-literal "false"
 
 \end_inset
 
@@ -1821,7 +1792,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 xml
 \end_layout
 
@@ -2038,7 +2008,6 @@ jsonlite
 \begin_inset CommandInset href
 LatexCommand href
 target "http://api.kivaws.org/v1/loans/newest.json"
-literal "false"
 
 \end_inset
 
@@ -2055,7 +2024,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 json
 \end_layout
 
@@ -2151,7 +2119,6 @@ check the robots.txt file (e.g.,
 \begin_inset CommandInset href
 LatexCommand href
 target "https://scholar.google.com/robots.txt"
-literal "false"
 
 \end_inset
 
@@ -2173,7 +2140,6 @@ Here are some links with useful information:
 LatexCommand href
 name "A blog post overview on webscraping and robots.txt"
 target "http://feedproxy.google.com/~r/RBloggers/~3/RZGJ8Trv5Xw/?utm_source=feedburner&utm_medium=email"
-literal "false"
 
 \end_inset
 
@@ -2185,7 +2151,6 @@ literal "false"
 LatexCommand href
 name "Blog post on webscraping ethics"
 target "https://towardsdatascience.com/ethics-in-web-scraping-b96b18136f01"
-literal "false"
 
 \end_inset
 
@@ -2197,7 +2162,6 @@ literal "false"
 LatexCommand href
 name "Some information on how to understand a robots.txt file"
 target "https://www.promptcloud.com/blog/how-to-read-and-respect-robots-file"
-literal "false"
 
 \end_inset
 
@@ -2243,7 +2207,6 @@ The response to an HTTP request will include a status code, which can be
 LatexCommand href
 name "this information"
 target "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
-literal "false"
 
 \end_inset
 
@@ -2328,7 +2291,6 @@ Let's see an example of accessing climate model output data from the World
 \begin_inset CommandInset href
 LatexCommand href
 target "http://datahelpdesk.worldbank.org/knowledgebase"
-literal "false"
 
 \end_inset
 
@@ -2351,7 +2313,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 REST
 \end_layout
 
@@ -2371,7 +2332,6 @@ As another example, here we can see the
 LatexCommand href
 name "Kiva API"
 target "https://build.kiva.org/api"
-literal "false"
 
 \end_inset
 
@@ -2414,7 +2374,6 @@ github.berkeley.edu
 LatexCommand href
 name "Github API"
 target "https://docs.github.com/en/rest/reference/repos"
-literal "false"
 
 \end_inset
 
@@ -2445,7 +2404,6 @@ Let's look at some UN data (agricultural crop data).
 \begin_inset CommandInset href
 LatexCommand href
 target "http://data.un.org/Explorer.aspx?d=FAO"
-literal "false"
 
 \end_inset
 
@@ -2494,7 +2452,6 @@ More tools -> Developer tools
 \begin_inset CommandInset href
 LatexCommand href
 target "http://data.un.org/Handlers/DownloadHandler.ashx?DataFilter=itemCode:526;year:2012,2013,2014,2015,2016,2017&DataMartId=FAO&Format=csv&c=2,4,5,6,7&s=countryName:asc,elementCode:asc,year:desc"
-literal "false"
 
 \end_inset
 
@@ -2564,7 +2521,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 http-get2
 \end_layout
 
@@ -2608,7 +2564,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 http-post, eval=FALSE
 \end_layout
 
@@ -2938,7 +2893,6 @@ Text (either in the form of a file with regular language in it or a data
 LatexCommand href
 name "limited ASCII set of characters"
 target "http://en.wikipedia.org/wiki/ASCII"
-literal "false"
 
 \end_inset
 
@@ -3096,7 +3050,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 locale
 \end_layout
 
@@ -3128,7 +3081,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 iconv
 \end_layout
 
@@ -3144,7 +3096,7 @@ iconv
 
 \begin_layout Standard
 You can also mark a string with an encoding, so R knows how to display it
- correctly:
+ correctly (again, this prints out incorrectly in the PDF):
 \end_layout
 
 \begin_layout Standard
@@ -3157,7 +3109,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 encoding
 \end_layout
 
@@ -3190,7 +3141,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 encoding-error
 \end_layout
 
@@ -3335,7 +3285,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 print
 \end_layout
 
@@ -3367,7 +3316,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 cat
 \end_layout
 
@@ -3439,7 +3387,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 sprintf
 \end_layout
 

@@ -308,11 +308,14 @@ system('cat tmp.txt')
 
 ## @knitr unicode-example
 
-x2 <- 'Pe\u00f1a 3\u00f72' # n with tilde and div. symbol as Unicode 'code points'
+## n-tilde and division symbol as Unicode 'code points'
+x2 <- 'Pe\u00f1a 3\u00f72' 
 Encoding(x2) 
 x2
 writeBin(x2, 'tmp2.txt')
-system('ls -l tmp2.txt') ## here n-tilde and division symbol take up two bytes
+## here n-tilde and division symbol take up two bytes
+## but there is an extraneous null byte in there; not sure why
+system('ls -l tmp2.txt') 
 ## so the system knows how to interpret the UTF-8 encoded file
 ## and represent the Unicode character on the screen:
 system('cat tmp2.txt')
@@ -324,7 +327,7 @@ Sys.getlocale()
 text <- "Melhore sua seguran\xe7a"
 Encoding(text)
 Encoding(text) <- "latin1"
-text
+text  ## this prints out correctly in R, but is not correct in the PDF
 
 text <- "Melhore sua seguran\xe7a"
 textUTF8 <- iconv(text, from = "latin1", to = "UTF-8")
