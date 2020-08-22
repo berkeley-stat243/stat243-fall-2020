@@ -990,7 +990,8 @@ readLines()
  all have the arguments that let you read in a fixed number of lines.
  To read-on-the-fly in blocks, we need to first establish the connection
  and then read from it sequentially.
- 
+ (If you don't, you'll read from the start of the file every time you read
+ from the file.)
 \end_layout
 
 \begin_layout Standard
@@ -1392,10 +1393,10 @@ literal "false"
 
 \begin_layout Standard
 We'll cover a few basic examples in this section, but HTML and XML formatting
- and navigating the structure of such pages is beyond the scope of what
- we can cover in detail.
- The key thing is to know that the tools exist so that you can learn how
- to use them if faced with such formats.
+ and navigating the structure of such pages in great detail is beyond the
+ scope of what we can cover.
+ The key thing is to see the main concepts and know that the tools exist
+ so that you can learn how to use them if faced with such formats.
 \end_layout
 
 \begin_layout Subsection
@@ -2078,11 +2079,15 @@ Webscraping and web APIs
 \end_layout
 
 \begin_layout Standard
-Here we'll see briefly some examples of making requests over the Web to
- get data.
- We'll see simple HTTP requests, as well as use APIs to systematically query
- a website for information based on a documented interface.
- The packages 
+Here we'll see some examples of making requests over the Web to get data.
+ We'll use APIs to systematically query a website for information.
+ Ideally, but not always, the API will be documented.
+ In many cases that simply amounts to making an HTTP GET request, which
+ is done by constructing a URL.
+\end_layout
+
+\begin_layout Standard
+The packages 
 \emph on
 RCurl
 \emph default
@@ -2400,8 +2405,20 @@ token
 \end_layout
 
 \begin_layout Standard
-I created your github.berkeley.edu accounts from Python by interacting with
- the Github API.
+I created your 
+\emph on
+github.berkeley.edu
+\emph default
+ accounts from Python by interacting with the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Github API"
+target "https://docs.github.com/en/rest/reference/repos"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection

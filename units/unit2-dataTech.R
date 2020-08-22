@@ -298,9 +298,9 @@ if(url.exists('http://www.wormbase.org/db/searches/advanced/dumper')) {
 ## 39 in hexadecimal is '9'
 ## 0a is a newline (at least in Linux/Mac)
 ## 3a is ':'     
-x <- as.raw(c('0x39','0x0a','0x3a'))  ## i.e., "9\n:" in ascii
+x <- as.raw(c('0x4d','0x6f', '0x6d','0x0a'))  ## i.e., "Mom\n" in ascii
 x
-charToRaw('9\n:')      
+charToRaw('Mom\n:')      
 writeBin(x, 'tmp.txt')
 readLines('tmp.txt')
 system('ls -l tmp.txt', intern = TRUE)
@@ -308,11 +308,11 @@ system('cat tmp.txt')
 
 ## @knitr unicode-example
 
-euro <- '\u20ac' # Euro currency symbol as Unicode 'code point'
-Encoding(euro) 
-euro
-writeBin(euro, 'tmp2.txt')
-system('ls -l tmp2.txt') ## here the euro takes up four bytes
+x2 <- 'Pe\u00f1a 3\u00f72' # n with tilde and div. symbol as Unicode 'code points'
+Encoding(x2) 
+x2
+writeBin(x2, 'tmp2.txt')
+system('ls -l tmp2.txt') ## here n-tilde and division symbol take up two bytes
 ## so the system knows how to interpret the UTF-8 encoded file
 ## and represent the Unicode character on the screen:
 system('cat tmp2.txt')
@@ -321,12 +321,12 @@ system('cat tmp2.txt')
 Sys.getlocale()
 
 ## @knitr iconv
-text <- "_Melhore sua seguran\xe7a_"
+text <- "Melhore sua seguran\xe7a"
 Encoding(text)
 Encoding(text) <- "latin1"
 text
 
-text <- "_Melhore sua seguran\xe7a_"
+text <- "Melhore sua seguran\xe7a"
 textUTF8 <- iconv(text, from = "latin1", to = "UTF-8")
 Encoding(textUTF8)
 textUTF8
