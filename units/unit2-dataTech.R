@@ -14,14 +14,14 @@
 
 ## @knitr readcsv
 dat <- read.table(file.path('..', 'data', 'RTADataSub.csv'),
-                  sep = ',', head = TRUE)
+                  sep = ',', header = TRUE)
 sapply(dat, class)
 ## whoops, there is an 'x', presumably indicating missingness:
-levels(dat[ ,2])
+unique(dat[ , 2])
 ## let's treat 'x' as a missing value indicator
 dat2 <- read.table(file.path('..', 'data', 'RTADataSub.csv'),
-                   sep = ',', head = TRUE,
-   na.strings = c("NA", "x"), stringsAsFactors = FALSE)
+                   sep = ',', header = TRUE,
+                   na.strings = c("NA", "x"))
 unique(dat2[ ,2])
 ## hmmm, what happened to the blank values this time?
 which(dat[ ,2] == "")
@@ -37,7 +37,6 @@ sapply(sequ, class)
 ## that made use of the fact that a data frame is a list
 
 ## @knitr readLines
-print(getwd())
 dat <- readLines(file.path('..', 'data', 'precip.txt'))
 id <- as.factor(substring(dat, 4, 11) )
 year <- substring(dat, 18, 21)
