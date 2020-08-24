@@ -11,7 +11,7 @@ You can view the [(DRAFT) syllabus here](https://github.com/berkeley-stat243/sta
 
  - This site: most non-recorded course material
  - SCF tutorials (see below)
- - bCourses: Zoom class recordings and pre-recorded videos
+ - bCourses: links to Zoom class and section meetings, Zoom class recordings, and pre-recorded videos
 
 Note that the various tutorials referred to in the class materials (e.g., the UNIX and bash shell tutorials, the dynamic documents tutorial, the Git tutorial, the string processing tutorial, etc.), are available [here](http://statistics.berkeley.edu/computing/training/tutorials).
 
@@ -49,7 +49,9 @@ Class:
 Assignments:
  - Fri Aug 28: fill out [class survey](https://forms.gle/ZPvuDmQSw4YoRGVJ9)
 
-Lab: (OPTIONAL) R and basic UNIX practice
+Lab:
+ - (REQUIRED) Meet Chris in small groups for 5 minutes (sign up [here (UNDER CONSTRUCTION)](xyz.com)). 
+ - (OPTIONAL) R and basic UNIX practice
 
 **Week 2**
 
@@ -73,17 +75,19 @@ Class:
  - Fri Sep 11: no class
 
 Assignments:
- - Wed Sep 7, 10 am: bash tutorial problems (recommended to do at least some by Fri Sep 4 10 am)
+ - Wed Sep 7, 10 am: bash tutorial problems (recommended to do at least some by Fri Sep 4, 10 am)
  - *Fri Sep 9, 5 pm: PS 1*
 
 **Week 4**
 
 Class:
  - Mon Sep 14: strings/regular expressions demo and group work
+ - Wed Sep 16: TBD
+ - Fri Sep 18: TBD
 
 Assignments:
  - Mon Sep 14, 10 am: regex practice problems and string processing tutorial questions
- - *Fri Sep 18, 10 am: PS 2*
+ - (tentative) *Fri Sep 18, 10 am: PS 2*
 
 
 

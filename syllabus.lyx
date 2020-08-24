@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -29,6 +29,9 @@
 
 
 \makeatother
+% Added by lyx2lyx
+\renewcommand{\textendash}{--}
+\renewcommand{\textemdash}{---}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -46,8 +49,6 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype false
-\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -77,7 +78,6 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
-\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -86,10 +86,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\is_math_indent 0
-\math_numbering_side default
-\quotes_style english
-\dynamic_quotes 0
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -158,7 +155,6 @@ Informal prerequisites: If you are not a statistics or biostatistics graduate
 LatexCommand href
 name "available here"
 target "https://github.com/berkeley-scf/r-bootcamp-fall-2020/archive/master.zip"
-literal "false"
 
 \end_inset
 
@@ -215,11 +211,7 @@ Instructor:
 
 \begin_deeper
 \begin_layout Itemize
-Chris Paciorek
-\begin_inset Newline newline
-\end_inset
-
-e-mail: paciorek@stat.berkeley.edu 
+Chris Paciorek (paciorek@stat.berkeley.edu)
 \end_layout
 
 \end_deeper
@@ -233,7 +225,7 @@ GSI
 
 \begin_deeper
 \begin_layout Itemize
-Zoe Vernon
+Zoe Vernon (zoe_vernon@berkeley.edu)
 \end_layout
 
 \end_deeper
@@ -293,7 +285,7 @@ Some (but not all) live class sessions on Zoom will be used for group work
 \begin_layout Itemize
 Those not able to attend live class sessions will have the option of watching
  the video separately but will still need to turn in work related to the
- class.
+ class session.
 \end_layout
 
 \begin_layout Standard
@@ -337,6 +329,10 @@ If possible please have your video on during class sessions.
 \end_layout
 
 \begin_layout Itemize
+
+\end_layout
+
+\begin_layout Itemize
 If you have concerns about being recorded in the Zoom sessions, please let
  me know so we can discuss how you can avoid being recorded.
  
@@ -367,7 +363,6 @@ Github for course content:
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com/berkeley-stat243/stat243-fall-2020"
-literal "false"
 
 \end_inset
 
@@ -380,7 +375,6 @@ SCF tutorials for additional content:
 \begin_inset CommandInset href
 LatexCommand href
 target "https://statistics.berkeley.edu/computing/training/tutorials"
-literal "false"
 
 \end_inset
 
@@ -405,7 +399,6 @@ bCourses site for course recordings, Zoom links, and possibly some other
 LatexCommand href
 name "https://bcourses.berkeley.edu/courses/1497598"
 target "https://bcourses.berkeley.edu/courses/1497598"
-literal "false"
 
 \end_inset
 
@@ -513,7 +506,6 @@ For bash: Newham, Cameron and Rosenblatt, Bill.
 \begin_inset CommandInset href
 LatexCommand href
 target "http://uclibs.org/PID/77225"
-literal "false"
 
 \end_inset
 
@@ -535,7 +527,6 @@ Adler, Joseph; R in a Nutshell (available electronically through OskiCat:
 \begin_inset CommandInset href
 LatexCommand href
 target "http://uclibs.org/PID/151634"
-literal "false"
 
 \end_inset
 
@@ -548,7 +539,6 @@ Wickham, Hadley: Advanced R:
 LatexCommand href
 name "http://adv-r.had.co.nz/"
 target "http://adv-r.had.co.nz/"
-literal "false"
 
 \end_inset
 
@@ -567,7 +557,6 @@ Gentle, James.
 \begin_inset CommandInset href
 LatexCommand href
 target "http://dx.doi.org/10.1007/978-0-387-98144-4"
-literal "false"
 
 \end_inset
 
@@ -605,7 +594,6 @@ Chambers, John; Software for Data Analysis: Programming with R (available
 \begin_inset CommandInset href
 LatexCommand href
 target "http://dx.doi.org/10.1007/978-0-387-75936-4"
-literal "false"
 
 \end_inset
 
@@ -619,7 +607,6 @@ Xie, Yihui; Dynamic documents with R and knitr.
 LatexCommand href
 name "electronically through Oskicat"
 target "http://oskicat.berkeley.edu/search~S1?/tDynamic+documents+with+R+and+knitr/tdynamic+documents+with+r+and+knitr/1%2C1%2C4%2CB/frameset&FF=tdynamic+documents+with+r+and+knitr&3%2C%2C4"
-literal "false"
 
 \end_inset
 
@@ -633,7 +620,6 @@ Nolan, Deborah and Temple Lang, Duncan.
 \begin_inset CommandInset href
 LatexCommand href
 target "https://link.springer.com/book/10.1007%2F978-1-4614-7900-0"
-literal "false"
 
 \end_inset
 
@@ -646,7 +632,6 @@ The R-intro and R-lang documentation.
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.cran.r-project.org/manuals.html"
-literal "false"
 
 \end_inset
 
@@ -659,7 +644,6 @@ Murrell, Paul; R Graphics, 2nd ed.
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.stat.auckland.ac.nz/~paul/RG2e/"
-literal "false"
 
 \end_inset
 
@@ -672,7 +656,6 @@ Murrell, Paul; Introduction to Data Technologies.
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.stat.auckland.ac.nz/~paul/ItDT/"
-literal "false"
 
 \end_inset
 
@@ -707,7 +690,6 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 target "https://link.springer.com/book/10.1007%2Fb98850"
-literal "false"
 
 \end_inset
 
@@ -735,7 +717,6 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 target "http://dx.doi.org/10.1017/CBO9780511977176"
-literal "false"
 
 \end_inset
 
@@ -1330,7 +1311,6 @@ units
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com/berkeley-stat243/stat243-fall-2019"
-literal "false"
 
 \end_inset
 
