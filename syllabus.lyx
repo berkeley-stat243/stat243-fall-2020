@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -29,9 +29,6 @@
 
 
 \makeatother
-% Added by lyx2lyx
-\renewcommand{\textendash}{--}
-\renewcommand{\textemdash}{---}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -49,6 +46,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -78,6 +77,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -86,7 +86,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -147,7 +150,7 @@ Informal prerequisites: If you are not a statistics or biostatistics graduate
  not assume familiarity with the UNIX-style command line/terminal/shell).
  Furthermore, I'm expecting you will know the basics of R, at the level
  of the Modules 1-5 in the R bootcamp offered Aug.
- 10-13, 2019.
+ 10-13, 2020.
  If you don't have that background you'll need to spend time in the initial
  couple weeks getting up to speed.
  All the material from the bootcamp is 
@@ -155,14 +158,18 @@ Informal prerequisites: If you are not a statistics or biostatistics graduate
 LatexCommand href
 name "available here"
 target "https://github.com/berkeley-scf/r-bootcamp-fall-2020/archive/master.zip"
+literal "false"
 
 \end_inset
 
-, we'll have a hands-on practice session in Lab 0 on Friday August 28, and
- the GSI can also provide assistance.
+ (plus I can give you access to the bootcamp videos), we'll have a hands-on
+ practice session in Lab 0 on Friday August 28, and the GSI can also provide
+ assistance.
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 DISCLAIMER: Given the evolving situation, we may need to adjust some of
  the approaches and policies stated here, but I will try to be very clear
  if/when I do this.
@@ -261,8 +268,8 @@ Given the virtual context, class sessions will be somewhat different than
 \begin_layout Standard
 Each unit has a set of notes and demo code that will form the basis of the
  instruction for that unit.
- For some material, we will make use of tutorials provided by the SCF (if
- I refer to a 'tutorial', you'll need to find it on the SCF link above).
+ For some material, we will make use of tutorials provided by the SCF (see
+ link below).
 \end_layout
 
 \begin_layout Itemize
@@ -272,9 +279,9 @@ I will assign reading and pre-recorded videos for each unit.
 \end_layout
 
 \begin_layout Itemize
-Some (but not all) live class sessions on Zoom will be used for group work
- on problems, discussion, and presentation of topics benefiting from the
- live format.
+Some (but not all) class sessions will be live on Zoom, focused on presentation
+ of topics benefiting from the live format, group work on problems, and
+ discussion.
  All of the main sessions (but not breakout groups) will be recorded for
  anyone in the class (but not anyone else) to view later.
  In some class sessions you will be asked to work on a group problem and
@@ -299,11 +306,7 @@ My goal is to have the class sessions that we do hold live be an interactive
 \end_layout
 
 \begin_layout Standard
-Please do your best to stay focused during class time and section group
- work (I know this can be hard).
- I ask that you leave your phone elsewhere and keep other windows/apps on
- your computer closed.
- 
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -324,18 +327,32 @@ We'll experiment with having text-based questions in Piazza during class
 
 \begin_layout Itemize
 If possible please have your video on during class sessions.
- Unless absolutely necessary, please have your video on when working in
- a group or asking me a question.
+ Unless absolutely necessary not to, please have your video on when working
+ in a group or asking me a question.
 \end_layout
 
 \begin_layout Itemize
-
+Please do your best to stay focused during class time and section group
+ work (I know this can be hard).
+ 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+I ask that you leave your phone elsewhere and keep other windows/apps on
+ your computer closed or out of your direct view.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 If you have concerns about being recorded in the Zoom sessions, please let
  me know so we can discuss how you can avoid being recorded.
  
+\end_layout
+
+\begin_layout Itemize
+If you have trouble accessing a Zoom session or don't see me there, please
+ check Piazza for updates.
 \end_layout
 
 \begin_layout Standard
@@ -363,6 +380,7 @@ Github for course content:
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com/berkeley-stat243/stat243-fall-2020"
+literal "false"
 
 \end_inset
 
@@ -375,6 +393,7 @@ SCF tutorials for additional content:
 \begin_inset CommandInset href
 LatexCommand href
 target "https://statistics.berkeley.edu/computing/training/tutorials"
+literal "false"
 
 \end_inset
 
@@ -386,6 +405,7 @@ Piazza site for discussions/Q&A (also linked from bCourses):
 \begin_inset CommandInset href
 LatexCommand href
 target "https://piazza.com/berkeley/fall2020/stat243"
+literal "false"
 
 \end_inset
 
@@ -394,22 +414,29 @@ target "https://piazza.com/berkeley/fall2020/stat243"
 
 \begin_layout Itemize
 bCourses site for course recordings, Zoom links, and possibly some other
- materials: 
+ materials:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset CommandInset href
 LatexCommand href
 name "https://bcourses.berkeley.edu/courses/1497598"
 target "https://bcourses.berkeley.edu/courses/1497598"
+literal "false"
 
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 Gradescope for assignments (also linked from bCourses): 
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.gradescope.com/courses/166974"
+literal "false"
 
 \end_inset
 
@@ -441,7 +468,7 @@ We will use the course Piazza site for communication (announcements, questions,
 \end_layout
 
 \begin_layout Standard
-In addition, we will use gradeScope for viewing grades [CHECK THIS].
+In addition, we will use Gradescope for viewing grades.
 \end_layout
 
 \begin_layout Standard
@@ -506,6 +533,7 @@ For bash: Newham, Cameron and Rosenblatt, Bill.
 \begin_inset CommandInset href
 LatexCommand href
 target "http://uclibs.org/PID/77225"
+literal "false"
 
 \end_inset
 
@@ -527,6 +555,7 @@ Adler, Joseph; R in a Nutshell (available electronically through OskiCat:
 \begin_inset CommandInset href
 LatexCommand href
 target "http://uclibs.org/PID/151634"
+literal "false"
 
 \end_inset
 
@@ -539,6 +568,7 @@ Wickham, Hadley: Advanced R:
 LatexCommand href
 name "http://adv-r.had.co.nz/"
 target "http://adv-r.had.co.nz/"
+literal "false"
 
 \end_inset
 
@@ -557,6 +587,7 @@ Gentle, James.
 \begin_inset CommandInset href
 LatexCommand href
 target "http://dx.doi.org/10.1007/978-0-387-98144-4"
+literal "false"
 
 \end_inset
 
@@ -569,6 +600,7 @@ Gentle, James.
 \begin_inset CommandInset href
 LatexCommand href
 target "https://link-springer-com.libproxy.berkeley.edu/book/10.1007%2F978-3-319-64867-5"
+literal "false"
 
 \end_inset
 
@@ -576,6 +608,7 @@ target "https://link-springer-com.libproxy.berkeley.edu/book/10.1007%2F978-3-319
 \begin_inset CommandInset href
 LatexCommand href
 target "https://link-springer-com.libproxy.berkeley.edu/chapter/10.1007/978-1-4612-0623-1_1"
+literal "false"
 
 \end_inset
 
@@ -594,6 +627,7 @@ Chambers, John; Software for Data Analysis: Programming with R (available
 \begin_inset CommandInset href
 LatexCommand href
 target "http://dx.doi.org/10.1007/978-0-387-75936-4"
+literal "false"
 
 \end_inset
 
@@ -607,6 +641,7 @@ Xie, Yihui; Dynamic documents with R and knitr.
 LatexCommand href
 name "electronically through Oskicat"
 target "http://oskicat.berkeley.edu/search~S1?/tDynamic+documents+with+R+and+knitr/tdynamic+documents+with+r+and+knitr/1%2C1%2C4%2CB/frameset&FF=tdynamic+documents+with+r+and+knitr&3%2C%2C4"
+literal "false"
 
 \end_inset
 
@@ -620,6 +655,7 @@ Nolan, Deborah and Temple Lang, Duncan.
 \begin_inset CommandInset href
 LatexCommand href
 target "https://link.springer.com/book/10.1007%2F978-1-4614-7900-0"
+literal "false"
 
 \end_inset
 
@@ -632,6 +668,7 @@ The R-intro and R-lang documentation.
 \begin_inset CommandInset href
 LatexCommand href
 target "https://www.cran.r-project.org/manuals.html"
+literal "false"
 
 \end_inset
 
@@ -644,6 +681,7 @@ Murrell, Paul; R Graphics, 2nd ed.
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.stat.auckland.ac.nz/~paul/RG2e/"
+literal "false"
 
 \end_inset
 
@@ -656,6 +694,7 @@ Murrell, Paul; Introduction to Data Technologies.
 \begin_inset CommandInset href
 LatexCommand href
 target "http://www.stat.auckland.ac.nz/~paul/ItDT/"
+literal "false"
 
 \end_inset
 
@@ -690,6 +729,7 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 target "https://link.springer.com/book/10.1007%2Fb98850"
+literal "false"
 
 \end_inset
 
@@ -717,6 +757,7 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 target "http://dx.doi.org/10.1017/CBO9780511977176"
+literal "false"
 
 \end_inset
 
@@ -868,7 +909,7 @@ both
 
 \begin_deeper
 \begin_layout Enumerate
-A PDF submitted electronically through gradeScope, generally (but not always)
+A PDF submitted electronically through Gradescope, generally (but not always)
  
 \series bold
 by the start of class (10 am)
@@ -977,7 +1018,8 @@ For components #1 and #3, many of you will get a score of 2 for some problem
 \begin_layout Standard
 Your total score for the PS is a weighted sum of the scores for the three
  components.
- If you turn in a PS late, I'll bump you down by two points.
+ If you turn in a PS late, I'll bump you down by two points (out of the
+ available).
  If you turn it in really late (i.e., after we start grading them), I will
  bump you down by four points.
  No credit after solutions are distributed.
@@ -1311,12 +1353,12 @@ units
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com/berkeley-stat243/stat243-fall-2019"
+literal "false"
 
 \end_inset
 
 .
- Material will be quite similar, except that I've shifted the order of some
- of the initial units (in particular moving the bash unit back a bit).
+ 
 \end_layout
 
 \end_body
