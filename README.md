@@ -3,9 +3,7 @@ This repository holds course materials for the fall 2020 offering of Statistics 
 
 If you would like to audit the class, enroll as a UC Berkeley undergraduate, or enroll as a concurrent enrollment student (i.e., for visiting students), or for some other reason are not enrolled, please fill out [this survey](https://forms.gle/j5KP7TwGgHGYQZHt8) as soon as possible. All those enrolled or wishing to take the class should have filled it out by Friday, August 28 at 5 pm.
 
-This site is UNDER CONSTRUCTION.
-
-You can view the [(DRAFT) syllabus here](https://github.com/berkeley-stat243/stat243-fall-2020/blob/master/syllabus.pdf).
+You can view the [syllabus here](https://github.com/berkeley-stat243/stat243-fall-2020/blob/master/syllabus.pdf).
 
 ## Course content
 
