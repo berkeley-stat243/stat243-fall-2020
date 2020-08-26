@@ -50,7 +50,7 @@ Assignments:
  - Fri Aug 28: fill out [class survey](https://forms.gle/ZPvuDmQSw4YoRGVJ9)
 
 Lab:
- - (REQUIRED) Meet Chris in small groups for 5 minutes (sign up [here (UNDER CONSTRUCTION)](xyz.com)). 
+ - (REQUIRED) Meet Chris in small groups for 10 minutes (sign up [here](https://calendar.google.com/calendar/selfsched?sstoken=UU9PYnFKdFk4YUhhfGRlZmF1bHR8NDJmMzM4MDc1YjM1NjliNzNkYzExOWFhMzljZGY3ODU)).
  - (OPTIONAL) R and basic UNIX practice
 
 **Week 2**
