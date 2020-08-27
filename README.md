@@ -59,7 +59,7 @@ Class:
  - Fri Sep 4 (live): bash shell demo
 
 Assignments:
- - Mon Aug 31, 10 am: Unit 2 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8151392).
+ - Mon Aug 31, 10 am: Unit 2 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8151392)).
  - Wed Sep 2 (OPTIONAL): suggested day to have completed optional UNIX problems (see SCF Basics of UNIX tutorial)
  - Fri Sep 4 (OPTIONAL): suggested day to have completed R catch-up (see [R Bootcamp](https://github.com/berkeley-scf/r-bootcamp-fall-2020) Modules 1-5 and Week 1 section materials)
 
