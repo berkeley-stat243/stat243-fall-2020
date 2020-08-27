@@ -18,15 +18,21 @@ There are a bit over a 100 words that I am providing. So you should be able to p
 
 Every person should obtain the necessary code by running the following in R.
 
+```
 load(url("https://bit.ly/3j1bHDs"))
+```
 
 The presenter starts her or his turn by setting the random number seed so she/he gets random words:
 
+```
 set.seed(1)
+```
 
 Then each time you need to get a word, run:
 
+```
 next_word()
+```
 
 The other team should be running the same code, with the same random number seed, so they can see the forbidden words. Of course the presenter’s teammates should not run the code!
 
