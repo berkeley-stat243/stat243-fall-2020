@@ -2241,8 +2241,7 @@ resources
 , which might be a Facebook account or a database of stock quotes.
  The resource may return information in the form of an HTML file or JSON,
  CSV or something else.
- REST generally uses XML or JSON as the format for the request (if not a
- simple GET request) and what is returned.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2253,7 +2252,7 @@ Often the format of the request is a URL (aka an endpoint) plus a query
 \begin_layout Standard
 \begin_inset CommandInset href
 LatexCommand href
-target "https://itunes.appl.com/search?country=US&term=purple+rain"
+target "https://itunes.apple.com/search?country=US&term=purple+rain"
 
 \end_inset
 
@@ -2298,8 +2297,8 @@ target "http://datahelpdesk.worldbank.org/knowledgebase"
  Following that documentation we can download monthly average precipitation
  predictions for 2080-2099 for the US (ISO3 code `USA') based on global
  climate model simulations.
- In this case what the World Bank refers to as the REST-based query is simply
- constructing a straightforward URL.
+ In this case our REST-based query is simply constructing a straightforward
+ URL.
  
 \end_layout
 
@@ -2348,7 +2347,7 @@ The Nolan and Temple Lang book provides a number of examples of different
 Finally, some web services allow us to pass information to the service in
  addition to just getting data or information.
  E.g., you can programmatically interact with your Facebook, Dropbox, and
- Google Drive accounts using REST based on HTTP POST, PUT, and DELETE.
+ Google Drive accounts using REST based on HTTP POST, PUT, and DELETE requests.
  Authentication is of course important in these contexts and some times
  you would first authenticate with your login and password and receive a
  
@@ -2377,7 +2376,11 @@ target "https://docs.github.com/en/rest/reference/repos"
 
 \end_inset
 
-.
+ using the 
+\emph on
+requests
+\emph default
+ package.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2427,9 +2430,10 @@ by hand
 \end_layout
 
 \begin_layout Standard
-In this case, we can't see the full URL that is being used.
- More generally, rather than looking at the URL associated with a link we
- may need to view the actual HTTP request sent by our browser to the server.
+In this case, we can't see the full URL that is being used because there's
+ some Javascript involved.
+ Therefore, rather than looking at the URL associated with a link we need
+ to view the actual HTTP request sent by our browser to the server.
  We can do this using features of the browser (e.g., in Firefox see 
 \family typewriter
 Web Developer -> Network
@@ -2441,6 +2445,14 @@ More tools -> Developer tools
  
 \family typewriter
 -> Network
+\family default
+) (or right-click on the webpage and select 
+\family typewriter
+Inspect
+\family default
+ and then 
+\family typewriter
+Network
 \family default
 ).
  Based on this we can see that an HTTP GET request is being used with a
@@ -2459,11 +2471,9 @@ target "http://data.un.org/Handlers/DownloadHandler.ashx?DataFilter=itemCode:526
 \end_layout
 
 \begin_layout Standard
-The stuff at the end of the URL specifies inputs passed to the server separated
- by `&', in this case relating to the itemCode, dates, output format, etc.
- So we could more easily download the data using that URL, which we can
- fairly easily construct using string processing in bash, R, or Python,
- such as this:
+We'e now able to easily download the data using that URL, which we can fairly
+ easily construct using string processing in bash, R, or Python, such as
+ this:
 \end_layout
 
 \begin_layout Standard
@@ -2482,7 +2492,16 @@ status open
 
 \end_inset
 
+So, what have we achieved?
+\end_layout
 
+\begin_layout Enumerate
+We have a reproducible workflow we can share with others (perhaps ourself
+ in the future).
+\end_layout
+
+\begin_layout Enumerate
+We can automate the process of downloading many such files.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2508,7 +2527,11 @@ raw
 GET()
 \emph default
 , followed by writing to disk and reading back in, as follows (for some
- reason knitr won't print the output...):
+ reason 
+\emph on
+knitr
+\emph default
+ won't print the output...):
 \end_layout
 
 \begin_layout Standard
@@ -2758,16 +2781,6 @@ senators = api.lists.members(owner_screen_name="gov", slug="us-senate", count=10
 
 \begin_layout Plain Layout
 
-with open("senators-list.json", "w") as f:
-\end_layout
-
-\begin_layout Plain Layout
-
-    json.dump(senators, f, indent=4, sort_keys=True)
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2788,6 +2801,25 @@ timelines = [api.statuses.user_timeline(screen_name=name, count = 500)
 \begin_layout Plain Layout
 
              for name in names]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# save information out to JSON
+\end_layout
+
+\begin_layout Plain Layout
+
+with open("senators-list.json", "w") as f:
+\end_layout
+
+\begin_layout Plain Layout
+
+    json.dump(senators, f, indent=4, sort_keys=True)
 \end_layout
 
 \begin_layout Plain Layout
