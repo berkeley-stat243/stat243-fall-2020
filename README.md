@@ -60,6 +60,7 @@ Class:
 
 Assignments:
  - Mon Aug 31, 10 am: Unit 2 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8151392)).
+ - Tue Sep 1, 5 pm: Login to github.berkeley.edu with your Calnet credentials (that's all you have to do). Also fill out this survey so we can set office hours.
  - Wed Sep 2 (OPTIONAL): suggested day to have completed optional UNIX problems (see SCF Basics of UNIX tutorial)
  - Fri Sep 4 (OPTIONAL): suggested day to have completed R catch-up (see [R Bootcamp](https://github.com/berkeley-scf/r-bootcamp-fall-2020) Modules 1-5 and Week 1 section materials)
 
