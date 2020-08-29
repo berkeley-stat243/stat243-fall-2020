@@ -55,7 +55,7 @@ Lab:
 
 Class:
  - Mon Aug 31 (live): webscraping demo
- - Wed Sep 2 (OPTIONAL, live): group work on bash tutorial problems
+ - Wed Sep 2 (OPTIONAL, live): group work on bash tutorial problems (see SCF Using the Bash Shell tutorial)
  - Fri Sep 4 (live): bash shell demo
 
 Assignments:
@@ -73,8 +73,8 @@ Class:
  - Fri Sep 11: no class
 
 Assignments:
- - Wed Sep 7, 10 am: bash tutorial problems (recommended to do at least some by Fri Sep 4, 10 am)
- - *Fri Sep 9, 5 pm: PS 1*
+ - Wed Sep 9, 10 am: bash tutorial problems (recommended to do at least some by Fri Sep 4, 10 am)
+ - *Fri Sep 11, 5 pm: PS 1*
 
 **Week 4**
 
