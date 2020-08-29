@@ -42,7 +42,7 @@ We will use the [course Piazza site](https://piazza.com/berkeley/fall2020/stat24
 
 Class:
  - Wed Aug 26 (live): general introduction, basic UNIX demo
- - Fri Aug 28 (OPTIONAL, live): game event to get to know each other
+ - Fri Aug 28 (OPTIONAL, live): [game event](./units/class2-taboo-game.md) to get to know each other
 
 Assignments:
  - Fri Aug 28: fill out [class survey](https://forms.gle/ZPvuDmQSw4YoRGVJ9)
