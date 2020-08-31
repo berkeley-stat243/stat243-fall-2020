@@ -1,0 +1,71 @@
+---
+title: "UNIX practice solutions"
+output: html_document
+author: Zoe Vernon 
+date: 08/29/2020
+---
+
+```{r setup, include = FALSE}
+# set bash as default
+knitr::opts_chunk$set(engine='bash') 
+```
+
+
+## 1. 
+
+```{r problem1}
+mkdir -p projects/drought
+```
+
+## 2. 
+```{r problem2}
+ls -lrS 
+```
+
+## 3. 
+First we need to clone the repository, then we can adjust the permissions on the file.  
+```{r problem3}
+git clone https://github.com/berkeley-stat243/stat243-fall-2018
+cd stat243-fall-2018/units
+ls -l unit2-bash.sh
+```
+
+Note, the file is already readable by the user and the group.  We remove the readability for other. The file is already writable by the user.  We add excuting permission for all.  
+```{r problem3.2}
+cd stat243-fall-2018/units
+chmod o-r unit2-bash.sh
+chmod ugo+x unit2-bash.sh
+ls -l unit2-bash.sh
+```
+
+## 4. 
+.zip file is larger
+```{r problem4, results = "hide"}
+zip -r stat243-fall-2018.zip stat243-fall-2018
+tar -cvzf stat243-fall-2018.tar stat243-fall-2018
+```
+
+```{r problem5.2}
+# removing 2018 folder
+rm -rf stat243-fall-2018/
+ls -lS 
+```
+
+## 5. 
+```{r problem5}
+df -m
+```
+
+## 6. 
+```{r problem6}
+which ls
+```
+
+## 7. 
+```{r problem7}
+which grep
+```
+
+```{r problem7.2}
+ls /usr/bin
+```
