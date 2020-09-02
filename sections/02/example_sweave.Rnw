@@ -1,0 +1,57 @@
+\documentclass[english]{article}
+
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=magenta,
+}
+\usepackage{float}
+
+\begin{document}
+\bibliographystyle{plain}
+
+\title{Example R Sweave document}
+
+
+\author{Zoe Vernon}
+\date{\today}
+
+\maketitle
+\section{Introduction}
+R Sweave is a file format that allows you to render PDF's the knit together code chunks and text in the form of \LaTeX~document.   This document can be used as a template if you choose to use this format for your homeworks.  
+
+To get better formatted output go to RStudio menu and choose Preferences.  Once you are in the Preferences window choose the Sweave tab and change the Weave Rnw files from Sweave to knitr.  
+
+You will need to have \LaTeX~downloaded on your computer to compile the PDF (done by clicking the \textbf{Compile PDF} button).
+
+\subsection{Useful links}
+\begin{itemize}
+  \item To [download \LaTeX](https://www.latex-project.org/get/)
+  \item To get a more detailed introduction to \LaTeX~visit this \href{https://www.overleaf.com/learn/latex/Creating_a_document_in_LaTeX}{webpage}.  
+\end{itemize}
+
+\section{Including \texttt{R} code}
+Code chunk options are the same for R Markdown and R Sweave.  
+<<chunk_name, echo = TRUE>>=
+data(cars)
+head(cars)
+@
+
+\subsection{Including figures}
+<<plot, echo = TRUE, message = FALSE, fig.cap = "Test caption", fig.height = 4>>= 
+library(tidyverse)
+ggplot(cars, aes(x = speed, y = dist)) + 
+  geom_point()
+@
+
+\end{document}
