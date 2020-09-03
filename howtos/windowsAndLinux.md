@@ -39,6 +39,7 @@ Once the Linux subsystem feature has been enabled, there are multiple methods to
 1.  Open the **Microsoft Store**
 2.  Search for **Ubuntu**
     -   You're looking for the highest number followed by LTS, currently **20.04 LTS** (or 18.04 LTS is fine too). This is the current long-term-release, meaning it will be supported for the next 5 years.
+    - Some people have had issues installing 20.04, if you run into this issue this [link](https://phpsolved.com/gpg-cant-connect-to-the-agent-ipc-connect-call-failed/) has instructions for a workaround.  
 3.  Click on the tile, then click **Get**, and this should start the installation.
 4.  Follow the prompts to install Ubuntu.
 
