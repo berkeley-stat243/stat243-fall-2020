@@ -1,7 +1,7 @@
 Windows 10 and the Ubuntu Subsystem
 ================
 Jared Bennett
-21 August, 2020
+03 September, 2020
 
 Windows 10 has a powerful new feature that allows a full Linux system to be installed and run from within Windows. This is incredibly useful for building/testing code in Linux, without having a dedicated Linux machine, but it poses strange new behaviors as two very different operating systems coexist in one place. Initially, this document mirrors the [Windows Install](./windowsInstall.md) tutorial, showing you how to install Ubuntu and setting up R, RStudio, and LaTex. Then, we cover some of the issues of running two systems together, starting with finding files, finding the Ubuntu subsystem, and file modifications.
 
@@ -39,7 +39,6 @@ Once the Linux subsystem feature has been enabled, there are multiple methods to
 1.  Open the **Microsoft Store**
 2.  Search for **Ubuntu**
     -   You're looking for the highest number followed by LTS, currently **20.04 LTS** (or 18.04 LTS is fine too). This is the current long-term-release, meaning it will be supported for the next 5 years.
-    - Some people have had issues installing 20.04, if you run into this issue this [link](https://phpsolved.com/gpg-cant-connect-to-the-agent-ipc-connect-call-failed/) has instructions for a workaround.  
 3.  Click on the tile, then click **Get**, and this should start the installation.
 4.  Follow the prompts to install Ubuntu.
 
@@ -49,62 +48,10 @@ After installing Ubuntu, it is advisable to update it. This is something you sho
 2.  Type `sudo apt update` to update your local package database.
 3.  Type `sudo apt upgrade` to upgrade your installed packages.
 
-Installing R on the Linux Subsystem
------------------------------------
+Using the Linux Terminal from R in Windows
+------------------------------------------
 
-The Linux Subsystem behaves exactly like a regular Linux installation, but for completeness, I will provide instructions here for people new to Linux. These instructions are written from the perspective of Ubuntu, but will be similar for other repos.
-
-R is not a part of the standard Ubuntu installation. So, we have to add the repository manually to our repository list. This is relatively straightforward, and R supports several versions of Ubuntu.
-
-**Sources:**
-
--   [CRAN](https://cran.r-project.org/) guide for Ubuntu
--   [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-18-04) quick tutorial
-
-1.  In a bash window, type `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9`
-    -   This adds the key to "sign", or validate, the R repository
-2.  Then, type `sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'`
-    -   `cloud.r-project.org` is the default mirror, however, it is prudent to connect to the mirror closest to you geographically. Berkeley has it's own mirror, so the command with the Berkeley mirror would look like `sudo add-apt-repository 'deb https://cran.r-project.org/bin/linux/ubuntu/bionic-cran40/'`
-3.  Finally, type `sudo apt install r-base`, and press `y` to confirm installation
-4.  To test that it worked, type `R` into the console, and an R session should begin
-    -   Type `q()` to quit the R session
-
-Installing Rstudio on the Linux Subsystem
------------------------------------------
-
-**THIS NO LONGER WORKS**
-As of Rstudio 1.5.x, it does not run on WSL. [Link](https://github.com/rstudio/rstudio/issues/3615#issuecomment-427914311)
-Also possible issues, WSL has no GUI, and therefore can't support anything that uses a GUI.
-These instructions work, but Rstudio doesn't run.
-
-**Sources:**
-
--   [Rstudio](https://www.rstudio.com/products/rstudio/download/#download)
--   [Source](https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt)
-
-1.  Go the the Rstudio website (link above) and download the appropriate Rstudio Desktop version.
-    -   For most people, this is the `Ubuntu 18 (64-bit)` installer.
-    -   Save it somewhere that you can find it.
-    -   You should have a file similar to `rstudio-<version number>-amd64.deb`
-2.  Open a terminal window and navigate to wherever you saved the rstudio install file.
-3.  Type the command `sudo dpkg -i ./rstudio-<version number>-amd64.deb`
-    -   This tells the package installer (`dpkg`) to install (`-i`) the file specified (`./thing.deb`)
-4.  Type the command `sudo apt-get install -f`
-    -   This tells the package manager (`apt-get`) to fix (`-f`) any dependency issues that may have arisen when installing the package.
-5.  Type the command `which rstudio` to make sure the system can find it.
-    -   Output should be similar to `/usr/bin/rstudio`
-6.  Run rstudio from linux by typing `rstudio &`
-    -   The `&` runs it in the background, allowing you to close the terminal window.
-
-Installing LaTeX on the Linux Subsystem
----------------------------------------
-
-LaTeX is a text-markup language used when generating documents from .Rmd files. **Source**
-[LaTeX](https://www.latex-project.org/)
-
-1.  Type `sudo apt-get install texlive-full`, press `y` to confirm installation
-
-Generally, if you want to create and edit R Markdown documents you will also need a text editor to go with your LaTeX installation, but we won't go into that here.
+To get all the functionality of a UNIX-style commandline from within R (e.g., for bash code chunks), you should set the terminal under R in Windows to be the Linux subsystem.
 
 A Note on File Modification
 ---------------------------
@@ -158,3 +105,64 @@ This is slightly more tricky than getting from Linux to Windows. Windows stores 
 
 So, the final path to find your home directory from windows will look like:
 `%userprofile%\AppData\Local\Packages\<Distro-Folder>\LocalStat\rootfs\home\<your-user-name>\`
+
+Installing R on the Linux Subsystem
+-----------------------------------
+
+IMPORTANT: This section is only if you'd like to try using R under Linux. For class, using R under Windows should be fine.
+
+The Linux Subsystem behaves exactly like a regular Linux installation, but for completeness, I will provide instructions here for people new to Linux. These instructions are written from the perspective of Ubuntu, but will be similar for other repos.
+
+R is not a part of the standard Ubuntu installation. So, we have to add the repository manually to our repository list. This is relatively straightforward, and R supports several versions of Ubuntu.
+
+**Sources:**
+
+-   [CRAN](https://cran.r-project.org/) guide for Ubuntu
+-   [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-18-04) quick tutorial
+
+1.  In a bash window, type `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9`
+    -   This adds the key to "sign", or validate, the R repository
+2.  Then, type `sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'`
+    -   `cloud.r-project.org` is the default mirror, however, it is prudent to connect to the mirror closest to you geographically. Berkeley has it's own mirror, so the command with the Berkeley mirror would look like `sudo add-apt-repository 'deb https://cran.r-project.org/bin/linux/ubuntu/bionic-cran40/'`
+3.  Finally, type `sudo apt install r-base`, and press `y` to confirm installation
+4.  To test that it worked, type `R` into the console, and an R session should begin
+    -   Type `q()` to quit the R session
+
+Installing Rstudio on the Linux Subsystem
+-----------------------------------------
+
+**THIS NO LONGER WORKS**
+As of Rstudio 1.5.x, it does not run on WSL. [Link](https://github.com/rstudio/rstudio/issues/3615#issuecomment-427914311)
+Also possible issues, WSL has no GUI, and therefore can't support anything that uses a GUI.
+These instructions work, but Rstudio doesn't run.
+
+**Sources:**
+
+-   [Rstudio](https://www.rstudio.com/products/rstudio/download/#download)
+-   [Source](https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt)
+
+1.  Go the the Rstudio website (link above) and download the appropriate Rstudio Desktop version.
+    -   For most people, this is the `Ubuntu 18 (64-bit)` installer.
+    -   Save it somewhere that you can find it.
+    -   You should have a file similar to `rstudio-<version number>-amd64.deb`
+2.  Open a terminal window and navigate to wherever you saved the rstudio install file.
+3.  Type the command `sudo dpkg -i ./rstudio-<version number>-amd64.deb`
+    -   This tells the package installer (`dpkg`) to install (`-i`) the file specified (`./thing.deb`)
+4.  Type the command `sudo apt-get install -f`
+    -   This tells the package manager (`apt-get`) to fix (`-f`) any dependency issues that may have arisen when installing the package.
+5.  Type the command `which rstudio` to make sure the system can find it.
+    -   Output should be similar to `/usr/bin/rstudio`
+6.  Run rstudio from linux by typing `rstudio &`
+    -   The `&` runs it in the background, allowing you to close the terminal window.
+
+Installing LaTeX on the Linux Subsystem
+---------------------------------------
+
+IMPORTANT: This section is only if you'd like to try using LaTeX under Linux. For class, using LaTeX (or R Markdown) under Windows should be fine.
+
+LaTeX is a text-markup language used when generating documents from .Rmd files. **Source**
+[LaTeX](https://www.latex-project.org/)
+
+1.  Type `sudo apt-get install texlive-full`, press `y` to confirm installation
+
+Generally, if you want to create and edit R Markdown documents you will also need a text editor to go with your LaTeX installation, but we won't go into that here.
