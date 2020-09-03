@@ -76,7 +76,7 @@ Lab: Git and R Markdown introduction, problem set requirements/submission tools
 Class:
  - Mon Sep 7: no class (holiday)
  - Wed Sep 9 (live): bash challenge problems group work
- - Fri Sep 11: no class
+ - Fri Sep 11: TBD: possibly finish bash challenge problems; possibly no class
 
 Assignments:
  - Wed Sep 9, 10 am: bash tutorial problems (recommended to do at least some by Fri Sep 4, 10 am)
