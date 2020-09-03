@@ -44,12 +44,17 @@ echo $nfields
 ## alternatively, we can use `bc`
 nfields=$(echo "${nfields}+1" | bc)
 
-## @knitr mission3             
+## @knitr mission3
 cd ../units
-grep -l 'example.pdf' unit3-dataIO.R
+grep -l 'example.pdf' unit13-graphics.R
+ls -tr *.R
+## if unit13-graphics.R is not amongst the 5 most recently used,
+## let's artificially change the timestamp so it is recently used.
+touch unit13-graphics.R
+
 ls -tr *.R | tail -n 5
 ls -tr *.R | tail -n 5 | grep pdf
-ls -tr *.R | tail -n 5 | grep optim
+ls -tr *.R | tail -n 5 | grep "13-gr"
 ls -tr *.R | tail -n 5 | xargs grep 'example.pdf'
 ls -tr *.R | tail -n 5 | xargs grep -l 'example.pdf'
 ## here's how we could do it by explicitly passing the file names
@@ -92,7 +97,7 @@ unique packages we will install."
 
 ## @knitr mission5a               -
 Rscript -e "pkgs <- scan('libs.txt', what = 'character'); \
-install.packages(pkgs, repos = 'https://cran.cnr.berkeley.edu')"
+install.packages(pkgs, repos = 'https://cran.r-project.org')"
 
 ## @knitr mission6             
 echo "Sys.sleep(1e5)" > job.R 
