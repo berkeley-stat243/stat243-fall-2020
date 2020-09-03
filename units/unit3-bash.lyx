@@ -546,8 +546,16 @@ grep
 \series bold
 Our fourth mission
 \series default
-: automate the process of determining what R packages are used in all of
- the R code here and install those packages on a new machine.
+: write a function that will move the most recent 
+\emph on
+n
+\emph default
+ files in your Downloads directory to another directory.
+\end_layout
+
+\begin_layout Standard
+In general, we want to start with a specific case, and then generalize to
+ create the function.
 \end_layout
 
 \begin_layout Standard
@@ -574,35 +582,12 @@ mission4
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-mission4a
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 Our fifth mission
 \series default
-: suppose I've accidentally started a bunch of jobs (perhaps with a for
- loop in bash!) and need to kill them.
+: automate the process of determining what R packages are used in all of
+ the R code here and install those packages on a new machine.
 \end_layout
 
 \begin_layout Standard
@@ -639,6 +624,61 @@ status open
 
 \begin_layout Plain Layout
 mission5a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Our sixth mission
+\series default
+: suppose I've accidentally started a bunch of jobs (perhaps with a for
+ loop in bash!) and need to kill them.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+mission6
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+mission6a
 \end_layout
 
 \end_inset
