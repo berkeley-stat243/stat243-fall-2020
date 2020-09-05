@@ -22,10 +22,10 @@ Instructor office hours:
   - Chris (in class Zoom): 
      - Mondays, 2:30-3:30 pm
      - Tuesdays, 7:30-9:00 am
-     - Wednesdays, 5:00-6:00 pm
      - Thursdays, 10:30-11:30 am
      - Thursdays, 6:00-7:00 pm
   - Zoe (in section Zoom): 
+     - Wednesdays, 5:00-6:00 pm
      - Fridays, 1:10-2:10 pm
      - Fridays, informally after 2:40-3:10 pm lab section (show up right after lab)
 
