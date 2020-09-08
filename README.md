@@ -76,7 +76,7 @@ Lab: Git and R Markdown introduction, problem set requirements/submission tools
 Class:
  - Mon Sep 7: no class (holiday)
  - Wed Sep 9 (live): bash challenge problems group work
- - Fri Sep 11: no class; please work on the regular expression/string processing material assigned for Monday Sep 14
+ - Fri Sep 11: no class; please work on the regular expression/string processing material assigned for Monday Sep 14. I'll be available on the class Zoom during class time for questions.
 
 Assignments:
  - Wed Sep 9, 10 am: bash tutorial problems (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8157938))
@@ -90,7 +90,7 @@ Class:
  - Fri Sep 18: TBD
 
 Assignments:
- - Mon Sep 14, 10 am: regex practice problems and string processing tutorial reading 
+ - Mon Sep 14, 10 am: regex practice problems and string processing tutorial reading (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8162505)
  - (tentative) *Fri Sep 18, 10 am: PS 2*
 
 
