@@ -1,0 +1,9 @@
+{
+	"github_base_uri": "https://github.berkeley.edu/api/v3",
+	"orgs": {
+		"stat243-fall-2020": {
+			"admins": ["paciorek"],
+			"team": "all"
+        }
+    }
+}

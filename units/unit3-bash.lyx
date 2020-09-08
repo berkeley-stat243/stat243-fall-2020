@@ -702,7 +702,7 @@ First challenge
 \begin_layout Standard
 Consider the file 
 \emph on
-unit4-bash.sh
+unit3-bash.sh
 \emph default
 .
  How would you write a shell command that returns "There are 2 occurrences
