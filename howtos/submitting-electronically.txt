@@ -70,7 +70,7 @@ When we pull from your repository, our code will be assuming the following struc
 your_repo/
 ├── ps1/
 │   ├── ps1.pdf
-│   ├── ps1.rmd (.rtex, .rnw, .lyx, .tex, .r)
+│   ├── ps1.Rmd (.Rtex, .rnw, .lyx, .tex, .R)
 ├── ps2/
 │   ├── ...
 ├── ...
