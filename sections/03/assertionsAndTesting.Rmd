@@ -208,10 +208,15 @@ The `testthat` package provides a framework for writing and performing tests in 
 
 ## `testthat` example
 To understand how `testthat` works, we will consider the `standardize()`
-function, which takes a vector `x`, subtracts the mean of the vector, and then divides by the standard deviation.  
+function, which takes a vector `x`, subtracts the mean of the vector, and then divides by the standard deviation.  Notice the assertions in the function checking pre-conditions! 
 
 ```{r, eval = TRUE}
 standardize <- function(x, na.rm = FALSE) {
+  # assertions on input
+  assert_that(is.vector(x))
+  assert_that(is.flag(na.rm))
+  
+  # do computation
   z <- (x - mean(x, na.rm = na.rm)) / sd(x, na.rm = na.rm)
   return(z)
 }
@@ -405,3 +410,28 @@ test_file("tests/tests-standardize-wrong.R")
 ```
 
 Here we see that 3 tests failed, namely that our output is not equal to the value that we expect it to be.  This allows us to go back to the function and assess what may be going wrong.  
+
+# Practice problems 
+
+Although it is not required to code in this manner, we are going to practice working in a test-driven format.  It is a coding practice where you first write the tests, then write a function that will pass those tests, and update the function and tests as needed.   Coding in this way is called [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development).  
+
+Suppose we want to write a function `calculator(x, y, method)` that takes in two numbers `x` and `y` as well as a string `method` indicating whether to perform addition, subtraction, multiplication, or division.  This function should return a numeric value.  
+
+1. Write a test that checks whether `calculator` returns an error when `x` and `y` are not numeric and when `method` is not in the expected set of operations (i.e. addition, subtraction, multiplication, and division).  Save these tests in a file called `tests-calculator.R`.  
+
+2. Start writing your `calculator` function with assertions that produces errors if `x` or `y` are not numeric or when `method` is not in the expected set of operations.  You can choose what you expect the user to call each operation in the function.  Save this function as `calculator.R`
+
+3. Use the `test_files("tests-calculator.R")` to see if your function is operating as you hope. 
+
+4. Write a test that checks whether the addition piece of your calculator produces the correct results with the following input: 
+  a. `x = 1` and `y = 9`
+  b.  `x = 100`, `y = -5`
+  c. `calculator` returns a numeric value
+Save these tests in a file called `tests-calculator.R`.  
+
+5. Add the addition functionality to `calculator()` and call `test_files("tests-calculator.R")` again.  
+
+6. Continue iterating through this process for substraction, multiplication, and division.  Make sure your function elegantly handles division when the demoninator is 0 with an assertion and with testing.
+
+7.  If you have time, add new functionality to your calulator (e.g. square root).  
+
