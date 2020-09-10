@@ -141,8 +141,7 @@ validate_that(is.string(c("a", "b")))
 
 ### Writing Your Own Assertions
 
-You can also write you own assertions with custom error messages.  This is done using the 
-`on_failure()` function. Below is an example of how this works: 
+You can also write you own assertions with custom error messages.  There are two ways to do this. The first is using the `on_failure()` function. Below is an example of how this works: 
 
 ```{r, error=TRUE}
 is_odd <- function(x) {
@@ -160,9 +159,14 @@ assert_that(is_odd(2))
 
 Also note theat the assertions from our original `is_odd()` function flow through the function call from `on_failure()`, so we still get the appropriate error messages when we pass a non-numeric or vector value to `is_odd()`.  
 
+Another, option is to add a new assertion that checks whether the number is odd and add a custome message directly to the assertion: 
 ```{r, error=TRUE}
-assert_that(is_odd("b"))
-assert_that(is_odd(1:2))
+is_odd2 <- function(x) {
+  assert_that(is.numeric(x), length(x) == 1)
+  assert_that(x %% 2 == 1, msg = paste(x, "is even"))
+  x %% 2 == 1
+}
+assert_that(is_odd2(2))
 ```
 
 ## Testing
@@ -415,23 +419,23 @@ Here we see that 3 tests failed, namely that our output is not equal to the valu
 
 Although it is not required to code in this manner, we are going to practice working in a test-driven format.  It is a coding practice where you first write the tests, then write a function that will pass those tests, and update the function and tests as needed.   Coding in this way is called [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development).  
 
-Suppose we want to write a function `calculator(x, y, method)` that takes in two numbers `x` and `y` as well as a string `method` indicating whether to perform addition, subtraction, multiplication, or division.  This function should return a numeric value.  
+Suppose we want to write a function `calculator(x, y, operation)` that takes in two numbers `x` and `y` as well as a string `operation` indicating whether to perform addition, subtraction, multiplication, or division.  This function should return a numeric value.  
 
-1. Write a test that checks whether `calculator` returns an error when `x` and `y` are not numeric and when `method` is not in the expected set of operations (i.e. addition, subtraction, multiplication, and division).  Save these tests in a file called `tests-calculator.R`.  
+1. Write a test that will check whether `calculator` (which you have not written yet) returns an error when `x` and `y` are not numeric and when `operation` is not in the expected set of operations (i.e. addition, subtraction, multiplication, and division). Save these tests in a file called `tests-calculator.R`.  Hint: use the expectation `expect_error()`.  You may want to write custom error messages in your assertions.  
 
-2. Start writing your `calculator` function with assertions that produces errors if `x` or `y` are not numeric or when `method` is not in the expected set of operations.  You can choose what you expect the user to call each operation in the function.  Save this function as `calculator.R`
+2. Start writing your `calculator` function to pass the tests written in 1).  You the `assertthat` package to produce errors if `x` or `y` are not numeric or when `operation` is not in the expected set of operations.  You can choose what you expect the user to call each operation in the function.  Save this function as `calculator.R`
 
-3. Use the `test_files("tests-calculator.R")` to see if your function is operating as you hope. 
+3. Use the `test_files("tests-calculator.R")` to see if your function is operating as you hope. Note this assumes you are in the directory that holds `tests-calculator.R`.  
 
 4. Write a test that checks whether the addition piece of your calculator produces the correct results with the following input: 
-  a. `x = 1` and `y = 9`
-  b.  `x = 100`, `y = -5`
-  c. `calculator` returns a numeric value
-Save these tests in a file called `tests-calculator.R`.  
+
+    1. `x = 1` and `y = 9`
+    2.  `x = 100`, `y = -5`
+Also, check that the value returned is a scalar.  Save these tests in a file called `tests-calculator.R`.  If you think of any other tests feel free to add them.  
 
 5. Add the addition functionality to `calculator()` and call `test_files("tests-calculator.R")` again.  
 
-6. Continue iterating through this process for substraction, multiplication, and division.  Make sure your function elegantly handles division when the demoninator is 0 with an assertion and with testing.
+6. Continue iterating through this process for substraction, multiplication, and division.  Make sure your function elegantly handles division when the demoninator is 0.
 
 7.  If you have time, add new functionality to your calulator (e.g. square root).  
 
