@@ -69,7 +69,7 @@ Assignments:
  - Wed Sep 2 (OPTIONAL): suggested day to have completed optional UNIX problems (see SCF Basics of UNIX tutorial)
  - Fri Sep 4 (OPTIONAL): suggested day to have completed R catch-up (see [R Bootcamp](https://github.com/berkeley-scf/r-bootcamp-fall-2020) Modules 1-5 and Week 1 section materials)
 
-Lab: Git and R Markdown introduction, problem set requirements/submission tools
+Section: Git and R Markdown introduction, problem set requirements/submission tools
 
 **Week 3**
 
@@ -82,17 +82,29 @@ Assignments:
  - Wed Sep 9, 10 am: bash tutorial problems (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8157938))
  - *Fri Sep 11, 5 pm: PS 1* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
 
+Section: assertions and testing
+
 **Week 4**
 
 Class:
  - Mon Sep 14: strings/regular expressions demo and group work
- - Wed Sep 16: TBD
- - Fri Sep 18: TBD
+ - Wed Sep 16: no class; please work on the PS2 problem 3 reading in preparation for Friday section
+ - Fri Sep 18: no class; please read Sections 1-4.3 of Unit 5 and watch the associated videos
 
 Assignments:
- - Mon Sep 14, 10 am: regex practice problems and string processing tutorial reading (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8162505)
- - (tentative) *Fri Sep 18, 10 am: PS 2*
+ - Mon Sep 14, 10 am: regex practice problems and string processing tutorial reading (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8162505))
+ - Fri Sep 18, noon: please complete problem 3 of PS2 (except for the part about your section group collective answer) and turn in your initial comments for problem 3b via [this Google form](https://forms.gle/KUmWhv768FUa5uZe9).
 
+Section: discussion of reproducibility
 
+**Week 5**
 
+Class:
+ - Mon Sep 21: TBD
+ - Wed Sep 23: TBD
+ - Fri Sep 25: TBD
 
+Assignments
+ - *Mon Sep 21, 5 pm: PS 2* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
+
+Section: TBD
