@@ -1707,7 +1707,7 @@ attr1
 \end_layout
 
 \begin_layout Standard
-Thus in an subsequent operations with 
+Thus in any subsequent operations with 
 \emph on
 qs
 \emph default
@@ -3650,7 +3650,9 @@ Functions as objects
 
 \begin_layout Standard
 Everything in R is an object, including functions.
- Perhaps unexpectedly, one can have a non-function 
+ We can assign functions to variables in the same way we assign numeric
+ and other values.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3959,53 +3961,9 @@ args
 \end_layout
 
 \begin_layout Standard
-Any argument without a default value (i.e., without an 
-\begin_inset Quotes eld
-\end_inset
-
-=
-\begin_inset Quotes erd
-\end_inset
-
- followed by the default) is required.
- However, sometimes it can be hard to tell what arguments are required.
- Consider this:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-args-req
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Challenge
-\series default
-: figure out where the final error actually occurs.
- (Recall our discussion of S3 OOP...)
-\end_layout
-
-\begin_layout Standard
-R will error out if it is expecting an argument, rather than looking for
+You can't generally tell directly which arguments are required; in general
+ you'd need to look at the documentation.
+ R will error out if it is expecting an argument, rather than looking for
  that argument elsewhere.
 \end_layout
 

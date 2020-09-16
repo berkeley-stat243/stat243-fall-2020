@@ -765,7 +765,7 @@ is.list(mod)
 ### 6.4 Frames and the call stack
 
 ## @knitr frames, eval=FALSE
-## NOTE: run this chunk outside RStudio as it seems to
+## NOTE: run this chunk outside RStudio as RStudio seems to
 ##       inject additional frames
 sys.nframe()
 f <- function() {
