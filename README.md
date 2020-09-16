@@ -101,11 +101,12 @@ Section: discussion of reproducibility
 
 Class:
  - Mon Sep 21: no class; please read sections 4.4-6.4 of Unit 5 and watch the associated videos
- - Wed Sep 23: TBD
- - Fri Sep 25: TBD
+ - Wed Sep 23: (tentative) passing arguments to functions and lazy evaluation
+ - Fri Sep 25: (tentative) variable scope and variable look-up
 
 Assignments
  - *Mon Sep 21, 5 pm: PS 2* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
  - Wed Sep 23, 10 am: Unit 5, Sections 1-6.4 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8166320))
+ - (tentative) Fri Sep 25, 10 am: Unit 5, Sections 6.5-6.12 reading/videos questions
 
 Section: TBD
