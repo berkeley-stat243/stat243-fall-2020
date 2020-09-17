@@ -27,7 +27,7 @@ Instructor office hours:
   - Zoe (in section Zoom): 
      - Wednesdays, 5:00-6:00 pm
      - Fridays, 1:10-2:10 pm
-     - Fridays, informally after 2:40-3:10 pm lab section (show up right after lab)
+     - Fridays, informally after 2:10-2:40 pm lab section (show up right after lab)
 
 ## Software
 
