@@ -4406,7 +4406,16 @@ R keeps track of the call stack, which is the series of nested calls to
  The stack operates like a stack of cafeteria trays - when a function is
  called, it is added to the stack (pushed) and when it finishes, it is removed
  (popped).
- There are a bunch of functions that let us query what frames are on the
+ Each function call is associated with a 
+\emph on
+frame
+\emph default
+ that contains the local variables for that function call.
+ 
+\end_layout
+
+\begin_layout Standard
+There are a bunch of functions that let us query what frames are on the
  stack and access objects in particular frames of interest.
  This gives us the ability to work with objects in the frame from which
  a function was called.

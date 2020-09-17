@@ -538,11 +538,15 @@ master
 set.seed(1)
 devs <- master$simulate()
 plot(master$getTimes(), devs, type = 'l', xlab = 'time',
-      ylab = 'process values')
-master <- tsSimClass$new(1:100, 2, 3)
+     ylab = 'process values')
+devs2 <- master$simulate()
+lines(master$getTimes(), devs2, lty = 2)
+
+master2 <- tsSimClass$new(1:100, 2, 3)
 set.seed(1)
-devs <- master$simulate()
-lines(master$getTimes(), devs, col = 'red')
+devs <- master2$simulate()
+lines(master2$getTimes(), devs, col = 'red')
+
 mycopy <- master
 myRealCopy <- master$clone()
 master$changeTimes(seq(0,1000, length = 100))
@@ -769,38 +773,45 @@ is.list(mod)
 ##       inject additional frames
 sys.nframe()
 f <- function() {
-	cat('f: Frame number is ', sys.nframe(),
+	cat('in f: Frame number is ', sys.nframe(),
             '; parent frame number is ', sys.parent(), '.\n', sep = '')
-	cat('f: Frame (i.e., environment) is: ')
+	cat('in f: Frame (i.e., environment) is: ')
 	print(sys.frame(sys.nframe()))
-	cat('f: Parent is ')
+	cat('in f: Parent is ')
 	print(parent.frame())
-	cat('f: Two frames up is ')
+	cat('in f: Two frames up is ')
 	print(sys.frame(-2))
 }
 f()
-f2 <- function() {
-	cat('f2: Frame (i.e., environment) is: ')
+ff <- function() {
+	cat('in ff: Frame (i.e., environment) is: ')
 	print(sys.frame(sys.nframe()))
-	cat('f2: Parent is ')
+	cat('in ff: Parent is ')
 	print(parent.frame())	
 	f()
 }
-f2() 
+ff() 
 
 
 ## @knitr frames2, eval=FALSE
 ## exploring functions that give us information the frames in the stack
+
+## Here's a recursive function, so we'll get a lot of function calls on the stack
 g <- function(y) {
-	gg <- function() {
-            ## this gives us the information from sys.calls(),
-            ##  sys.parents() and sys.frames() as one object
-		## print(sys.status()) 
-		tmp <- sys.status()
-            print(tmp)
-	}
-	if(y > 0) g(y-1) else gg()
+    if(y > 0) g(y-1) else gg()
 }
+
+## Ultimately, gg() is called, and it prints out info about the call stack
+gg <- function() {
+    ## this gives us the information from sys.calls(),
+    ##   sys.parents() and sys.frames() as one object
+    ## Rather than running print(sys.status()),
+    ## which would involve adding print() to the call stack,
+    ## we'll run sys.status and then print the result out.
+    tmp <- sys.status()
+    print(tmp)
+}
+
 g(3)
 
 
