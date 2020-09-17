@@ -3065,10 +3065,11 @@ R6 classes
 \end_layout
 
 \begin_layout Standard
-R6 classes are a new construct in R.
+R6 classes are a somewhat new construct in R.
  They are classes somewhat similar to S4.
  Importantly, they behave like pointers (the fields in the objects are 'mutable'
 ).
+ We'll discuss pointers in Section 6.5.
  Let's work through an example where we set up the fields of the class (like
  S4 slots) and class methods, including a constructor.
  
@@ -3128,6 +3129,15 @@ R6method
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+That's just for demonstration.
+ In general we would define 
+\emph on
+simulate
+\emph default
+ when we define the class originally.
 \end_layout
 
 \begin_layout Standard
@@ -3197,7 +3207,24 @@ R6Class("tsSimClass", inherit = "simClass", ...)
 \end_deeper
 \begin_layout Itemize
 Here we see that use of private fields shields them from modification by
- users, which might cause problems:
+ users.
+ In this example, the correlation matrix and the Cholesky factor U are both
+ functions of the vector of times.
+ So we don't want to allow a user to directly modify 
+\emph on
+times
+\emph default
+.
+ Instead we force them to use 
+\emph on
+setTimes()
+\emph default
+, which correctly keeps all the fields in the object internally consistent
+ (by calling 
+\emph on
+calcMats()
+\emph default
+):
 \end_layout
 
 \begin_layout Standard

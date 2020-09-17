@@ -536,28 +536,37 @@ tsSimClass$set("public", "simulate", function() {
 master <- tsSimClass$new(1:100, 2, 1)
 master
 set.seed(1)
+## here's a simulated time series
 devs <- master$simulate()
 plot(master$getTimes(), devs, type = 'l', xlab = 'time',
      ylab = 'process values')
+## here's a second simulated time series
 devs2 <- master$simulate()
 lines(master$getTimes(), devs2, lty = 2)
 
 master2 <- tsSimClass$new(1:100, 2, 3)
 set.seed(1)
+## here's a simulated time series with a different value of
+## the correlation parameter (corParam)
 devs <- master2$simulate()
 lines(master2$getTimes(), devs, col = 'red')
+## That simulated time series is less wiggly because the corParam value
+## is larger than before.
 
 mycopy <- master
-myRealCopy <- master$clone()
+## 'mycopy' and 'master' are names for the same underlying object
+myRealCopy <- master$clone()  # myRealCopy is a true copy and a new object
 master$changeTimes(seq(0,1000, length = 100))
-mycopy$getTimes()[1:5]
-myRealCopy$getTimes()[1:5]
+master$getTimes()[1:5] # this and 
+mycopy$getTimes()[1:5] # this are the same
+myRealCopy$getTimes()[1:5] # this is different
 
                                            
 ## @knitr R6access, eval=FALSE
 
 ## the next line would be dangerous if 'times' were public, since
-## currentU would no longer be accurate
+## changing 'times' should result in changing the correlation matrix and
+## changing U.
 master$times <- 1:10 
 
 
