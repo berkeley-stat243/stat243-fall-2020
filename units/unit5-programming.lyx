@@ -5303,9 +5303,20 @@ enclosing, eval=FALSE
 Let's dig deeper to understand where R looks for non-local variables.
  
 \series bold
-R looks for variables that are not local to a function in the enclosing
- environment of the function, where the enclosing environment is the environment
- in which the function was defined.
+R looks for variables that are not local to a function in the 
+\emph on
+enclosing environment
+\emph default
+ of the function.
+ The 
+\emph on
+enclosing environment
+\emph default
+ is the environment in which the function was 
+\emph on
+defined
+\emph default
+.
 
 \series default
  Note that the enclosing/parent environment is NOT the environment from
@@ -5556,8 +5567,7 @@ One way to avoid passing data by value is to associate data with a function,
 closure
 \emph default
 .
- This is a functional programming way to achieve something like have an
- OOP class.
+ This is a functional programming way to achieve something like an OOP class.
  This 
 \begin_inset CommandInset href
 LatexCommand href
@@ -6659,8 +6669,8 @@ vecLib
 \end_layout
 
 \begin_layout Standard
-Note that I run a lot of MCMCs so I pay attention to making sure my calculations
- are fast as they are done repeatedly.
+Note that I run a lot of iterative algorithms so I pay attention to making
+ sure my calculations are fast as they are done repeatedly.
  Similarly, one would want to pay attention to speed when doing large simulation
 s and bootstrapping, and in some cases for optimization.
  And if you're distributing code, it's good to have it be efficient.
@@ -6997,7 +7007,8 @@ Challenges
 \end_layout
 
 \begin_layout Standard
-One or more of these challenges may appear on a problem set.
+We'll work on some of these challenges in class.
+ In addition, one or more of these challenges will appear on PS4.
 \end_layout
 
 \begin_layout Standard

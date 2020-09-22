@@ -1106,7 +1106,10 @@ a + b
 x <- 1:3; y <- c(100,200,300)
 outer(x, y, `+`)
 
-myList <- list(list(a = 'new york', b = 1:5), list(a = 'california', b = 6:10))
+myList <- list(list(state = 'new york', value = 1:5),
+               list(state = 'california', value = 6:10),
+               list(state = 'delaware', value = 11:15))
+
 result <- lapply(myList, `[[`, 2)
 result
 ## note that the index "2" is the additional argument to the [[ function
