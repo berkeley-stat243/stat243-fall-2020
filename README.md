@@ -102,11 +102,24 @@ Section: discussion of reproducibility
 Class:
  - Mon Sep 21: no class; please read Unit 5, Sections 4.4-6.4 and watch the associated videos
  - Wed Sep 23: review of some concepts from Unit 5, Sections 1-6.4, discussion of passing arguments to functions and lazy evaluation (Unit 5, Section 6.5)
- - Fri Sep 25: (tentative) variable scope and variable look-up (Unit 5, Sections 6.6-6.8)
+ - Fri Sep 25: variable scope and variable look-up (Unit 5, Sections 6.6-6.8)
 
 Assignments
  - *Mon Sep 21, 5 pm: PS 2* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
  - Wed Sep 23, 10 am: Unit 5, Sections 1-6.4 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8166320))
- - (tentative) Fri Sep 25, 10 am: Unit 5, Sections 6.5-6.12 reading/videos questions
+
 
 Section: debugging
+
+**Week 6**
+
+Class:
+ - Mon Sep 28: (tentative) writing efficient code (Unit 5, Section 7 and "Writing Efficient R Code" tutorial) 
+ - Wed Sep 30: (tentative) group work on efficiency problems
+ - Fri Oct 2: (tentative) no class: please work on Unit 5, Section 8 and watch the associated videos
+
+Assignments
+ - (tentative) Mon Sep 28, 10 am: Unit 5, Sections 6.5-6.12 reading/videos questions
+ - *Fri Oct 2, 10 am: PS3* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
+
+Section: TBD
