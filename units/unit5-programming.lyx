@@ -3069,7 +3069,14 @@ R6 classes are a somewhat new construct in R.
  They are classes somewhat similar to S4.
  Importantly, they behave like pointers (the fields in the objects are 'mutable'
 ).
- We'll discuss pointers in Section 6.5.
+ We'll discuss pointers in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Approaches-to-passing"
+
+\end_inset
+
+.
  Let's work through an example where we set up the fields of the class (like
  S4 slots) and class methods, including a constructor.
  
@@ -3503,7 +3510,14 @@ non-standard evaluation
 .
  One reason it is not standard is that country and unemp are not themselves
  independent R variables so R can't find them in the usual way (see Section
- 6.9).
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Variable-scope"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -4468,10 +4482,16 @@ frame
 environment
 \emph default
  is a collection of named objects.
- (Note that when we talk about variable scope in Section 6.6, we'll have
- to be more careful with our terminology.) So in the context of a function
- call, the frame is the set of local variables available in the function,
- including arguments passed to the function.
+ (Note that when we talk about variable scope in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Variable-scope"
+
+\end_inset
+
+, we'll have to be more careful with our terminology.) So in the context
+ of a function call, the frame is the set of local variables available in
+ the function, including arguments passed to the function.
 \end_layout
 
 \begin_layout Standard
@@ -4958,8 +4978,19 @@ Character vectors in R are essentially pointers to the individual character
 \end_layout
 
 \begin_layout Itemize
-Environments (see Section 6.11) behave like pointers and are passed by reference
- rather than by copy.
+R6 objects behave like pointers and are passed by reference rather than
+ by copy, as seen in Section 4.4.3.
+\end_layout
+
+\begin_layout Itemize
+Environments (see Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:environments"
+
+\end_inset
+
+) behave like pointers and are passed by reference rather than by copy.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5153,6 +5184,13 @@ function(x, y = mean(rnorm(1e6)) print(x)
 
 \begin_layout Subsection
 Variable scope
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Variable-scope"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5957,6 +5995,13 @@ Question
 
 \begin_layout Subsection
 Creating and working in an environment (optional)
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:environments"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
