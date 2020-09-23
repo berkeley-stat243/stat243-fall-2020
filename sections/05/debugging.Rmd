@@ -224,10 +224,13 @@ pretty good tradeoff - where else do you get the foremost experts in a domain ac
 - What is the std of the coefficient of `x` from `summary(mod)`?
 - Now find the estimate of the same parameter now using bootstrap by simply calling `logitBoot()` as provided in the script.
 - Why is this estimate so much larger?
-- Use debugging tools to figure out the bug.
+- Use debugging tools to figure out the bug. 
 
-Code found [here](./logitBoot.R)  
-Data found [here](./data.csv)
+A couple hints to help get started 
+  - Use `debug(logitBoot)` to step through the function.  Determine which entry/entries in `out` are particuarily large or small.  
+  - You may also want to use `trace()` on the `myGLM` function to temporarily edit the values it returns to figure out what is going wrong at the entry/entries that you found to be out of sample above.  
+
+The code can be found in the `logitBoot.R` script and the data is stored in the `data.csv` file.  
 ```{r, eval=FALSE}
 my_data <- read.csv('./data.csv')
 
