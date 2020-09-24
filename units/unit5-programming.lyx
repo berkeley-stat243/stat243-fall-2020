@@ -5409,7 +5409,7 @@ y
 \begin_layout Enumerate
 When 
 \emph on
-f()
+fun_constructor()
 \emph default
  finishes, does its environment disappear? What would happen if it did?
 \begin_inset Note Note
@@ -5427,7 +5427,7 @@ g would not have an enclosing env't!
 \begin_layout Enumerate
 What is the enclosing environment of 
 \emph on
-h()
+myfun()
 \emph default
 ?
 \end_layout

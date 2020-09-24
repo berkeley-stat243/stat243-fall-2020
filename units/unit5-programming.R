@@ -923,33 +923,33 @@ f() # what will happen?
                                            
 ## @knitr scope-tricky
 y <- 100
-f <- function(){
+fun_constructor <- function(){
 	y <- 10
 	g <- function(x) {
-            return(x + y + rnorm(1))
+            return(x + y)
         }
 	return(g)
 }
-## you can think of f() as a function constructor
-h <- f()
-h(3)
+## fun_constructor() creates functions
+myfun <- fun_constructor()
+myfun(3)
 
 
 ## @knitr scope-envts
-environment(h)  # enclosing environment of h()
-ls(environment(h)) # objects in that environment
-f <- function(){
-	print(environment()) # execution environment of f()
+environment(myfun)  # enclosing environment of h()
+ls(environment(myfun)) # objects in that environment
+fun_constructor <- function(){
+	print(environment()) # execution environment of fun_constructor()
 	y <- 10
 	g <- function(x) x + y
 	return(g)
 }
-h <- f()
-environment(h)
-h(3)
-environment(h)$y
+myfun <- fun_constructor()
+environment(myfun)
+myfun(3)
+environment(myfun)$y
 ## advanced: explain this:
-environment(h)$g
+environment(myfun)$g
 
                                            
 ## @knitr scope-problem
@@ -986,7 +986,7 @@ searchpaths()
 x <- environment(lm)
 while (environmentName(x) != environmentName(emptyenv())) {
 	print(environmentName(x))
-	x <- parent.env(x)
+	x <- parent.env(x) # enclosing env't, NOT parent frame!
 }
 
 
@@ -1010,21 +1010,21 @@ mod <- lm(y ~ x)
 
 ## @knitr closures
 x <- rnorm(10)
-f <- function(input){
+scaler_constructor <- function(input){
 	data <- input
 	g <- function(param) return(param * data) 
 	return(g)
 }
-myFun <- f(x)
+scaler <- scaler_constructor(x)
 rm(x) # to demonstrate we no longer need x
-myFun(3)
+scaler(3)
 x <- rnorm(1e7)
-myFun <- f(x)
-object.size(myFun) # hmmm
-object.size(environment(myFun)$data)
+scaler <- scaler_constructor(x)
+object.size(scaler) # hmmm
+object.size(environment(scaler)$data)
 
 library(pryr)
-object_size(myFun) # that's better!
+object_size(scaler) # that's better!
 
 
 ## @knitr closure-boot
