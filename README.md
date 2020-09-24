@@ -89,7 +89,7 @@ Section: assertions and testing
 Class:
  - Mon Sep 14: strings/regular expressions demo and group work
  - Wed Sep 16: no class; please work on the PS2 problem 3 reading in preparation for Friday section
- - Fri Sep 18: no class; please read Sections 1-4.3 of Unit 5 and watch the associated videos
+ - Fri Sep 18: no class; please read Sections 1-4.3 of Unit 5 and watch the associated videos (Unit 5, Videos 1-3)
 
 Assignments:
  - Mon Sep 14, 10 am: regex practice problems and string processing tutorial reading (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8162505))
@@ -100,7 +100,7 @@ Section: discussion of reproducibility
 **Week 5**
 
 Class:
- - Mon Sep 21: no class; please read Unit 5, Sections 4.4-6.4 and watch the associated videos
+ - Mon Sep 21: no class; please read Unit 5, Sections 4.4-6.4 and watch the associated videos (Unit 5, Videos 4-6)
  - Wed Sep 23: review of some concepts from Unit 5, Sections 1-6.4, discussion of passing arguments to functions and lazy evaluation (Unit 5, Section 6.5)
  - Fri Sep 25: variable scope and variable look-up (Unit 5, Sections 6.6-6.8)
 
@@ -114,12 +114,12 @@ Section: debugging
 **Week 6**
 
 Class:
- - Mon Sep 28: (tentative) writing efficient code (Unit 5, Section 7 and "Writing Efficient R Code" tutorial) 
- - Wed Sep 30: (tentative) group work on efficiency problems
+ - Mon Sep 28: writing efficient code (Unit 5, Section 7 and "Writing Efficient R Code" tutorial, Section 4) 
+ - Wed Sep 30: group work on efficiency problems (Unit 5, Section 7.3)
  - Fri Oct 2: (tentative) no class: please work on Unit 5, Section 8 and watch the associated videos
 
 Assignments
- - (tentative) Mon Sep 28, 10 am: Unit 5, Sections 6.5-6.12 reading/videos questions
+ - Mon Sep 28, 10 am: Unit 5, Sections 6.8, 6.10, 6.11 and "Writing Efficient R code" tutorial Sections 1-4.1 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8169945))
  - *Fri Oct 2, 10 am: PS3* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
 
 Section: TBD
