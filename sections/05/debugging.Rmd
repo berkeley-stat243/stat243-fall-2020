@@ -231,7 +231,7 @@ The goal here is to figure out what is going wrong and, if time, fix the issue. 
     - Run through each line until you compute the vector `boot_coefs`.  Use the `range` and `quantile` functions to examine `boot_coefs` and see what could be going wrong.
     - Find the index of sample that is causing the issue.
   - Now that we have identified where the issue is occuring we still need to figure out why that paricular permutation is problematic.  For that we will use `trace` to temporarily edit our functions.
-    - Call `trace(myGLM, edit = TRUE)` and edit the function to return a list of coeficient, `y_perm`, and `x_perm`.
+    - Call `trace(myGLM, edit = TRUE)` and edit the function to return a list of coeficient, `y_boot`, and `x_boot`.
     - Call `trace(logitBoot, edit = TRUE)` and change `sapply` to `lapply` 
   - Rerun `logitBoot(my_data$y, my_data$x)`, which will again open the browser window. Step through the code lines and look at `boot_coefs[[i]]` where `i` is the index found in step 5.
     - Look at the values of `x_boot` that correspond to `y_boot = 1`.  Also, `sort` the `x_boot` output.  Can you tell what is going wrong? 
