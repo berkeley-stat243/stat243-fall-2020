@@ -119,7 +119,8 @@ Class:
  - Fri Oct 2: (tentative) no class: please work on Unit 5, Section 8 and watch the associated videos
 
 Assignments
- - Mon Sep 28, 10 am: Unit 5, Sections 6.8, 6.10, 6.11 and "Writing Efficient R code" tutorial Sections 1-4.1 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8169945))
+ - Mon Sep 28, 10 am: Unit 5, Sections 6.8, 6.10, 6.11 and [Writing Efficient R code" tutorial](https://github.com/berkeley-scf/tutorial-efficient-R) Sections 1-4.1 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8169945))
  - *Fri Oct 2, 10 am: PS3* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
+ - Fri Oct 2: [request an SCF account](https://scf.berkeley.edu/account) if you don't already have one
 
 Section: TBD

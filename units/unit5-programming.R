@@ -899,6 +899,7 @@ x
 
                                            
 ## @knitr scope, eval=FALSE
+x <- 3
 f2 <- function() print(x)
 f <- function() {
     x <- 7
@@ -906,6 +907,7 @@ f <- function() {
 }
 f() # what will happen?
 
+x <- 3
 f <- function() {
     f2 <- function() { print(x) }
     x <- 7
