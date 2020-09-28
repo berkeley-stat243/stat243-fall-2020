@@ -7028,6 +7028,8 @@ Challenge 1
 
  mixture components (i.e., what's the likelihood if it came from each of the
  components).
+ (In this case, the the likelihood is simply the normal density of the observati
+on given the mean and standard deviation of the component normal distribution.)
  So I should produce a matrix of 
 \begin_inset Formula $n$
 \end_inset
@@ -7101,7 +7103,11 @@ status open
 
 \end_inset
 
-
+ Try to figure out the fastest way to do this, amongst the options of looping
+ over the mixture components, looping over the observations, using vectorized
+ operations that recycle the observations, using vectorized operations that
+ recycle the mixture components, etc.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7213,7 +7219,8 @@ Challenge 4:
 Challenge 5:
 \series default
  Figure out how to improve the efficiency of the following code chunk, which
- is part of a likelihood calculation for a student's PhD research.
+ is part of an iterative optimization of a log-likelihood for a student's
+ PhD research.
  Some test data is in 
 \emph on
 likLoops.Rda
