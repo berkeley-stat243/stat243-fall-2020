@@ -1,6 +1,6 @@
 ##################################################
 ### Demo code for Unit 5 of Stat243, "Programming"
-### Chris Paciorek, September 2019
+### Chris Paciorek, September 2020
 ##################################################
 
 #####################################################
@@ -1280,7 +1280,7 @@ out <- oneUpdate(A, n, K, theta.init)
 
 # in the real code, oneUpdate was called repeatedly in a while loop
 # as part of an iterative optimization to find a maximum likelihood estimator
-} 
+ 
 
 ## @knitr challenge6
 
@@ -1339,14 +1339,14 @@ system.time(
 
                                            
 ## @knitr gc
-gc()
+gc(reset = TRUE)
 x <- rnorm(1e8) # should use about 800 Mb
 object.size(x)
 object_size(x)  # from pryr
 gc()
 mem_used() # from pryr
 rm(x)
-gc() # note the "max used" column
+gc() # note the "max used" column is unchanged
 mem_change(x <- rnorm(1e8)) # from pryr
 mem_change(x <- rnorm(1e7))
 
@@ -1409,7 +1409,8 @@ obj <- list(a = rnorm(5), b = list(d = "adfs"))
 ## @knitr pryr-address
 obj <- list(a = rnorm(5), b = list(d = "adfs"))
 address(x)  # from pryr
-address(obj$a)
+address(obj)
+address(obj$a) # doesn't work
 
 
 
@@ -1421,8 +1422,8 @@ n <- 1e6
 microbenchmark(tmp <- 1:n)
 object.size(tmp)  # incorrect as of R 3.5
 object_size(tmp)  # incorrect as of R 3.5
-mem_change(tmp2 <- 1:n)
-length(serialize(tmp, NULL)) # expands the object out
+mem_change(mySeq <- 1:n)
+length(serialize(mySeq, NULL)) 
 
 ## @knitr hidden3, eval=FALSE
 x <- rnorm(1e7)
@@ -1444,17 +1445,148 @@ gc()
 ## @knitr hidden2, eval=TRUE
 x <- rnorm(1e7)
 address(x)
-gc()
+gc(reset = TRUE)
 x[5] <- 7
-## when run plainly in R, should be the same address as before
+## When run plainly in R, should be the same address as before,
+## indicating no copy was made. Knitting the doc messes the
+## result up!
 address(x)
 gc()
 
+## @knitr
+                                                                                     
+### 8.6 Delayed copying (copy-on-change)
+
+## @knitr copy-on-change-fun, eval=TRUE
+f <- function(x){
+	print(gc())
+	.Internal(inspect(x))
+	return(x)
+}
+y <- rnorm(1e7)
+gc(reset = TRUE)
+.Internal(inspect(y))
+out <- f(y)
+.Internal(inspect(y))
+.Internal(inspect(out))
 
 
+
+## @knitr copy-on-change, eval=TRUE
+y <- rnorm(1e7)
+gc(reset = TRUE)
+address(y)
+x <- y
+gc()
+object_size(x, y)  # from pryr
+address(x)
+x[1] <- 5
+gc()
+address(x)
+object_size(x, y)
+rm(x)
+x <- y
+address(x)
+address(y)
+y[1] <- 5
+address(x)
+address(y)
+
+
+## @knitr copy-mem-change-question
+library(pryr)
+rm(x)
+rm(y)
+mem_change(x <- rnorm(1e7))
+address(x)
+mem_change(x[3] <- 8)
+address(x)
+mem_change(y <- x)
+address(y)
+mem_change(x[3] <- 8)
+address(x)
+address(y)
+
+
+
+## @knitr named-r4
+a <- rnorm(5)
+## .Internal(inspect(a))  ##  see below for result in R 4.0
+## @556accc65948 14 REALSXP g0c4 [REF(1)] (len=5, tl=0) 0.524365,0.55554,0.700011,-0.621318,-0.924413
+## refs(a)
+## [1] 1
+address(a)
+## [1] "0x556accc65948"
+b <- a
+## .Internal(inspect(b))  ##  see below for result in R 4.0
+## @556accc65948 14 REALSXP g0c4 [REF(2)] (len=5, tl=0) 0.524365,0.55554,0.700011,-0.621318,-0.924413
+## refs(a)
+## [1] 2
+## refs(b)
+## [1] 2
+address(b)
+# [1] "0x556accc65948"
+
+a[2] <- 0
+## .Internal(inspect(a))
+## @556accc657f8 14 REALSXP g0c4 [REF(1)] (len=5, tl=0) 0.524365,0,0.700011,-0.621318,-0.924413
+## .Internal(inspect(b))
+## @556accc65948 14 REALSXP g0c4 [REF(1)] (len=5, tl=0) 0.524365,0.55554,0.700011,-0.621318,-0.924413
+
+a <- rnorm(5)
+b <- a
+## refs(a)
+## [1] 2
+rm(b)
+refs(a)
+## [1] 1
+                                           
+## @knitr tracemem
+a <- 1:10     
+tracemem(a)      
+## b and a share memory      
+b <- a      
+b[1] <- 1  
+## result when done through knitr is not as in plain R   
+untracemem(a)   
+address(a)
+address(b)
+
+rm(x, y)
+f <- function(x) sum(x^2)
+y <- rnorm(10)
+## result of next line should be 1 if executed in clean R session
+## refs(y)  # knitting contaminates the result here
+
+f(y)
+## refs(y)  # knitting contaminates the result here
+address(y)
+y[3] <- 2
+address(y)
+
+
+
+## @knitr memuse1
+x <- rnorm(1e7) 
+myfun <- function(y){ 
+	z <- y 
+	return(mean(z)) 
+} 
+myfun(x)
+
+
+## @knitr memuse2
+x <- rnorm(1e7)
+x[1] <- NA
+myfun <- function(y){ 
+	return(mean(y, na.rm = TRUE))
+}
+myfun(x)
+
+                                           
 ## @knitr
                                            
-### 8.5 Passing objects to compiled code
+### 8.7 Passing objects to compiled code
 
 ## @knitr casts, eval=FALSE
 f <- function(arg1){
@@ -1490,139 +1622,7 @@ address(vals)
 
 
 ## @knitr
-                                           
-### 8.6 Delayed copying (copy-on-change)
 
-## @knitr copy-on-change-fun, eval=TRUE
-f <- function(x){
-	print(gc())
-	.Internal(inspect(x))
-	return(x)
-}
-y <- rnorm(1e7)
-gc()
-.Internal(inspect(y))
-out <- f(y)
-.Internal(inspect(y))
-.Internal(inspect(out))
-
-
-
-## @knitr copy-on-change, eval=TRUE
-y <- rnorm(1e7)
-gc()
-address(y)
-x <- y
-gc()
-object_size(x, y)  # from pryr
-address(x)
-x[1] <- 5
-gc()
-address(x)
-object_size(x, y)
-rm(x)
-x <- y
-address(x)
-address(y)
-y[1] <- 5
-address(x)
-address(y)
-
-
-## @knitr copy-mem-change-question
-library(pryr)
-rm(x)
-mem_change(x <- rnorm(1e7))
-address(x)
-mem_change(x[3] <- 8)
-address(x)
-mem_change(y <- x)
-address(y)
-mem_change(x[3] <- 8)
-address(x)
-address(y)
-
-
-
-## @knitr named-r4
-a <- rnorm(5)
-.Internal(inspect(a))
-## @556accc65948 14 REALSXP g0c4 [REF(1)] (len=5, tl=0) 0.524365,0.55554,0.700011,-0.621318,-0.924413
-refs(a)
-## [1] 1
-address(a)
-## [1] "0x556accc65948"
-b <- a
-.Internal(inspect(b))
-## @556accc65948 14 REALSXP g0c4 [REF(2)] (len=5, tl=0) 0.524365,0.55554,0.700011,-0.621318,-0.924413
-refs(a)
-## [1] 2
-refs(b)
-## [1] 2
-address(b)
-# [1] "0x556accc65948"
-
-a[2] <- 0
-.Internal(inspect(a))
-## @556accc657f8 14 REALSXP g0c4 [REF(1)] (len=5, tl=0) 0.524365,0,0.700011,-0.621318,-0.924413
-.Internal(inspect(b))
-## @556accc65948 14 REALSXP g0c4 [REF(1)] (len=5, tl=0) 0.524365,0.55554,0.700011,-0.621318,-0.924413
-
-a <- rnorm(5)
-b <- a
-refs(a)
-## [1] 2
-rm(b)
-refs(a)
-## [1] 1
-                                           
-## @knitr tracemem
-a <- 1:10     
-tracemem(a)      
-## b and a share memory      
-b <- a      
-b[1] <- 1  
-## result when done through knitr is not as in plain R   
-untracemem(a)   
-address(a)
-address(b)
-
-rm(x, y)
-f <- function(x) sum(x^2)
-y <- rnorm(10)
-## result of next line should be 1 if executed in clean R session
-refs(y)  # from pryr - reports on the NAMED count
-
-f(y)
-refs(y)
-address(y)
-y[3] <- 2
-address(y)
-
-
-
-
-
-## @knitr memuse1
-x <- rnorm(1e7) 
-myfun <- function(y){ 
-	z <- y 
-	return(mean(z)) 
-} 
-myfun(x)
-
-
-## @knitr memuse2
-x <- rnorm(1e7)
-x[1] <- NA
-myfun <- function(y){ 
-	return(mean(y, na.rm = TRUE))
-}
-myfun(x)
-
-                                           
-## @knitr
-                                           
 ### 8.9 Example
 
 ## @knitr memuse-real, eval = FALSE
