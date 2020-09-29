@@ -1339,6 +1339,7 @@ system.time(
 
                                            
 ## @knitr gc
+rm(x)
 gc(reset = TRUE)
 x <- rnorm(1e8) # should use about 800 Mb
 object.size(x)
@@ -1435,6 +1436,9 @@ y <- x[1:(length(x) - 1)]
 ### 8.4 Hidden uses of memory
 
 ## @knitr hidden1, eval=FALSE
+rm(x)
+gc(reset = TRUE)
+
 x <- rnorm(1e7)
 gc()
 dim(x) <- c(1e4, 1e3)
@@ -1443,9 +1447,12 @@ gc()
 
                                            
 ## @knitr hidden2, eval=TRUE
+rm(x)
+gc(reset = TRUE)
+
 x <- rnorm(1e7)
 address(x)
-gc(reset = TRUE)
+gc()
 x[5] <- 7
 ## When run plainly in R, should be the same address as before,
 ## indicating no copy was made. Knitting the doc messes the
@@ -1458,13 +1465,16 @@ gc()
 ### 8.6 Delayed copying (copy-on-change)
 
 ## @knitr copy-on-change-fun, eval=TRUE
+rm(y)
+gc(reset = TRUE)
+
 f <- function(x){
 	print(gc())
 	.Internal(inspect(x))
 	return(x)
 }
 y <- rnorm(1e7)
-gc(reset = TRUE)
+gc()
 .Internal(inspect(y))
 out <- f(y)
 .Internal(inspect(y))
@@ -1473,8 +1483,11 @@ out <- f(y)
 
 
 ## @knitr copy-on-change, eval=TRUE
-y <- rnorm(1e7)
+rm(y)
 gc(reset = TRUE)
+
+y <- rnorm(1e7)
+gc()
 address(y)
 x <- y
 gc()
