@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -12,6 +12,9 @@
 \hypersetup{unicode=true, pdfusetitle,
 bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
  breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=true,}
+% Added by lyx2lyx
+\renewcommand{\textendash}{--}
+\renewcommand{\textemdash}{---}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -32,8 +35,6 @@ knitr
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype false
-\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -63,7 +64,6 @@ knitr
 \suppress_date false
 \justification true
 \use_refstyle 0
-\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -76,10 +76,7 @@ knitr
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\is_math_indent 0
-\math_numbering_side default
-\quotes_style english
-\dynamic_quotes 0
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -102,7 +99,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 setup, include=FALSE
 \end_layout
 
@@ -231,7 +227,6 @@ Books on R listed on the syllabus: Adler, Chambers, Wickham
 LatexCommand href
 name "R intro manual"
 target "http://cran.r-project.org/doc/manuals/R-intro.html"
-literal "false"
 
 \end_inset
 
@@ -240,7 +235,6 @@ literal "false"
 LatexCommand href
 name "R language manual"
 target "http://cran.r-project.org/doc/manuals/R-lang.html"
-literal "false"
 
 \end_inset
 
@@ -316,7 +310,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 system
 \end_layout
 
@@ -351,7 +344,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 file-commands, eval=TRUE
 \end_layout
 
@@ -386,7 +378,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 list-files
 \end_layout
 
@@ -420,7 +411,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 sys-info
 \end_layout
 
@@ -475,7 +465,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 options
 \end_layout
 
@@ -509,7 +498,6 @@ The
 LatexCommand href
 name "R mailing list archives"
 target "http://tolstoy.newcastle.edu.au/R/"
-literal "false"
 
 \end_inset
 
@@ -552,7 +540,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 sessionInfo
 \end_layout
 
@@ -664,7 +651,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 rscript-args, eval=FALSE
 \end_layout
 
@@ -689,7 +675,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 rscript-run, engine='bash'
 \end_layout
 
@@ -714,7 +699,6 @@ One of the killer apps of R is the extensive collection of add-on packages
 LatexCommand href
 name "CRAN (www.cran.r-project.org)"
 target "www.cran.r-project.org"
-literal "false"
 
 \end_inset
 
@@ -798,7 +782,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 library
 \end_layout
 
@@ -855,7 +838,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 libpaths
 \end_layout
 
@@ -912,7 +894,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 install, eval=FALSE
 \end_layout
 
@@ -965,7 +946,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 install-source, eval=FALSE
 \end_layout
 
@@ -1043,7 +1023,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 namespace
 \end_layout
 
@@ -1091,7 +1070,6 @@ Using the bash shell
 LatexCommand href
 name "this online tool"
 target "https://regex101.com/"
-literal "false"
 
 \end_inset
 
@@ -1628,7 +1606,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 typeof
 \end_layout
 
@@ -1681,7 +1658,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 class
 \end_layout
 
@@ -1720,7 +1696,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 attr1
 \end_layout
 
@@ -1757,7 +1732,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 attr2
 \end_layout
 
@@ -1786,7 +1760,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 attr3
 \end_layout
 
@@ -1841,7 +1814,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 assign
 \end_layout
 
@@ -1878,7 +1850,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 assign2
 \end_layout
 
@@ -1906,7 +1877,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 assign3
 \end_layout
 
@@ -1935,7 +1905,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 intL
 \end_layout
 
@@ -1967,7 +1936,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 as
 \end_layout
 
@@ -2006,7 +1974,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 coercion
 \end_layout
 
@@ -2034,7 +2001,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 factor-indices
 \end_layout
 
@@ -2076,7 +2042,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 coercion2
 \end_layout
 
@@ -2190,7 +2155,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 inherit
 \end_layout
 
@@ -2227,7 +2191,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 s3
 \end_layout
 
@@ -2260,7 +2223,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 constructor
 \end_layout
 
@@ -2289,7 +2251,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 s3weird
 \end_layout
 
@@ -2326,7 +2287,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 s3methods, eval=FALSE
 \end_layout
 
@@ -2380,7 +2340,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 generic
 \end_layout
 
@@ -2419,7 +2378,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 new-generic
 \end_layout
 
@@ -2483,7 +2441,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 class-specific
 \end_layout
 
@@ -2583,7 +2540,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 summary, eval=FALSE
 \end_layout
 
@@ -2632,7 +2588,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 inherit2
 \end_layout
 
@@ -2849,7 +2804,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 s4
 \end_layout
 
@@ -2878,7 +2832,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 s4structured
 \end_layout
 
@@ -2921,7 +2874,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 s4methods
 \end_layout
 
@@ -3000,7 +2952,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 s4inherit
 \end_layout
 
@@ -3072,7 +3023,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 s4tos3
 \end_layout
 
@@ -3150,7 +3100,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 R6class
 \end_layout
 
@@ -3179,7 +3128,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 R6method
 \end_layout
 
@@ -3216,7 +3164,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 R6use, fig.width=7, fig.height=4, eval=TRUE
 \end_layout
 
@@ -3300,7 +3247,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 R6access, eval=TRUE
 \end_layout
 
@@ -3342,7 +3288,6 @@ More details on R6 classes can be found in the Advanced R book:
 \begin_inset CommandInset href
 LatexCommand href
 target "https://adv-r.hadley.nz/r6.html"
-literal "false"
 
 \end_inset
 
@@ -3441,7 +3386,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 long-wide
 \end_layout
 
@@ -3589,7 +3533,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 dplyr-example
 \end_layout
 
@@ -3628,7 +3571,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 dplyr-nse
 \end_layout
 
@@ -3648,7 +3590,6 @@ For more details on how to avoid this problem when writing functions that
 \begin_inset CommandInset href
 LatexCommand href
 target "https://dplyr.tidyverse.org/articles/programming.html"
-literal "false"
 
 \end_inset
 
@@ -3675,7 +3616,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 lm-nse, eval=FALSE
 \end_layout
 
@@ -3769,7 +3709,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 function-object
 \end_layout
 
@@ -3798,7 +3737,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 eval-fun
 \end_layout
 
@@ -3828,7 +3766,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 fun-as-arg
 \end_layout
 
@@ -3866,7 +3803,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 match-fun
 \end_layout
 
@@ -3905,7 +3841,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 fun-parts
 \end_layout
 
@@ -3963,7 +3898,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 do-call
 \end_layout
 
@@ -4014,7 +3948,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 do-call2
 \end_layout
 
@@ -4058,7 +3991,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 args
 \end_layout
 
@@ -4089,7 +4021,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 args-req2
 \end_layout
 
@@ -4141,7 +4072,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 dots
 \end_layout
 
@@ -4206,7 +4136,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 dots-list
 \end_layout
 
@@ -4258,7 +4187,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 dgamma
 \end_layout
 
@@ -4301,7 +4229,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 funs-as-args
 \end_layout
 
@@ -4342,7 +4269,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 formals
 \end_layout
 
@@ -4383,7 +4309,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 match-call
 \end_layout
 
@@ -4434,7 +4359,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 return
 \end_layout
 
@@ -4471,7 +4395,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 invisible
 \end_layout
 
@@ -4504,7 +4427,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 return-list
 \end_layout
 
@@ -4615,7 +4537,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 frames, eval=FALSE
 \end_layout
 
@@ -4661,7 +4582,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 frames2, eval=FALSE
 \end_layout
 
@@ -4771,7 +4691,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 par, eval=FALSE
 \end_layout
 
@@ -5139,7 +5058,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 lazy-eval, eval=FALSE
 \end_layout
 
@@ -5171,7 +5089,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 lazy-eval2
 \end_layout
 
@@ -5213,7 +5130,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 args-eval
 \end_layout
 
@@ -5296,7 +5212,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 scope-example
 \end_layout
 
@@ -5374,7 +5289,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 enclosing, eval=FALSE
 \end_layout
 
@@ -5431,7 +5345,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 scope, eval=FALSE
 \end_layout
 
@@ -5459,7 +5372,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 scope-tricky
 \end_layout
 
@@ -5544,7 +5456,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 scope-envts
 \end_layout
 
@@ -5577,7 +5488,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 scope-problem
 \end_layout
 
@@ -5631,7 +5541,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 findGlobals
 \end_layout
 
@@ -5667,7 +5576,6 @@ closure
 LatexCommand href
 name "Wikipedia entry"
 target "https://en.wikipedia.org/wiki/Closure_(computer_programming)"
-literal "false"
 
 \end_inset
 
@@ -5713,7 +5621,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 closures
 \end_layout
 
@@ -5750,7 +5657,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 closure-boot
 \end_layout
 
@@ -5861,7 +5767,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 search
 \end_layout
 
@@ -5894,7 +5799,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 nested-env
 \end_layout
 
@@ -5943,7 +5847,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 get
 \end_layout
 
@@ -6081,7 +5984,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 with
 \end_layout
 
@@ -6132,7 +6034,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 new.env
 \end_layout
 
@@ -6165,7 +6066,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 envt-container
 \end_layout
 
@@ -6220,7 +6120,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 eval-in-env
 \end_layout
 
@@ -6263,7 +6162,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 operators, tidy=FALSE
 \end_layout
 
@@ -6302,7 +6200,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 pass-operator
 \end_layout
 
@@ -6339,7 +6236,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 define-operator
 \end_layout
 
@@ -6371,7 +6267,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 operator-args
 \end_layout
 
@@ -6402,7 +6297,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 class-operators
 \end_layout
 
@@ -6506,7 +6400,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 all-is-fun, eval = FALSE
 \end_layout
 
@@ -6545,7 +6438,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 replace-funs, eval = FALSE
 \end_layout
 
@@ -6576,7 +6468,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 replace-funs2
 \end_layout
 
@@ -6625,7 +6516,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 create-replace
 \end_layout
 
@@ -6657,7 +6547,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 replacement
 \end_layout
 
@@ -6967,7 +6856,6 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 target "http://radfordneal.github.io/pqR/"
-literal "false"
 
 \end_inset
 
@@ -7077,7 +6965,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 byte, cache=TRUE
 \end_layout
 
@@ -7186,7 +7073,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 mixture-example, eval=FALSE
 \end_layout
 
@@ -7355,7 +7241,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 challenge5, eval=FALSE
 \end_layout
 
@@ -7762,7 +7647,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 gc
 \end_layout
 
@@ -7827,7 +7711,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 ls-sizes
 \end_layout
 
@@ -7867,7 +7750,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 serialize
 \end_layout
 
@@ -7956,7 +7838,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 inspect
 \end_layout
 
@@ -8005,7 +7886,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 pryr-address
 \end_layout
 
@@ -8072,7 +7952,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 sequences
 \end_layout
 
@@ -8101,7 +7980,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 hidden3, eval=FALSE
 \end_layout
 
@@ -8458,7 +8336,6 @@ There's a nice discussion of this on
 LatexCommand href
 name "this Stack Overflow thread"
 target "https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap"
-literal "false"
 
 \end_inset
 
@@ -8493,7 +8370,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 hidden1, eval=FALSE
 \end_layout
 
@@ -8527,7 +8403,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 hidden2, eval=TRUE
 \end_layout
 
@@ -8596,7 +8471,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 copy-on-change-fun, eval=TRUE
 \end_layout
 
@@ -8653,7 +8527,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 copy-on-change, eval=TRUE
 \end_layout
 
@@ -8686,7 +8559,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 copy-mem-change-question, eval=TRUE
 \end_layout
 
@@ -8732,9 +8604,16 @@ address()
 pryr
 \emph default
 .
- I am compiling this PDF on an older version of R (R 3.6) so I need to insert
- comments showing examples of what the results would be in R 4.0, as well
- as because knitting to PDF affects things.
+ 
+\end_layout
+
+\begin_layout Standard
+In older versions of R (before R 4.0) there were some shortcomings in how
+ R managed this, and I am compiling this PDF on an older version of R (R
+ 3.6).
+ So I need to insert comments showing examples of what the results would
+ be in R 4.0.
+ Also, knitting to PDF contaminates things.
  
 \end_layout
 
@@ -8748,7 +8627,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 named-r4
 \end_layout
 
@@ -8830,7 +8708,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 named
 \end_layout
 
@@ -8867,7 +8744,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 tracemem
 \end_layout
 
@@ -8899,7 +8775,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 memuse1
 \end_layout
 
@@ -8927,7 +8802,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 memuse2
 \end_layout
 
@@ -9104,7 +8978,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 casts, eval=FALSE
 \end_layout
 
@@ -9139,7 +9012,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 pass-to-C
 \end_layout
 
@@ -9219,7 +9091,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 memuse-real, eval = FALSE
 \end_layout
 
@@ -9329,7 +9200,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 internal-funs
 \end_layout
 
@@ -9384,7 +9254,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 quote, tidy=FALSE
 \end_layout
 
@@ -9423,7 +9292,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 type-quote
 \end_layout
 
@@ -9455,7 +9323,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 expr
 \end_layout
 
@@ -9502,7 +9369,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 parsing
 \end_layout
 
@@ -9924,7 +9790,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 lang-objects, tidy=FALSE
 \end_layout
 
@@ -9956,7 +9821,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 eval-lang
 \end_layout
 
@@ -9989,7 +9853,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 expr-structure
 \end_layout
 
@@ -10026,7 +9889,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 manip-expr
 \end_layout
 
@@ -10054,7 +9916,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 manip-expr2
 \end_layout
 
@@ -10095,7 +9956,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 deparse
 \end_layout
 
@@ -10128,7 +9988,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 manip-names
 \end_layout
 
@@ -10165,7 +10024,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 replace-lang
 \end_layout
 
@@ -10217,7 +10075,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 replace-lang2
 \end_layout
 
@@ -10269,7 +10126,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 substitute
 \end_layout
 
@@ -10302,7 +10158,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 substitute2
 \end_layout
 
@@ -10330,7 +10185,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 crazy-subst
 \end_layout
 
@@ -10418,7 +10272,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 subst-example
 \end_layout
 
@@ -10455,7 +10308,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 subst3
 \end_layout
 
@@ -10483,7 +10335,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 subst4
 \end_layout
 
@@ -10537,7 +10388,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 double-subst
 \end_layout
 

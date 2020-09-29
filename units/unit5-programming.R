@@ -1538,7 +1538,7 @@ b <- a
 ## refs(a)
 ## [1] 2
 rm(b)
-refs(a)
+## refs(a)
 ## [1] 1
                                            
 ## @knitr tracemem
