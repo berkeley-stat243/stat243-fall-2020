@@ -116,7 +116,7 @@ Section: debugging
 Class:
  - Mon Sep 28: writing efficient code (Unit 5, Section 7 and "Writing Efficient R Code" tutorial, Section 4) 
  - Wed Sep 30: group work on efficiency problems (Unit 5, Section 7.3)
- - Fri Oct 2: (tentative) no class: please work on Unit 5, Section 7.1; Efficient R tutorial Section 4.5; Unit 5, Sections 8.1-8.4 and watch the associated videos 
+ - Fri Oct 2: no class: please work on Unit 5, Section 7.1; Efficient R tutorial Sections 4.5-4.6; Unit 5, Sections 8.1-8.4 and watch the associated videos 
 
 Assignments
  - Mon Sep 28, 10 am: Unit 5, Sections 6.8, 6.10, 6.11 and [Writing Efficient R code" tutorial](https://github.com/berkeley-scf/tutorial-efficient-R) Sections 1-4.1 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8169945))
@@ -133,7 +133,7 @@ Class:
  - Fri Oct 9: (tentative) discussion of precision of computer numbers and implications for calculations
 
 Assignments
- - Mon Oct 5, 10 am: Unit 5, Section 7.1; Efficient R tutorial Section 4.5; Unit 5, Sections 8.1-8.4 reading/videos questions (see [assignment on bCourses -- UNDER CONSTRUCTION](xyz)).
+ - Mon Oct 5, 10 am: Unit 5, Section 7.1; Efficient R tutorial Sections 4.5-4.6; Unit 5, Sections 8.1-8.4 reading/videos questions (see [assignment on bCourses]](https://bcourses.berkeley.edu/courses/1497598/assignments/8173210)).
 
 
 Section: (tentative) getting set up to use the SCF Linux cluster and submit parallelized jobs
