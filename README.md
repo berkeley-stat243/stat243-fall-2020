@@ -129,8 +129,8 @@ Section: code review of PS3
 
 Class:
  - Mon Oct 5: discussion of memory use in R (Unit 5, Section 8)
- - Wed Oct 7: TBD
- - Fri Oct 9: (tentative) discussion of precision of computer numbers and implications for calculations
+ - Wed Oct 7: TBD - getting started on Unit 6 
+ - Fri Oct 9: (tentative) discussion of precision of computer numbers and implications for calculations (Unit 6)
 
 Assignments
  - Mon Oct 5, 10 am: Unit 5, Section 7.1; Efficient R tutorial Sections 4.5-4.6; Unit 5, Sections 8.1-8.4 reading/videos questions (see [assignment on bCourses]](https://bcourses.berkeley.edu/courses/1497598/assignments/8173210)).
