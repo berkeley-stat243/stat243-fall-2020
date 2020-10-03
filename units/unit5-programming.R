@@ -1640,24 +1640,27 @@ address(vals)
 
 ## @knitr memuse-real, eval = FALSE
 fastcount <- function(xvar, yvar) {
-	naline <- is.na(xvar)
-	naline[is.na(yvar)] = TRUE
-	xvar[naline] <- 0
-	yvar[naline] <- 0
-	useline <- !naline;
-	# Table must be initialized for -1's
-	tablex <- numeric(max(xvar)+1)
-	tabley <- numeric(max(yvar)+1)
-	stopifnot(length(xvar) == length(yvar))
-	res <- .C("fastcount",PACKAGE="GCcorrect",
-		tablex = as.integer(tablex), tabley = as.integer(tabley),
-		as.integer(xvar), as.integer(yvar), as.integer(useline),
-		as.integer(length(xvar)))
-	xuse <- which(res$tablex>0)
-	xnames <- xuse - 1
-	resb <- rbind(res$tablex[xuse], res$tabley[xuse]) 
-	colnames(resb) <- xnames
-	return(resb)
+    print(xvar[1])
+    print(yvar[1])
+    naline <- is.na(xvar)
+    naline[is.na(yvar)] = TRUE
+    xvar[naline] <- 0
+    yvar[naline] <- 0
+    useline <- !naline
+    ## We'll ignore the rest of the code.
+    ## Table must be initialized for -1's
+    tablex <- numeric(max(xvar)+1)
+    tabley <- numeric(max(yvar)+1)
+    stopifnot(length(xvar) == length(yvar))
+    res <- .C("fastcount",PACKAGE="GCcorrect",
+              tablex = as.integer(tablex), tabley = as.integer(tabley),
+              as.integer(xvar), as.integer(yvar), as.integer(useline),
+              as.integer(length(xvar)))
+    xuse <- which(res$tablex>0)
+    xnames <- xuse - 1
+    resb <- rbind(res$tablex[xuse], res$tabley[xuse]) 
+    colnames(resb) <- xnames
+    return(resb)
 }
 
 
