@@ -129,11 +129,30 @@ Section: code review of PS3
 
 Class:
  - Mon Oct 5: discussion of memory use in R (Unit 5, Section 8)
- - Wed Oct 7: TBD - getting started on Unit 6 
+ - Wed Oct 7: (tentative) no class: please work on Unit 6 and associated videos
  - Fri Oct 9: (tentative) discussion of precision of computer numbers and implications for calculations (Unit 6)
 
 Assignments
  - Mon Oct 5, 10 am: Unit 5, Section 7.1; Efficient R tutorial Sections 4.5-4.6; Unit 5, Sections 8.1-8.4 reading/videos questions (see [assignment on bCourses]](https://bcourses.berkeley.edu/courses/1497598/assignments/8173210)).
+ - Fri Oct 9, 10 am: (tentative) Unit 6 reading/videos questions
 
+Section: (tentative) introduction to Python
 
-Section: (tentative) getting set up to use the SCF Linux cluster and submit parallelized jobs
+**Week 8**
+
+Class:
+ - Mon Oct 12: (tentative) no class: please read Unit 7
+ - Wed Oct 14: parallelization examples (Unit 7)
+ - Fri Oct 16: (tentative) quiz review
+
+Assignments:
+ - (tentative) *Mon Oct 12, 5 pm: PS4* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github rep\
+ository)
+ - Wed Oct 14, 10 am: Unit 7 reading questions
+
+Section: Linux cluster usage and parallelization
+
+**Week 9**
+
+Class:
+ - Mon Oct 19: Quiz 1
