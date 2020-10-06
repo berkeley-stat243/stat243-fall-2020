@@ -1462,7 +1462,7 @@ gc()
 
 ## @knitr
                                                                                      
-### 8.6 Delayed copying (copy-on-change)
+### 8.5 Delayed copying (copy-on-change)
 
 ## @knitr copy-on-change-fun, eval=TRUE
 rm(y)
