@@ -133,7 +133,7 @@ Class:
  - Fri Oct 9: discussion of precision of computer numbers and implications for calculations (Unit 6, Section 3)
 
 Assignments
- - Mon Oct 5, 10 am: Unit 5, Section 7.1; Efficient R tutorial Sections 4.5-4.6; Unit 5, Sections 8.1-8.4 reading/videos questions (see [assignment on bCourses]](https://bcourses.berkeley.edu/courses/1497598/assignments/8173210)).
+ - Mon Oct 5, 10 am: Unit 5, Section 7.1; Efficient R tutorial Sections 4.5-4.6; Unit 5, Sections 8.1-8.4 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8173210)).
  - Fri Oct 9, 10 am: Unit 6, Sections 1-2 and Videos 1-5 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8175608))
 
 Section: introduction to Python
