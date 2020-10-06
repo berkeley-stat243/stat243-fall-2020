@@ -56,9 +56,11 @@ Some introductory video lectures:
 -   <https://www.youtube.com/watch?v=a_Z_6brm9ZQ>
 
 While working through this tutorial, you should type the example code
-snippets at an interactive Python terminal. I recommend using either the
-IPython shell or a Jupyter IPython notebook. To start an IPython shell, type
-the following at a bash prompt:
+snippets at an interactive Python terminal. I set up a IPython notebook (python_intro.ipynb) 
+that has the code in this tutortial which you can use.  Alternatively, you use a 
+IPython shell and type the code yourself. 
+
+To start an IPython shell, type the following at a bash prompt:
 
 ``` {.sourceCode .bash}
 ipython
@@ -70,7 +72,7 @@ To start an Jupyter IPython notebook, type this:
 jupyter notebook
 ```
 
-A notebook should open in your browser.
+A notebook should open in your browser.  
 
 Alternatively you can access Jupyter notebooks through a service called [Jupyterhub on the SCF](https://jupyter.stat.berkeley.edu).
 
