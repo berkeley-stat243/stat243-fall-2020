@@ -141,14 +141,13 @@ Section: introduction to Python
 **Week 8**
 
 Class:
- - Mon Oct 12: (tentative) no class: please read Unit 7
- - Wed Oct 14: parallelization examples (Unit 7)
- - Fri Oct 16: (tentative) quiz review
+ - Mon Oct 12: no class: please read Unit 7, Sections 1-4
+ - Wed Oct 14: parallelization examples (Unit 7, Sections 4-5)
+ - Fri Oct 16: quiz review
 
 Assignments:
- - (tentative) *Mon Oct 12, 5 pm: PS4* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github rep\
-ository)
- - Wed Oct 14, 10 am: Unit 7 reading questions
+ - *Mon Oct 12, 5 pm: PS4* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
+ - Wed Oct 14, 10 am: Unit 7, Sections 1-4 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8177181)
 
 Section: Linux cluster usage and parallelization
 
