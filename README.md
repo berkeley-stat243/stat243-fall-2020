@@ -129,14 +129,14 @@ Section: code review of PS3
 
 Class:
  - Mon Oct 5: discussion of memory use in R (Unit 5, Section 8)
- - Wed Oct 7: no class: please work on Unit 6, Sections 1-2 and watch the associated videos (Unit 6, Videos 1-4) (videos 2-4 will be posted on Tuesday)
+ - Wed Oct 7: no class: please work on Unit 6, Sections 1-2 and watch the associated videos (Unit 6, Videos 1-5)
  - Fri Oct 9: discussion of precision of computer numbers and implications for calculations (Unit 6, Section 3)
 
 Assignments
- - Mon Oct 5, 10 am: Unit 5, Section 7.1; Efficient R tutorial Sections 4.5-4.6; Unit 5, Sections 8.1-8.4 reading/videos questions (see [assignment on bCourses]](https://bcourses.berkeley.edu/courses/1497598/assignments/8173210)).
- - Fri Oct 9, 10 am: Unit 6 reading/videos questions (assignment to be posted on bCourses Tuesday Oct 6)
+ - Mon Oct 5, 10 am: Unit 5, Section 7.1; Efficient R tutorial Sections 4.5-4.6; Unit 5, Sections 8.1-8.4 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8173210)).
+ - Fri Oct 9, 10 am: Unit 6, Sections 1-2 and Videos 1-5 reading/videos questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8175608))
 
-Section: (tentative) introduction to Python
+Section: introduction to Python
 
 **Week 8**
 
