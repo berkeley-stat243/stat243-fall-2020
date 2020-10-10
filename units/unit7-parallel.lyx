@@ -1632,6 +1632,10 @@ You can debug by running serially using
 \family typewriter
 %dopar%
 \family default
+ or 
+\family typewriter
+%dorng%
+\family default
 .
  Note that you may need to load packages within the 
 \emph on

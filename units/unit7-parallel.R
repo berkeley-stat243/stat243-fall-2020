@@ -100,6 +100,7 @@ registerDoFuture()
 
 ## Use of %dorng% from doRNG relates to parallel random number generation.
 ## We'll see more in Unit 10 (Simulation)
+## If not using random number generation, people usually use %dopar%.
 
 result <- foreach(i = seq_len(nFolds)) %dorng% {
 	cat('Starting ', i, 'th job.\n', sep = '')
