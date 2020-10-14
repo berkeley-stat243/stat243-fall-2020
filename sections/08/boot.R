@@ -3,48 +3,36 @@ library(foreach)
 library(doFuture)
 library(microbenchmark)
 
-# load data and source function that computes GLM for each sample 
-data <- read.csv('data.csv')
-source("myGLM.R")
+# note this code and example is from this website
+# https://nceas.github.io/oss-lessons/parallel-computing-in-r/parallel-computing-in-r.html
 
-# normal function
-logitBoot <- function(y, x, n_boot = 5000) {
-  # do n_boot random permutations of x and y and return coefficient on x with 
-  # the myGLM function
-  boot_coefs <- sapply(seq_len(n_boot), myGLM, y, x) 
-  
-  # remove any computations that led to a warning from glm (i.e. a NULL value)
-  boot_coefs <- unlist(boot_coefs)
-  
-  # compute standard deviation of those estimates and return
-  boot_se <- sd(boot_coefs)
-  return(boot_se)
-}
-
-# parallel function
-logitBootParallel <- function(y, x, n_boot = 5000) {
-  # do n_boot random permutations of x and y and return coefficient on x with 
-  # the myGLM function
-  boot_coefs <- foreach(i = seq_len(n_boot), .combine = 'c') %dopar% {
-    myGLM(i, y, x)
-  } 
-  
-  # remove any computations that led to a warning from glm (i.e. a NULL value)
-  boot_coefs <- unlist(boot_coefs)
-  
-  # compute standard deviation of those estimates and return
-  boot_se <- sd(boot_coefs)
-  return(boot_se)
-}
+# get data
+data <- iris[which(iris[, 5] != "setosa"), c(1, 5)]
+n_boot <- 10000 # number of bootstrapped samples
 
 # set number of cores and register 
 nCores <- 3
 plan(strategy = multiprocess, workers = nCores)
 registerDoFuture()
 
-# compare timing 
-microbenchmark(logitBoot(data$y, data$x), times = 1)
-microbenchmark(logitBootParallel(data$y, data$x), times = 1)
+# do computation 
+microbenchmark({
+  r <- foreach(i = 1:n_boot, .combine = rbind) %dopar% {
+    # fit logistic regression on bootstrapped samples and return coefficients
+    ind <- sample(100, 100, replace = TRUE)
+    result1 <- glm(data[ind, 2] ~ data[ind, 1], family = binomial(logit))
+    coefficients(result1)
+  }
+}, times = 5)
+
+microbenchmark({
+  r <- foreach(i = 1:n_boot, .combine = rbind) %do% {
+    ind <- sample(100, 100, replace = TRUE)
+    result1 <- glm(data[ind, 2] ~ data[ind, 1], family = binomial(logit))
+    coefficients(result1)
+  }
+}, times = 5)
+
 
 # write results to a file 
 print("Computation done!")
