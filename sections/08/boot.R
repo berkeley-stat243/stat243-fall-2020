@@ -16,6 +16,7 @@ plan(strategy = multiprocess, workers = nCores)
 registerDoFuture()
 
 # do computation 
+# parallel
 microbenchmark({
   r <- foreach(i = 1:n_boot, .combine = rbind) %dopar% {
     # fit logistic regression on bootstrapped samples and return coefficients
@@ -25,6 +26,7 @@ microbenchmark({
   }
 }, times = 5)
 
+# serial
 microbenchmark({
   r <- foreach(i = 1:n_boot, .combine = rbind) %do% {
     ind <- sample(100, 100, replace = TRUE)
@@ -34,5 +36,4 @@ microbenchmark({
 }, times = 5)
 
 
-# write results to a file 
 print("Computation done!")
