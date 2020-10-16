@@ -24,7 +24,7 @@ microbenchmark({
     result1 <- glm(data[ind, 2] ~ data[ind, 1], family = binomial(logit))
     coefficients(result1)
   }
-}, times = 5)
+}, times = 2)
 
 # serial
 microbenchmark({
@@ -33,7 +33,7 @@ microbenchmark({
     result1 <- glm(data[ind, 2] ~ data[ind, 1], family = binomial(logit))
     coefficients(result1)
   }
-}, times = 5)
+}, times = 2)
 
 
 print("Computation done!")
