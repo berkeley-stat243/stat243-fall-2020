@@ -1,6 +1,6 @@
 ############################################################
 ### Demo code for Unit 7 of Stat243, "Parallel processing"
-### Chris Paciorek, October 2019
+### Chris Paciorek, October 2020
 ############################################################
 
 
@@ -29,6 +29,8 @@ c = Client(cluster)
 # code in calc_mean.py will calculate the mean of many random numbers
 from calc_mean import *    
 
+p = 20
+n = 100000000  # must be of type integer
 # set up and execute the parallel map
 inputs = [(i, n) for i in range(p)]
 # execute the function across the array of input values
@@ -50,8 +52,8 @@ import dask.multiprocessing
 dask.config.set(scheduler='processes', num_workers = 4)  
 
 futures = []
-n = 10000000
 p = 10
+n = 100000000
 for i in range(p):
     futures.append(dask.delayed(calc_mean)(i, n))  # add lazy task
 

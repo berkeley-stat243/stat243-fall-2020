@@ -2149,8 +2149,10 @@ Scenario 7: Simulation study with n=1000 replicates: parallel random number
 \end_layout
 
 \begin_layout Standard
-We won't cover this in class, though I will mention the issue in the simulation
- unit when we talk about random number generation.
+We won't cover this in class and you don't need to worry about this at the
+ moment.
+ Instead, I will mention the issue in the simulation unit when we talk about
+ random number generation.
 \end_layout
 
 \begin_layout Standard
@@ -2411,7 +2413,7 @@ Some solutions are to set OMP_NUM_THREADS to 1 to prevent the BLAS from
 \end_layout
 
 \begin_layout Section
-Using Dask in Python (optional)
+Using Dask in Python
 \end_layout
 
 \begin_layout Standard
