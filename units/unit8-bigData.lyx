@@ -370,7 +370,7 @@ Here's a
 \begin_inset CommandInset href
 LatexCommand href
 name "different way to summarize it"
-target "https://twitter.com/danariely/status/287952257926971392?lang=en"
+target "https://www.azquotes.com/quote/661939"
 
 \end_inset
 
@@ -3336,9 +3336,10 @@ Simple SQL joins
 \end_layout
 
 \begin_layout Standard
-It turns out that the syntax of using multiple tables we've seen can be
- viewed formally as a table join and could also be implemented using the
- JOIN keyword.
+Often to get the information we need, we'll need data from multiple tables.
+ To do this we'll need to do a database join, telling the database what
+ columns should be used to match the rows in the different tables.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3359,17 +3360,12 @@ Let's see some joins using the different syntax on the Stack Overflow database.
 \end_layout
 
 \begin_layout Standard
-Here's a join using similar syntax to what we saw above, without using the
- JOIN keyword.
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-<<join-without-join>>=
+<<join-with-join>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -3383,7 +3379,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-And here's how we do it with an explicit JOIN:
+It turns out you can do it without using the JOIN keyword.
 \end_layout
 
 \begin_layout Standard
@@ -3392,7 +3388,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<join-with-join>>=
+<<join-without-join>>=
 \end_layout
 
 \begin_layout Plain Layout
