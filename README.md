@@ -155,3 +155,16 @@ Section: Linux cluster usage and parallelization
 
 Class:
  - Mon Oct 19: Quiz 1
+ - Wed Oct 21: demo using Python's Dask package for parallelization (Unit 7, Section 7 and Unit 8, Section 2.2)
+ - Fri Oct 23: no class: please work on Unit 8, Section 3 and watch the associated videos (Unit 8, Videos 1-5)
+
+Section: No section - Zoe is available to help with the SCF, sbatch, future package, etc. 12-1 pm and 2-3 pm.
+
+**Week 10**
+
+Class:
+ - Mon Oct 26: group work on SQL query problems (Unit 8, Section 3)
+
+Assignments:
+ - *Mon Oct 26, 10 am: PS5* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
+ - Mon Oct 26, 10 am: Unit 8, Sections 3 reading questions (see [assignment on bCourses UNDER CONSTRUCTION](https://bcourses.berkeley.edu/courses/1497598/assignments/XYZ)
