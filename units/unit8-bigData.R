@@ -159,33 +159,35 @@ dbGetQuery(db, "select count(distinct tag) from questions_tags")
 
 ### 3.9 Simple SQL joins
 
-## @knitr join-without-join
-result1 <- dbGetQuery(db, "select * from questions, questions_tags
-        where questions.questionid = questions_tags.questionid and
-        tag = 'python'")
 
 ## @knitr join-with-join
 
-result2 <- dbGetQuery(db, "select * from questions join questions_tags
+result1 <- dbGetQuery(db, "select * from questions join questions_tags
         on questions.questionid = questions_tags.questionid
         where tag = 'python'")
+
+## @knitr join-without-join
+result2 <- dbGetQuery(db, "select * from questions, questions_tags
+        where questions.questionid = questions_tags.questionid and
+        tag = 'python'")
 
 head(result1)
 identical(result1, result2)
 
 ## @knitr three-way-join
-result1 <- dbGetQuery(db, "select * from
-        questions Q, questions_tags T, users U where
-        Q.questionid = T.questionid and
-        Q.ownerid = U.userid and
-        tag = 'python' and
-        age > 60")
 
-result2 <- dbGetQuery(db, "select * from
+result1 <- dbGetQuery(db, "select * from
         questions Q
         join questions_tags T on Q.questionid = T.questionid
         join users U on Q.ownerid = U.userid
         where tag = 'python' and
+        age > 60")
+
+result2 <- dbGetQuery(db, "select * from
+        questions Q, questions_tags T, users U where
+        Q.questionid = T.questionid and
+        Q.ownerid = U.userid and
+        tag = 'python' and
         age > 60")
 
 identical(result1, result2)
