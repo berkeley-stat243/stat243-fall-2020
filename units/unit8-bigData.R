@@ -219,7 +219,7 @@ dbExecute(db, "drop view if exists questionsAugment") # drop so can create again
 
 system.time(dbGetQuery(db,
   "select * from questions where viewcount > 10000"))   # 10 seconds
-system.time(dbGetQuery(db,
+system.time(dbExecute(db,
   "create index count_index on questions (viewcount)")) # 19 seconds
 system.time(dbGetQuery(db,
   "select * from questions where viewcount > 10000"))   # 3 seconds
