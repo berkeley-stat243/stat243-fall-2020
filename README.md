@@ -169,6 +169,6 @@ Class:
 
 Assignments:
  - *Mon Oct 26, 10 am: PS5* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
- - Mon Oct 26, 10 am: Unit 8, Sections 3 reading questions (see [assignment on bCourses UNDER CONSTRUCTION](https://bcourses.berkeley.edu/courses/1497598/assignments/8182267))
+ - Mon Oct 26, 10 am: Unit 8, Sections 3 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8182267))
 
 Section: TBD
