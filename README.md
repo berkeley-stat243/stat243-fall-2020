@@ -164,11 +164,11 @@ Section: No section - Zoe is available to help with the SCF, sbatch, future pack
 
 Class:
  - Mon Oct 26: group work on SQL query problems (Unit 8, Section 3)
- - Wed Oct 28: TBD
- - Fri Oct 30: TBD
+ - Wed Oct 28: Monte Carlo simulation (Unit 9, Section 1)
+ - Fri Oct 30: (tentative) no class: please work on Unit 9, Sections 4-5 and watch the associated videos. 
 
 Assignments:
  - *Mon Oct 26, 10 am: PS5* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
  - Mon Oct 26, 10 am: Unit 8, Sections 3 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8182267))
 
-Section: TBD
+Section: Comparison of Python and R.
