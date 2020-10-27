@@ -172,3 +172,15 @@ Assignments:
  - Mon Oct 26, 10 am: Unit 8, Sections 3 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8182267))
 
 Section: Comparison of Python and R.
+
+**Week 11**
+
+Class:
+  - Mon Nov 2: TBD
+  - Wed Nov 4: TBD
+  - Fri Nov 6: TBD
+
+Assignments:
+  - Mon Nov 2, 10 am: Unit 9, Sections 4-5 reading questions (TBD)
+  - *Fri Nov 6, 10 am: PS6* (submitted as usual)
+
