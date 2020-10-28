@@ -19,7 +19,7 @@ about this:
     on any questions.
     - Your group is expected to work on this for ~50 minutes.  If you do not make it through all the questions
     that is okay, as long as it is clear that you all made an effort.  
-3) Combine the solutions into one document that one group member should upload to the problem set 6 group work assignment. 
+3) Combine the solutions into one document that one group member should upload to the problem set 6 group work assignment on Gradescope. 
     - Make sure to add your fellow group members to the assignment on Gradescope when you submit.
     - How you create the pdf to submit is up to you but some options are (1) create an IPython notebook and save as pdf.  (2) create an R Markdown file with the code and knit to pdf.
 
