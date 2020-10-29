@@ -2248,7 +2248,6 @@ x>0
 \end_layout
 
 \begin_layout Standard
- 
 \begin_inset Note Note
 status open
 
@@ -2344,8 +2343,8 @@ mvtnorm
 \end_layout
 
 \begin_layout Standard
-To generate a multivariate normal, we've seen the standard method based
- on the Cholesky decomposition:
+To generate a multivariate normal, in Unit 10, we'll see the standard method
+ based on the Cholesky decomposition:
 \end_layout
 
 \begin_layout Standard
@@ -2372,8 +2371,8 @@ mvnorm, eval=FALSE
 \end_layout
 
 \begin_layout Standard
-For a singular covariance matrix we can use the Cholesky with pivoting,
- setting as many rows to zero as the rank deficiency.
+Side note: for a singular covariance matrix we can use the Cholesky with
+ pivoting, setting as many rows to zero as the rank deficiency.
  Then when we generate the multivariate normals, they respect the constraints
  implicit in the rank deficiency.
  However, you'll need to reorder the resulting vector because of the reordering
