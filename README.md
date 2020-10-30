@@ -176,11 +176,60 @@ Section: Comparison of Python and R.
 **Week 11**
 
 Class:
-  - Mon Nov 2: TBD
-  - Wed Nov 4: TBD
-  - Fri Nov 6: TBD
+  - Mon Nov 2: basis vectors, eigenvectors, and covariance matrices (Unit 10, Section 2)
+  - Wed Nov 4: (tentative) no class: please work on Unit 9, Sections 3 and 4.1 and watch the associated videos
+  - Fri Nov 6: (tentative) no class: please work on Unit 9, Sections 4.2-4.3 and watch the associated videos
 
 Assignments:
   - Mon Nov 2, 10 am: Unit 9, Sections 4-5 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8185492))
   - *Fri Nov 6, 10 am: PS6* (submitted as usual)
+
+Section: Discussion of Cao et al. simulation study
+
+**Week 12**
+
+Class:
+  - Mon Nov 9: (tentative) QR and SVD decompositions (Unit 10, Sections 4.4 and 5.2)
+  - Wed Nov 11: holiday, no class
+  - Fri Nov 13: (tentative) start on optimization (Unit 11)
+
+Assignments:
+  - TBD
+
+Section: advanced Git and GitHub usage
+
+**Week 13**
+
+Class:
+  - Mon Nov 16: (tentative) optimization
+  - Wed Nov 18: (tentative) optimization
+  - Fri Nov 20: quiz review
+
+Assignments:
+  - (tentative) **Mon Nov 16, 10 am: PS7** (submitted as usual)
+
+Section: discussion of projects
+
+**Week 14**
+
+Class:
+  - Mon Nov 23: Quiz 2
+  - Wed Nov 25: no class (Thanksgiving break)
+  - Fri Nov 27: no class (Thanksgiving break)
+
+Assignments: TBD
+
+Section: no section (Thanksgiving break)
+
+**Week 15**
+
+Class:
+  - Mon Nov 30: (tentative) optimization
+  - Wed Dec 2: (tentative) optimization or numeric integration/differentiation
+  - Fri Dec 4: (tentative) effective graphics discussion
+
+Assignments:
+  - (tentative) **Fri Dec 4, 10 am: PS8** (submitted as usual)
+
+Section: (tentative) project work time
 
