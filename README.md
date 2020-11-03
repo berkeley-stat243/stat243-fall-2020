@@ -41,7 +41,7 @@ The file [submitting-electronically.txt](./howtos/submitting-electronically.txt)
 
 We will use the [course Piazza site](https://piazza.com/berkeley/fall2020/stat243) for communication (announcements, questions, and discussion). If you're enrolled in the class you should be a member of the group and be able to access it. If you're auditing or not yet enrolled and would like access, make sure to fill out the survey above and I will add you. 
 
-## Schedule (Tentative):
+## Schedule:
 
 **Week 1**
 
@@ -177,8 +177,8 @@ Section: Comparison of Python and R.
 
 Class:
   - Mon Nov 2: basis vectors, eigenvectors, and covariance matrices (Unit 10, Section 2)
-  - Wed Nov 4: (tentative) no class: please work on Unit 9, Sections 3 and 4.1 and watch the associated videos
-  - Fri Nov 6: (tentative) no class: please work on Unit 9, Sections 4.2-4.3 and watch the associated videos
+  - Wed Nov 4: no class: please work on Unit 9, Sections 3 and 4.1 and watch the associated videos (Unit 10, Videos 1-3)
+  - Fri Nov 6: (tentative) no class: please work on Unit 9, Sections 4.2-4.3 and watch the associated videos (Unit 10, Videos 4-7)
 
 Assignments:
   - Mon Nov 2, 10 am: Unit 9, Sections 4-5 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8185492))
