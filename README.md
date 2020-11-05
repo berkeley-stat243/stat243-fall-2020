@@ -165,7 +165,7 @@ Section: No section - Zoe is available to help with the SCF, sbatch, future pack
 Class:
  - Mon Oct 26: group work on SQL query problems (Unit 8, Section 3)
  - Wed Oct 28: Monte Carlo simulation (Unit 9, Section 1)
- - Fri Oct 30: no class: please work on Unit 9, Sections 4-5 and watch the associated videos. 
+ - Fri Oct 30: no class: please work on Unit 9, Sections 4-5 and watch the associated videos (Unit 9, Videos 1-4). 
 
 Assignments:
  - *Mon Oct 26, 10 am: PS5* (submitted as a PDF on Gradescope and by pushing all materials (pdf and source files) to your Github repository)
@@ -177,24 +177,24 @@ Section: Comparison of Python and R.
 
 Class:
   - Mon Nov 2: basis vectors, eigenvectors, and covariance matrices (Unit 10, Section 2)
-  - Wed Nov 4: no class: please work on Unit 9, Sections 3 and 4.1 and watch the associated videos (Unit 10, Videos 1-3)
-  - Fri Nov 6: (tentative) no class: please work on Unit 9, Sections 4.2-4.3 and watch the associated videos (Unit 10, Videos 4-7)
+  - Wed Nov 4: no class: please work on Unit 10, Sections 3 and 4.1 and watch the associated videos (Unit 10, Videos 1-3)
+  - Fri Nov 6: no class: please work on Unit 10, Sections 4.2-4.3 and watch the associated videos (Unit 10, Videos 4-7)
 
 Assignments:
   - Mon Nov 2, 10 am: Unit 9, Sections 4-5 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8185492))
-  - *Fri Nov 6, 10 am: PS6* (submitted as usual)
+  - *Fri Nov 6, 10 am: PS6* (submitted as usual) (it's ok to turn in as late as Tue Nov 10 at 10 am)
 
 Section: Discussion of Cao et al. simulation study
 
 **Week 12**
 
 Class:
-  - Mon Nov 9: (tentative) QR and SVD decompositions (Unit 10, Sections 4.4 and 5.2)
+  - Mon Nov 9: QR and SVD decompositions (Unit 10, Sections 4.4 and 5.2)
   - Wed Nov 11: holiday, no class
   - Fri Nov 13: (tentative) start on optimization (Unit 11)
 
 Assignments:
-  - TBD
+  - Mon Nov 9, 10 am: Unit 10, Sections 3, 4.1-4.3 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8185492)) (it's ok to turn in as late as Wed Nov 11 at 5 pm)
 
 Section: advanced Git and GitHub usage
 
