@@ -11,7 +11,7 @@ might be sensitive to, and how one interprets the tables showing the simulation 
 
 Please start by finding a group of three people (two if necessary) and take 15-20 minutes to do the following:
 
- - briefly discuss your answers to questions 1 and 2 of problem set 6
+ - briefly discuss your answers to question 5 of problem set 6
  - write up pseudo-code (or mathematical expressions or R code, your choice) giving the details of 
  how the authors generate a simulated dataset
  - consider the choices the authors made in generating the simulated datasets. Select a few you think 
