@@ -1,6 +1,4 @@
----
-title: Thinking about simulation studies
----
+# Thinking about simulation studies
 
 We'll consider the simulation study in Section 4 of Cao et al. as an example of the kind of simulation
 study that researchers set up to evaluate statistical and machine learning methods.
