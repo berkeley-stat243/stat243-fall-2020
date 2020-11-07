@@ -206,7 +206,7 @@ Class:
   - Fri Nov 20: quiz review
 
 Assignments:
-  - (tentative) **Mon Nov 16, 10 am: PS7** (submitted as usual)
+  - **Tue Nov 17, 10 am: PS7** (submitted as usual)
 
 Section: discussion of projects
 
