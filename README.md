@@ -191,7 +191,7 @@ Section: Discussion of Cao et al. simulation study
 Class:
   - Mon Nov 9: QR and SVD decompositions (Unit 10, Sections 4.4 and 5.2)
   - Wed Nov 11: holiday, no class
-  - Fri Nov 13: (tentative) start on optimization (Unit 11)
+  - Fri Nov 13: univariate optimization (Unit 11, Section 3)
 
 Assignments:
   - Mon Nov 9, 10 am: Unit 10, Sections 3, 4.1-4.3 reading questions (see [assignment on bCourses](https://bcourses.berkeley.edu/courses/1497598/assignments/8185492)) (it's ok to turn in as late as Wed Nov 11 at 5 pm)
@@ -201,8 +201,8 @@ Section: advanced Git and GitHub usage
 **Week 13**
 
 Class:
-  - Mon Nov 16: (tentative) optimization
-  - Wed Nov 18: (tentative) optimization
+  - Mon Nov 16: no class: please work on Unit 11, Sections 4, 5.1-5.4 and watch the associated videos (TBD)
+  - Wed Nov 18: no class: please work on Unit 11, Sections 5.5-5.7, 6 and watch the associated videos (TBD)
   - Fri Nov 20: quiz review
 
 Assignments:
@@ -224,8 +224,8 @@ Section: no section (Thanksgiving break)
 **Week 15**
 
 Class:
-  - Mon Nov 30: (tentative) optimization
-  - Wed Dec 2: (tentative) optimization or numeric integration/differentiation
+  - Mon Nov 30: (tentative) Unit 11, Section 8 
+  - Wed Dec 2: (tentative) Unit 11, Section 9 plus Unit 12, Section 1 (numerical differentiation)
   - Fri Dec 4: (tentative) effective graphics discussion
 
 Assignments:
