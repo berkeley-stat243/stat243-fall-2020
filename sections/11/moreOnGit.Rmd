@@ -30,9 +30,9 @@ option in the upper right and then selecting Collaborators on the menu on the le
 3) Each person create a new branch (call them something different), add a file 
 or two to your branch and practice
 merging to the `master` branch.  You can do either merge on the command line or 
-use a pull request.  See section **Managing Branches** below for the commands.  
-Make sure to use `git pull` before pushing your merge to the remote repo if you
-do it through the command line.  
+use a pull request.  See section **Managing Branches** below for the commands.  Make
+sure to use `git pull` before pushing your merge to the remote repo if you
+do it through the command line to avoid merge conflicts.  
 4) Test what happens when your remote repository is ahead of your local 
 repository, but you already staged new changes.
   * Have one partner push a new commit to the remote repo
