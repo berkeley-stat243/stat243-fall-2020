@@ -201,12 +201,13 @@ Section: advanced Git and GitHub usage
 **Week 13**
 
 Class:
-  - Mon Nov 16: no class: please work on Unit 11, Sections 4, 5.1-5.4 and watch the associated videos (TBD)
+  - Mon Nov 16: no class: please work on Unit 11, Sections 4, 5.1-5.4 and watch the associated videos (Unit 11, Videos 1-3)
   - Wed Nov 18: no class: please work on Unit 11, Sections 5.5-5.7, 6 and watch the associated videos (TBD)
   - Fri Nov 20: quiz review
 
 Assignments:
   - **Tue Nov 17, 10 am: PS7** (submitted as usual)
+  - Fri Nov 17, 5 pm: Unit 11, Sections 1-6 reading questions [under construction]
 
 Section: discussion of projects
 
