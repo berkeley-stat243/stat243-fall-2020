@@ -2274,7 +2274,7 @@ As most of you know, iterative reweighted least squares (also called iterative
 Exponential families can be expressed as
 \begin_inset Formula 
 \[
-g(y;\theta,\phi)=\exp((y\theta-b(\theta))/a(\phi)+c(y,\phi)),
+f(y;\theta,\phi)=\exp((y\theta-b(\theta))/a(\phi)+c(y,\phi)),
 \]
 
 \end_inset
@@ -2314,11 +2314,11 @@ Considering N-R for a GLM in the canonical parameterization (and ignoring
 , which is one for logistic and Poisson regression), one can show that the
  gradient of the GLM log-likelihood is the inner product of the covariates
  and a residual vector, 
-\begin_inset Formula $\nabla f(\beta)=(Y-E(Y))^{\top}X$
+\begin_inset Formula $\nabla l(\beta)=(Y-E(Y))^{\top}X$
 \end_inset
 
 , and the Hessian is 
-\begin_inset Formula $H_{f}(\beta)=-X^{\top}WX$
+\begin_inset Formula $H_{l}(\beta)=-X^{\top}WX$
 \end_inset
 
  where 
@@ -2419,8 +2419,8 @@ where the so-called working observations are
 \end_layout
 
 \begin_layout Standard
-While Fisher scoring is standard for GLMs, you can also use general purpose
- optimization routines.
+While IRLS is standard for GLMs, you can also use general purpose optimization
+ routines.
  
 \end_layout
 
