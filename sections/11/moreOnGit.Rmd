@@ -25,16 +25,19 @@ We will do this as a partner exercise to practice collaborating with git and
 fixing issues that may arise during collaboration.  
 
 1) Create a new repo (just one of you, doesn't matter who)
-2) Add your partner(s) as a collaborator
-3) Each of you create a new branch, add some files to your branch and practice
-merging to the `master` branch.  You can do either merge directly or use a pull
-request.  See section **Managing Branches*@ below for the commands.  Make sure 
-to use `git pull` before merging to avoid merge conflicts.
+2) Add your partner(s) as a collaborator.  This can be done by clicking the Settings
+option in the upper right and then selecting Collaborators on the menu on the left.
+3) Each person create a new branch (call them something different), add a file 
+or two to your branch and practice
+merging to the `master` branch.  You can do either merge on the command line or 
+use a pull request.  See section **Managing Branches** below for the commands.  
+Make sure to use `git pull` before pushing your merge to the remote repo if you
+do it through the command line.  
 4) Test what happens when your remote repository is ahead of your local 
 repository, but you already staged new changes.
   * Have one partner push a new commit to the remote repo
-  * Have the other partner try to add, commit, and push new changes and see what
-  happens.
+  * Have the other partner try to add, commit, and push new changes without pulling
+  the most recent update and see what happens.
   * Resolve the merge conflict.  You can do this by calling `git pull` and merging
   the repositories or by using `git reset --soft` as described in the **Reset** 
   section below.
@@ -209,7 +212,8 @@ the changes made in experimental into master, run:
 git merge experimental
 ```
 
-If the changes don't conflict, you're done. If there are conflicts, markers will 
+If the changes don't conflict, then the merge was succesful and you can add,
+commit and push to the remote repository. If there are conflicts, markers will 
 be left in the problematic files showing the conflict;
 
 ```{bash}
