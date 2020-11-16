@@ -3682,10 +3682,18 @@ If
 \end_inset
 
  is not better than 
+\begin_inset Formula $x_{h}$
+\end_inset
+
+), replace 
 \begin_inset Formula $x_{p+1}$
 \end_inset
 
-) shrink the simplex toward 
+ with 
+\begin_inset Formula $x_{h}$
+\end_inset
+
+ and shrink the simplex toward 
 \begin_inset Formula $x_{1}$
 \end_inset
 
@@ -3703,7 +3711,7 @@ If
 \begin_inset Formula $x_{i}=\delta x_{i}+(1-\delta)x_{1}$
 \end_inset
 
-for 
+ for 
 \begin_inset Formula $i=2,\ldots,p+1$
 \end_inset
 
@@ -3728,9 +3736,10 @@ We can see the points at which the function was evaluated in the same quadratic
  In this case, we start with points 1, 2, and 3.
  Point 4 is a reflection.
  At this point, it looks like point 5 is a contraction but that doesn't
- exactly follow the algorithm above, so perhaps the algorithm as implemented
- is a bit different than as described above.
- The new set is (2, 3, 4).
+ exactly follow the algorithm above (since Point 4 is between Points 2 and
+ 3 so the iteration should end without a contraction), so perhaps the algorithm
+ as implemented is a bit different than as described above.
+ In any event, the new set is (2, 3, 4).
  Then point 6 and point 7 are reflection and expansion steps and the new
  set is (3, 4, 6).
  Points 8 and 9 are again reflection and expansion steps.

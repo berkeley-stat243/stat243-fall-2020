@@ -489,7 +489,10 @@ plotseg(xe, 1, col = 'green')
 plotseg(xe, 2, col = 'green')
 plotseg(1, 2, col = 'green')
 
-### consider contraction if xr is worse than all the other points
+### consider contraction if xr is worse than x_1,...,x_p
+
+## suppose xr is worse than x_p+1
+## set xh = x_p+1
 
 points(xs[3,1], xs[3, 2], col = 'blue')
 
@@ -518,17 +521,23 @@ plotseg(1, 2, 'purple')
 plotseg(1, 3, 'purple')
 plotseg(2, 3, 'purple')
 
+### if xr was better than x_p+1 then
+## set xh = xr and do the contraction and shrinkage similarly to the above
+
 ### Nelder-Mead on our quadratic toy example
 
 ## @knitr nelder-example
 
-f <- function(x, plot = TRUE){
+f <- function(x, plot = TRUE, verbose = FALSE) {
+    result <- x[1]^2/1000 + 4*x[1]*x[2]/1000 + 5*x[2]^2/1000
+    if(verbose) print(result)
     if(plot && cnt < 10) {
         points(x[1], x[2], pch = as.character(cnt))
         if(cnt < 10) cnt <<- cnt + 1 else cnt <<- 1
+        if(interactive())
+            invisible(readline(prompt = "Press <Enter> to continue..."))
     } else if(plot) points(x[1], x[2])
-    # if(plot) print(c(x,x[1]^2/1000 + 4*x[1]*x[2]/1000 + 5*x[2]^2/1000))
-    return(x[1]^2/1000 + 4*x[1]*x[2]/1000 + 5*x[2]^2/1000)
+    return(result)
 }
 
 library(fields)
@@ -539,14 +548,14 @@ fx <- apply(expand.grid(x1s, x2s), 1, f, FALSE)
 cnt <- 1
 image.plot(x1s, x2s, matrix(log(fx), 100, 100))
 init <- c(7, -4)
-optim(init, f, method = "Nelder-Mead")
+optim(init, f, method = "Nelder-Mead", verbose = FALSE)
 
 x1s <- seq(-.2, .2, len = 100); x2s = seq(-.12, .12, len = 100)
 fx <- apply(expand.grid(x1s, x2s), 1, f, FALSE)
 cnt <- 1
 image.plot(x1s, x2s, matrix(log(fx), 100, 100))
 init <- c(-0, 0)
-optim(init, f, method = "Nelder-Mead")
+optim(init, f, method = "Nelder-Mead", verbose = FALSE)
 
 ## @knitr dummy
 
