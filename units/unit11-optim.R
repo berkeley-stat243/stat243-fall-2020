@@ -598,33 +598,33 @@ cutoff = (1/25.4) # wet days defined as those with > 1 mm (1/25.4 inches) of pre
 thresh = as.numeric(quantile(y[y > cutoff],.98,na.rm=T)) # 98%ile of wet days
 
 
-pp.lik <- function(par, y, thresh, npy) {
+pp.negloglik <- function(par, y, thresh, npy) {
   mu <- par[1]
   sc <- par[2]
-  xi <- par[3]
+  sh <- par[3]
   uInd = y > thresh
   if(sc <= 0) 
     return(10^6);
-  if ((1 + ((xi * (thresh - mu))/sc)) < 0) {
+  if ((1 + ((sh * (thresh - mu))/sc)) < 0) {
     l <- 10^6; 
   }
   else {
     y <- (y - mu)/sc
-    y <- 1 + xi * y
+    y <- 1 + sh * y
     if (min(y^uInd) <= 0){   
       l <- 10^6;
     } else{
       ytmp = y
       ytmp[!uInd]=1  # 'zeroes' out those below the threshold after applying the log in next line
       l <- sum(uInd * log(sc)) + sum(uInd * log(ytmp) * 
-                                     (1/xi + 1)) + length(y)/npy * mean((1 + (xi * (thresh - mu))/sc)^(-1/xi))
+                                     (1/sh + 1)) + length(y)/npy * mean((1 + (sh * (thresh - mu))/sc)^(-1/sh))
     }
   }
   l
 }
 
 ## optim() usage
-## out <- optim(init, pp.lik, hessian = TRUE, method = "BFGS", control = list(maxit = maxit, trace = TRUE))
+## out <- optim(init, pp.negloglik, hessian = TRUE, method = "BFGS", control = list(maxit = maxit, trace = TRUE))
 
 yExc = y[y > thresh]
 in2 <- sqrt(6 * var(yExc))/pi  # have initial values depend only on those above the threshold
@@ -632,26 +632,26 @@ in1 <- mean(yExc) - 0.57722 * in2
 init0 = c(in1, in2, 0.1)
 
 ## fit with Nelder-Mead (default) and BFGS
-fit1 <- optim(init0, pp.lik, y = y, thresh = thresh, npy = npy, control = list(trace = TRUE)) # 118 fxn evals
-fit2 <- optim(init0, pp.lik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control = list(trace = TRUE)) # ~ 10 its
+fit1 <- optim(init0, pp.negloglik, y = y, thresh = thresh, npy = npy, control = list(trace = TRUE)) # 118 fxn evals
+fit2 <- optim(init0, pp.negloglik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control = list(trace = TRUE)) # ~ 10 its
 print(fit1)
 print(fit2)
 
 mle <- fit2$par
 
-system.time(optim(init0, pp.lik, y = y, thresh = thresh, npy = npy))
-system.time(optim(init0, pp.lik, y = y, thresh = thresh, npy = npy, method = 'BFGS'))
+system.time(optim(init0, pp.negloglik, y = y, thresh = thresh, npy = npy))
+system.time(optim(init0, pp.negloglik, y = y, thresh = thresh, npy = npy, method = 'BFGS'))
 
 ## different starting value 
 init1 = c(mean(y[y > thresh]), sd(y[y > thresh]), -0.1)
-optim(init1, pp.lik, y = y, thresh = thresh, npy = npy, control = list(trace = TRUE)) 
-optim(init1, pp.lik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control = list(trace = TRUE)) 
+optim(init1, pp.negloglik, y = y, thresh = thresh, npy = npy, control = list(trace = TRUE)) 
+optim(init1, pp.negloglik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control = list(trace = TRUE)) 
 
 ## bad starting value for BFGS
 init2 = c(thresh, .01, .1)
-out = optim(init2, pp.lik, y = y, thresh = thresh, npy = npy, control = list(trace = TRUE), hessian = TRUE)
+out = optim(init2, pp.negloglik, y = y, thresh = thresh, npy = npy, control = list(trace = TRUE), hessian = TRUE)
 solve(out$hessian)
-out2 = optim(init2, pp.lik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control = list(trace = TRUE), hessian = TRUE)
+out2 = optim(init2, pp.negloglik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control = list(trace = TRUE), hessian = TRUE)
 solve(out2$hessian)
 
 
@@ -665,18 +665,18 @@ in2 <- sqrt(6 * var(yExc2))/pi  # have initial values depend only on those above
 in1 <- mean(yExc2) - 0.57722 * in2
 init3 = c(in1, in2, 0.1)
 
-optim(init3, pp.lik, y = y2, thresh = thresh2, npy = npy, control = list(trace = TRUE)) ## note that the parameters have changed even beyond a scaling effect
-optim(init3, pp.lik, y = y2, thresh = thresh2, npy = npy, method = 'BFGS', control = list(trace = TRUE)) # note lack of convergence after 100 its
-optim(init3, pp.lik, y = y2, thresh = thresh2, npy = npy, method = 'BFGS', control = list(trace = TRUE, maxit = 1000)) # convergence, but to values not concordant with those from fitting the original y data
+optim(init3, pp.negloglik, y = y2, thresh = thresh2, npy = npy, control = list(trace = TRUE)) ## note that the parameters have changed even beyond a scaling effect
+optim(init3, pp.negloglik, y = y2, thresh = thresh2, npy = npy, method = 'BFGS', control = list(trace = TRUE)) # note lack of convergence after 100 its
+optim(init3, pp.negloglik, y = y2, thresh = thresh2, npy = npy, method = 'BFGS', control = list(trace = TRUE, maxit = 1000)) # convergence, but to values not concordant with those from fitting the original y data
 
 ## when we have y2 = y*1000, the location and scale parameters are on very different scales than the shape parameter
 ## can we use parscale to deal with the problems when the data are on a different scale?
-optim(init3, pp.lik, y = y2, thresh = thresh2, npy = npy, control = list(trace = TRUE, parscale = c(1000,1000,1))) 
-optim(init3, pp.lik, y = y2, thresh = thresh2, npy = npy, method = 'BFGS', control = list(trace = TRUE, parscale = c(1000,1000,1))) 
+optim(init3, pp.negloglik, y = y2, thresh = thresh2, npy = npy, control = list(trace = TRUE, parscale = c(1000,1000,1))) 
+optim(init3, pp.negloglik, y = y2, thresh = thresh2, npy = npy, method = 'BFGS', control = list(trace = TRUE, parscale = c(1000,1000,1))) 
 ## yes, that works! the parameter estimates are now equivalent to those from the standard fitting of the original data
 
 ## default step size for numerical derivative is only .001; perhaps we should try with higher accuracy
-optim(init0, pp.lik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control = list(trace = TRUE, ndeps = rep(1e-6, 3)))
+optim(init0, pp.negloglik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control = list(trace = TRUE, ndeps = rep(1e-6, 3)))
 ## note that we needed only 33 function evaluations instead of the original 43, presumably because of higher accuracy in the derivative
 
 #### let's do some plotting of the objective fxn as a sanity check
@@ -684,21 +684,21 @@ optim(init0, pp.lik, y = y, thresh = thresh, npy = npy, method = 'BFGS', control
 ## 3-d grid of location, scale, shape
 locVals = seq(0, 5, len = 30)
 scaleVals = seq(.1, 3, len = 30)
-shapeVals = seq(-.3, .25, by = .05)
+shapeVals = seq(-.3, .3, by = .04)
 parGrid = expand.grid(loc = locVals, scale = scaleVals, shape = shapeVals)
 
-obj=apply(parGrid, 1, pp.lik, y=y, thresh=thresh, npy=npy) # compute objective function for all parameter combos
+obj=apply(parGrid, 1, pp.negloglik, y=y, thresh=thresh, npy=npy) # compute objective function for all parameter combos
 
 tmp = cbind(parGrid,obj)
 
 library(fields)
 
-par(mfrow=c(3, 4), mai = c(.6,.5, .3, .1), mgp = c(1.8, .7, 0))
+par(mfrow=c(4, 4), mai = c(.6,.5, .3, .1), mgp = c(1.8, .7, 0))
 for( i in 1:length(shapeVals)){
   tmp2 = tmp[tmp$shape == shapeVals[i],] # slice of objective fxn for fixed shape parameter
   image.plot(locVals, scaleVals, matrix((tmp2$obj), length(locVals), length(scaleVals)), col = tim.colors(32), zlim = c(40,80), main = as.character(shapeVals[i]))
 }
-## note there a couple weird things about this log likelihood - (1) weird things happen when the shape parameter is very close to 0 and (2) for certain combinations the likelihood is not defined (it's set to 1e6) - this is why some of the colors go from aqua to white without showing red values - reparameterizing or optimizing with explicit constraints may be better approaches
+## note there a couple weird things about this log likelihood - (1) weird things happen when the shape parameter is very close to 0 (not shown) and (2) for certain combinations the likelihood is not defined (it's set to 1e6) - this is why the white regions of the plot exist - reparameterizing or optimizing with explicit constraints may be better approaches
 
 ## apart from that, it appears that optim() has probably found the minimum
 
