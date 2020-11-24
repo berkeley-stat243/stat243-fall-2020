@@ -117,7 +117,7 @@ Problem
 
 \begin_layout Standard
 Your task is to implement an adaptive-rejection sampler, described in the
- Unit 10 notes (Section 5.5) and with details in Section 2.2 of Gilks et al.
+ Unit 9 notes (Section 5.4) and with details in Section 2.2 of Gilks et al.
  (1992) - the PDF is in the 
 \emph on
 Files
