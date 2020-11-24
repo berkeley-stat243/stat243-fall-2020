@@ -5465,12 +5465,12 @@ Suppose we have an objective function
 \end_inset
 
  is the set of 
-\begin_inset Formula $x$
+\begin_inset Formula $\delta$
 \end_inset
 
  s.t.
  
-\begin_inset Formula $Ax=0$
+\begin_inset Formula $A\delta=0$
 \end_inset
 
 .
@@ -5497,7 +5497,7 @@ Suppose we have an objective function
 \end_inset
 
 ) as 
-\begin_inset Formula $x=x_{c}+Bz$
+\begin_inset Formula $x=x_{c}+\delta=x_{c}+Bz$
 \end_inset
 
  where 
