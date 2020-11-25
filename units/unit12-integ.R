@@ -26,13 +26,13 @@ fxmh <- lgamma(x-h)
 fxp2h <- lgamma(x+2*h)
 fxm2h <- lgamma(x-2*h)
 ## now find numerical derivatives
-fp1 <- (fxph - fx)/h # forward difference
-fp2 <- (fxph - fxmh)/(2*h) # central difference
+fp_fwd <- (fxph - fx)/h # forward difference
+fp_cent <- (fxph - fxmh)/(2*h) # central difference
 ## second derivatives 
-fpp1 <- (fxp2h - 2*fxph + fx)/(h*h) # forward difference
-fpp2 <- (fxph - 2*fx + fxmh)/(h*h) # central difference
+fpp_fwd <- (fxp2h - 2*fxph + fx)/(h*h) # forward difference
+fpp_cent <- (fxph - 2*fx + fxmh)/(h*h) # central difference
 ## table of results
-cbind(h,fp1,fp2,fpp1,fpp2)
+cbind(h,fp_fwd,fp_cent,fpp_fwd,fpp_cent)
 
 ## @knitr dummy
 
