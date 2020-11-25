@@ -225,12 +225,12 @@ Section: no section (Thanksgiving break)
 **Week 15**
 
 Class:
-  - Mon Nov 30: (tentative) Unit 11, Section 8 
-  - Wed Dec 2: (tentative) Unit 11, Section 9 plus Unit 12, Section 1 (numerical differentiation)
-  - Fri Dec 4: (tentative) effective graphics discussion
+  - Mon Nov 30: EM algorithm (Unit 11, Section 8)
+  - Wed Dec 2: no class: please work on  Unit 11, Section 9 (optimization under constraints) plus Unit 12, Section 1 (numerical differentiation) and the associated videos (Unit 11, Videos 9-11 and Unit 12, Video 1)
+  - Fri Dec 4: discussion of effective (and ineffective) graphics
 
 Assignments:
-  - (tentative) **Fri Dec 4, 10 am: PS8** (submitted as usual)
+  - **Fri Dec 4, 10 am: PS8** (submitted as usual)
 
-Section: (tentative) project work time
+Section: no official section -- time for you to work on your project
 
