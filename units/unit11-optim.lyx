@@ -802,7 +802,7 @@ golden ratio
 \end_inset
 
 , namely 
-\begin_inset Formula $x_{3}=a+(1-\phi)(x_{1}-a)$
+\begin_inset Formula $x_{3}=a+(1-\phi)(x_{2}-a)$
 \end_inset
 
 .
