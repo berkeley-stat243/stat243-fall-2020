@@ -5122,7 +5122,7 @@ The complete log likelihood given
  is
 \begin_inset Formula 
 \[
-\log\prod_{i}f(x_{i}|z_{i};\theta)\mbox{Pr}(Z_{i}=z_{i}|\theta)
+\log\prod_{i}f(x_{i}|z_{i};\theta)\mbox{Pr}(Z_{i}=z_{i};\theta)
 \]
 
 \end_inset
@@ -5138,7 +5138,7 @@ which can be expressed as
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\log L(x,z|\theta) & = & \sum_{i}\log f(x_{i};\mu_{z_{i}},\sigma_{z_{i}})+\log\pi_{z_{i}}\\
+\log L(\theta|x,z) & = & \sum_{i}\log f(x_{i};\mu_{z_{i}},\sigma_{z_{i}})+\log\pi_{z_{i}}\\
  & = & \sum_{i}\sum_{k}I(z_{i}=k)(\log f_{k}(x_{i};\mu_{k},\sigma_{k})+\log\pi_{k})
 \end{eqnarray*}
 
