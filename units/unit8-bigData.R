@@ -103,6 +103,7 @@ db <- dbConnect(drv, dbname = file.path(dir, dbFilename))
 # simple query to get 5 rows from a table
 dbGetQuery(db, "select * from questions limit 5")  
 
+## http://www.stat.berkeley.edu/share/paciorek/stackoverflow-2016.db
 
 ## @knitr database-tables
 
@@ -127,6 +128,17 @@ dbDisconnect(db)
 
 ### 3.6 Basic SQL for choosing rows and columns from a table
 
+# Option A
+
+"select * from users sort by age desc limit 25"
+
+# Option B
+
+"select * from users where age > 75"
+
+
+
+
 ## @knitr database-queries-examples
 
 ## find the largest viewcounts in the questions table
@@ -136,6 +148,56 @@ dbGetQuery(db,
 dbGetQuery(db, 'select * from questions where viewcount > 100000')
 
 ## @knitr
+
+dbGetQuery(db, "select count(*) as n from questions Q left outer join answers A 
+  on Q.questionid = A.questionid group by A.questionid order by n desc limit 25")
+
+
+## Using a left outer join to figure out the rows with no answers
+dbGetQuery(db, "select count(*) from questions Q left outer join answers A 
+  on Q.questionid = A.questionid where A.answerid is NULL")
+
+## We didn't cover subqueries, but you could use a separate query within the 'where': 
+## A couple of you talked about this in the chat
+dbGetQuery(db, "select count(*) from questions Q where Q.questionid NOT IN
+   (select questionid from answers)")
+
+dbGetQuery(db, "select count(answerid) as n, questionid from answers group by questionid")
+
+dbGetQuery(db, "select count(A.answerid) as n, Q.questionid from 
+  questions Q left outer join answers A 
+  on Q.questionid = A.questionid group by Q.questionid order by n limit 25")
+
+
+"select distinct(*) from answers A 
+      join questions_tags T on A.questionid = T.questionid 
+      join users U on U.userid = A.ownerid
+  where tag = 'python'" 
+
+select userid from users join answers on ... join questions_tags
+
+dbGetQuery(db, "select count(*) as n, questionid, title from answers 
+join questions on questions.questionid=answers.questionid
+ group by answers.questionid order by n desc
+  limit 25")
+
+
+select count(*) from questions Q left outer join 
+answers A on Q.questionid = A.questionid where A.answerid is NULL
+
+dbGetQuery(db, "select count(answerid) as n from answers left outer
+join questions on questions.questionid=answers.questionid
+ group by answers.answerid order by n")
+  
+
+
+
+
+
+
+
+
+
 
 ### 3.7 Grouping / stratifying
 

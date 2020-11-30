@@ -77,12 +77,15 @@ sum(y)
 ## @knitr ill-cond
 
 norm2 <- function(x) sqrt(sum(x^2))
+
 A <- matrix(c(10,7,8,7,7,5,6,5,8,6,10,9,7,5,9,10),4)
-e <- eigen(A)
 b <- c(32, 23, 33, 31)
-bPerturbed <- c(32.1, 22.9, 33.1, 30.9)
 x <- solve(A, b)
+
+bPerturbed <- c(32.1, 22.9, 33.1, 30.9)
 xPerturbed <- solve(A, bPerturbed)
+
+e <- eigen(A)
 norm2(x - xPerturbed)  ## delta x
 norm2(b - bPerturbed)  ## delta b
 norm2(x - xPerturbed)/norm2(x)
