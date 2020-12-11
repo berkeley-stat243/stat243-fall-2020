@@ -90,7 +90,7 @@ Stat243: Final group project
 \begin_inset Newline newline
 \end_inset
 
-Due Wednesday Dec.
+Due Friday Dec.
  16, 5 pm
 \end_layout
 
@@ -306,17 +306,34 @@ R
 \end_layout
 
 \begin_layout Enumerate
-Formal tests you applied to your overall function, located in the 
+Formal tests you applied to your overall function.
+ You can set this up with 
 \emph on
-tests
+usethis::use_testthat
 \emph default
- directory of the package.
- I will run the testing using 
+; however, I don’t care about the exact structure of the tests folder in
+ your R package, so long as I can run either 
 \family typewriter
-library(testthat); test_package('ars')
+devtools::test(’ars’)
 \family default
- (please check that you can run that successfully before submitting).
- 
+ or 
+\family typewriter
+testthat::test_package(’ars’)
+\family default
+ and have it run all your tests.
+ Please check that you can run the tests successfully using one of those
+ commands and indicate in your writeup how I can run your tests.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Only test('ars') works if I set up the package with usethis::create_package
+ and usethis::use_testthat.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
